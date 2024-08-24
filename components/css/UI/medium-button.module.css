@@ -1,17 +1,17 @@
 .button {
-    width: 136px;
-    height: 39px;
-    border-radius: 10px;
+    width: 268px;
+    height: 67px;
+    border-radius: 20px;
     overflow: hidden;
-    border: 2px solid;
+    border: none;
     justify-content: center;
     align-items: center;
-    gap: 21px;
     display: inline-flex;
     transition: transform 0.3s;
-    font-size: 16.5px;
+    font-size: 1.5rem;
     font-weight: 600;
     box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .button:hover,

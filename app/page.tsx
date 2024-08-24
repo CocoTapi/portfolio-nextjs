@@ -8,12 +8,12 @@ import AboutPage from "@/components/about/about-page";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className={classes.main}>
       <MainHeader />
 
       {/* top image */}
       <section className={classes.topSection}>
-        <div>
+        <div className={classes.nameGroup}>
           <h2>Hi, I'm Shiori.</h2>
           <h2>Full stack Developer</h2>
           <p>{profile_data.top_page_description}</p>
@@ -23,16 +23,18 @@ export default function HomePage() {
       {/* projects */}
       <section id="projects" className={classes.section}>
         <h1>Projects</h1>
-        <main>
-          <ul>
-          {projects_data.projects.map((project) => 
-            <li>
+          <div className={classes.cardComponent}>
+          {projects_data.projects.map((project, index) => 
+            <div
+                key={project.project_id}
+                className={`${classes.card} ${
+                    index % 2 === 0 ? classes.evenCard : classes.oddCard
+                }`}
+            >
               <ProjectSummary key={project.project_id} project={project} />
-            </li>
+            </div>
           )}
-          </ul>
-        </main>
-        
+          </div>
       </section>
 
       {/* About */}

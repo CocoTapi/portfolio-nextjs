@@ -1,4 +1,46 @@
+.outerBox {
+  min-height: 750px;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.leftComponent {
+  display: grid;
+}
+
+.buttonComponent {
+  display: grid;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
 .slideshow {
-    width: 40rem;
-    height: 25rem;
-  }
+  width: 25rem;
+  height: 17rem;
+}
+
+.rightComponent {
+  max-width: 42rem;
+  margin-left: 5rem;
+}
+
+.rightComponent h3 {
+  margin-bottom: 2rem;
+}
+
+.rightComponent p, .rightComponent ul {
+  margin-bottom: 1.5rem;
+}
+
+.techGroup {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.techGroup li {
+  margin-right: 10px;
+  margin-bottom: 7px;
+}

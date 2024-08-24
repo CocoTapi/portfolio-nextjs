@@ -12,7 +12,10 @@ export interface ProfileData {
     my_email: string;
     top_page_description: string;
     short_self_introduction: string;
-    long_self_introduction: string;
+    long_self_introduction1: string;
+    long_self_introduction2: string;
+    long_self_introduction3: string;
+    long_self_introduction4: string;
     hobbies: string;
     skills: string[];
     professional_development: string[];
