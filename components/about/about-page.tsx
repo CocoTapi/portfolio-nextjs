@@ -4,6 +4,7 @@ import { ProfileProps } from "@/util/types";
 import MediumButton from "../UI/medium-button";
 import classes from "../css/about/about-page.module.css";
 import { useState } from "react";
+import Skills from "./skills";
 
 export default function AboutPage({ profile }: ProfileProps) {
   const [showLong, setShowLong] = useState(false);
@@ -60,19 +61,17 @@ export default function AboutPage({ profile }: ProfileProps) {
       <div className={classes.subComponent}>
         <h3>Skills & Tools :</h3>
         <div className={classes.skillsComponent}>
-          {profile.skills.map((skill: string) => (
-            <div>{skill}</div>
-          ))}
+          <Skills />
         </div>
       </div>
       <div className={classes.subComponent}>
         <h3>Education :</h3>
         <div>
-          <div>
+          <div className={classes.eduGroup}>
             <p>Professional Development</p>
             <ul>
               {profile.professional_development.map((item: string) => (
-                <p>{item}</p>
+                <p key={item}>{item}</p>
               ))}
             </ul>
           </div>

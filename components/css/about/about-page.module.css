@@ -66,6 +66,17 @@
     gap: 2rem
 }
 
+.skillsComponent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 10px; 
+    padding-top: 2rem;
+}
+
 .subComponent {
     margin-bottom: 3rem;
+}
+
+.eduGroup {
+    padding-top: 1rem;
 }
