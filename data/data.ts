@@ -23,7 +23,7 @@ export const profile_data: ProfileData = {
         'Modern React with Redux 2023 | Udemy',
         'JavaScript Algorithms and Data Structures Masterclass | Udemy',
         'The Complete SQL Bootcamp: Go from Zaro to Hero | Udemy',
-        'Angular - The Complete Guide (2024 Edition) | Udemy (Ongoing)'
+        'The Complete Angular Course: Beginner to Advanced | Udemy (Ongoing)'
     ],
 }
 
