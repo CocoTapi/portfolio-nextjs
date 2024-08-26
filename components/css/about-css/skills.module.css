@@ -1,0 +1,49 @@
+.skillGroup {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 1.7rem;
+}
+
+.skillIcon, .skillCss, .skillPostman {
+    margin: auto;
+    margin-bottom: 0.7rem;
+    color: transparent;
+}
+
+.skillIcon {
+    font-size: 4rem;
+}
+
+.skillCss {
+    font-size: 3.7rem;
+}
+
+.skillPostman {
+    font-size: 3.2rem;
+}
+
+.enIcon, .jpnIcon {
+    margin: auto;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #FFAA9E, #704BDB); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.enIcon {
+    font-size: 3rem;
+}
+
+.jpnIcon {
+    font-size: 2.8rem;
+}
+
+
+
+
+
+

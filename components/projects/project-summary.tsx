@@ -1,5 +1,5 @@
 import { ProjectProps } from "@/util/types";
-import classes from "../css/projects/project-summary.module.css";
+import classes from "../css/projects-css/project-summary.module.css";
 import MediumButton from "../UI/medium-button";
 import ImageSlideshow from "./image-slideshow";
 import Link from "next/link";

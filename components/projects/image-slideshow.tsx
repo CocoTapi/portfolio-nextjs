@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import classes from '../css/projects/image-slideshow.module.css';
+import classes from '../css/projects-css/image-slideshow.module.css';
 import { ImageSlideshowProps } from '@/util/types';
 
 

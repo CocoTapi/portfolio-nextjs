@@ -1,0 +1,28 @@
+.ctrButtons {
+    display: flex;
+    gap: 2rem;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.active:hover, .nonActive:hover {
+    cursor: pointer;
+}
+
+.active {
+    font-size: 2rem;
+}
+
+.nonActive {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.longParagraph p {
+    padding-bottom: 1rem;
+}
+
+.longParagraph p:last-child {
+    padding-bottom: 0;
+}

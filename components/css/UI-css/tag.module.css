@@ -1,5 +1,5 @@
 .tag {
-    height: 1.8rem;
+    height: 2.5rem;
     padding: 0 1rem;
     border: none;
     border-radius: 17px;
@@ -8,7 +8,8 @@
     align-items: center;
     display: inline-flex;
     transition: transform 0.3s; 
-    font-size: inherit;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
     font-weight: 400;
     box-sizing: border-box; 
 }

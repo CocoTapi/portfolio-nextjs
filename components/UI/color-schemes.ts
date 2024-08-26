@@ -4,16 +4,22 @@ export const colorSchemes: Record<string, ColorScheme> = {
     primary: {
         textColor: 'white',
         backgroundColor: 'var(--color-primary-400)',
-        borderColor: '',
+        borderColor: 'none',
     },
     primaryWhite: {
         textColor: 'var(--color-primary-400)',
         backgroundColor: 'white',
-        borderColor: '',
+        borderColor: 'none',
     },
     grey: {
         textColor: 'white',
         backgroundColor: 'var(--color-grey-400)',
-        borderColor: ''
+        borderColor: 'none'
+    },
+    gradient: {
+        textColor: 'white',
+        backgroundColor: 'none',
+        borderColor: 'none',
+        backgroundImage: 'linear-gradient(135deg, #FFAA9E, #704BDB)'
     }
 }

@@ -1,16 +1,11 @@
-import Image from "next/image";
 import classes from "./page.module.css";
-import MainHeader from "@/components/main-header/main-header";
 import { profile_data, projects_data } from "../data/data";
 import ProjectSummary from "@/components/projects/project-summary";
-import { ProjectProps } from "@/util/types";
 import AboutPage from "@/components/about/about-page";
 
 export default function HomePage() {
   return (
-    <div className={classes.main}>
-      <MainHeader />
-
+    <main className={classes.main}>
       {/* top image */}
       <section className={classes.topSection}>
         <div className={classes.nameGroup}>
@@ -23,26 +18,25 @@ export default function HomePage() {
       {/* projects */}
       <section id="projects" className={classes.section}>
         <h1>Projects</h1>
-          <div className={classes.cardComponent}>
-          {projects_data.projects.map((project, index) => 
+        <div className={classes.cardComponent}>
+          {projects_data.projects.map((project, index) => (
             <div
-                key={project.project_id}
-                className={`${classes.card} ${
-                    index % 2 === 0 ? classes.evenCard : classes.oddCard
-                }`}
+              key={project.project_id}
+              className={`${classes.card} ${
+                index % 2 === 0 ? classes.evenCard : classes.oddCard
+              }`}
             >
               <ProjectSummary key={project.project_id} project={project} />
             </div>
-          )}
-          </div>
+          ))}
+        </div>
       </section>
 
       {/* About */}
-      <section className={classes.section}>
+      <section id="about" className={classes.section}>
         <h1>About</h1>
         <AboutPage profile={profile_data} />
       </section>
-
-    </div>
+    </main>
   );
 }

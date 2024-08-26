@@ -1,5 +1,10 @@
-import { ProfileData, ProjectsData } from "@/util/types";
+import { MediaData, ProfileData, ProjectsData } from "@/util/types";
 import { lessonLab_image_data } from "./image-data";
+
+export const media_data: MediaData = {
+    gitHub: "https://github.com/CocoTapi",
+    linkedIn: "https://linkedin.com"
+}
 
 export const profile_data: ProfileData = {
     my_email: 'shioriavino@gmail.com',
@@ -10,7 +15,7 @@ export const profile_data: ProfileData = {
     long_self_introduction2: `I refined my project, diving into data and technologies, and sought advice from software engineers. While they encouraged me to learn coding, I initially resisted. However, that all changed when my software engineer friend successfully launched a project we had been discussing, quickly turning it into a business. This moment opened my eyes to the incredible power and potential of software engineering.`,
     long_self_introduction3: `Inspired, I began learning to code and quickly found joy in building programs, solving complex puzzles, and crafting designs that reflected my vision. The journey has been far from easy—every new challenge brings unknown errors and difficulties. But with the support of engineer friends and incredible resources available online, I’ve found fulfillment in overcoming them.`,
     long_self_introduction4: `Now, as a software engineer, I combine my passion for education with the problem-solving and creative power of coding, continuously striving to create impactful and innovative solutions.`,
-    hobbies: `When I’m not coding, I love spending time with my cat (who is also my coding partner), cooking, and gardening.`,
+    hobbies: `I love spending time with my cat (who is also my coding partner), cooking, baking, and gardening. Recently, I like playing pickle ball too!`,
     skills: ['JavaScript', 'TypeScript','React', 'Angular', 'HTML', 'CSS', 'Sass', 'Node.js', 'Node Express', 'PostgreSQL', 'MongoDB', 'PgAdmin', 'Postman', 'AWS', 'Git', 'GitHub', 'Figma', 'English', 'Japanese'],
     professional_development: [
         'Web Developer Bootcamp 2023 | Udemy',

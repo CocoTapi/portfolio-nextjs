@@ -8,6 +8,11 @@ export interface ImageData {
     alt: string;
 }
 
+export interface MediaData {
+    gitHub: string;
+    linkedIn: string
+}
+
 export interface ProfileData {
     my_email: string;
     top_page_description: string;
@@ -78,6 +83,7 @@ export interface ColorScheme {
     textColor: string;
     backgroundColor: string;
     borderColor: string;
+    backgroundImage?: string
 }
 
 // Define the valid keys for color schemes
@@ -102,6 +108,7 @@ export interface ButtonStyle {
     color: string;
     backgroundColor: string;
     borderColor: string;
+    backgroundImage?: string;
 };
 
 export interface ImageSlideshowProps {

@@ -1,5 +1,5 @@
 import { colorSchemes } from "./color-schemes";
-import classes from "../css/UI/tag.module.css";
+import classes from "../css/UI-css/tag.module.css";
 import { ButtonProps, ButtonStyle, ColorScheme } from "@/util/types";
 
 export default function Tag({ className, children, colorScheme = 'grey', ...rest }: ButtonProps){

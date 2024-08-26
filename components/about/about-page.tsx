@@ -1,21 +1,11 @@
-"use client";
-
 import { ProfileProps } from "@/util/types";
 import MediumButton from "../UI/medium-button";
-import classes from "../css/about/about-page.module.css";
-import { useState } from "react";
+import classes from "../css/about-css/about-page.module.css";
 import Skills from "./skills";
+import IntroductionNav from "./introduction-nav";
+import { media_data } from "@/data/data";
 
 export default function AboutPage({ profile }: ProfileProps) {
-  const [showLong, setShowLong] = useState(false);
-
-  function handleLongVer() {
-    setShowLong(true);
-  }
-
-  function handleShortVer() {
-    setShowLong(false);
-  }
 
   return (
     <div className={classes.aboutComponent}>
@@ -24,36 +14,16 @@ export default function AboutPage({ profile }: ProfileProps) {
           <img src="/images/dodger-sleeping.jpg" alt="My Image" />
         </div>
         <div className={classes.introDescription}>
-          <nav className={classes.ctrButtons}>
-            <h4
-              onClick={handleShortVer}
-              className={showLong ? classes.nonActive : classes.active}
-            >
-              Short Version
-            </h4>
-            <h4
-              onClick={handleLongVer}
-              className={showLong ? classes.active : classes.nonActive}
-            >
-              Long Version
-            </h4>
-          </nav>
-          {!showLong && <p>{profile.short_self_introduction}</p>}
-          {showLong && (
-            <div className={classes.longParagraph}>
-              <p>{profile.long_self_introduction1}</p>
-              <p>{profile.long_self_introduction2}</p>
-              <p>{profile.long_self_introduction3}</p>
-            {/* <p>{profile.long_self_introduction4}</p> */}
-            </div>
-          )}
-          <p className={classes.hobbies}>{profile.hobbies}</p>
+          <IntroductionNav profile={profile} />
+          <p className={classes.hobbies}>
+            <span>When I'm not coding : </span>{profile.hobbies}
+          </p>
           <div className={classes.socialButtons}>
-            <a href="https://github.com/CocoTapi">
-              <MediumButton>My GitHub</MediumButton>
+            <a href={media_data.gitHub}>
+              <MediumButton>GitHub</MediumButton>
             </a>
-            <a href="https://www.linkedin.com/">
-              <MediumButton>My LinkedIn</MediumButton>
+            <a href={media_data.linkedIn}>
+              <MediumButton>LinkedIn</MediumButton>
             </a>
           </div>
         </div>
@@ -68,15 +38,15 @@ export default function AboutPage({ profile }: ProfileProps) {
         <h3>Education :</h3>
         <div>
           <div className={classes.eduGroup}>
-            <p>Professional Development</p>
+            <p className={classes.eduLabel}>Professional Development</p>
             <ul>
               {profile.professional_development.map((item: string) => (
-                <p key={item}>{item}</p>
+                <li key={item}>{item}</li>
               ))}
             </ul>
           </div>
-          <div>
-            <p className={classes.degree}>
+          <div className={classes.eduGroup}>
+            <p className={classes.eduLabel}>
               Master of Science in Teaching English to Speakers of Other
               Languages (4.0 GPA)
             </p>
@@ -84,8 +54,8 @@ export default function AboutPage({ profile }: ProfileProps) {
               University of Rochester, Rochester NY, USA
             </p>
           </div>
-          <div>
-            <p className={classes.degree}>
+          <div className={classes.eduGroup}>
+            <p className={classes.eduLabel}>
               Master of Arts in English and Bachelor of Arts in English
             </p>
             <p className={classes.school}>
@@ -99,8 +69,7 @@ export default function AboutPage({ profile }: ProfileProps) {
         <p>
           I'm always open to discussing new opportunities, projects, or ideas.
           If you'd like to connect or learn more about my work, feel free to get
-          in touch at
-          <a href={`mailto:${profile.my_email}`}>{profile.my_email}</a>
+          in touch at <a href={`mailto:${profile.my_email}`}>{profile.my_email}</a>
         </p>
       </div>
     </div>
