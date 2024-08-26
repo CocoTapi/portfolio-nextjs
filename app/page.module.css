@@ -24,6 +24,7 @@
 
 .section {
   margin-top: 13rem;
+  scroll-margin-top: 10rem; /* Adjust according to the height of your header */
 }
 
 .section h1 {

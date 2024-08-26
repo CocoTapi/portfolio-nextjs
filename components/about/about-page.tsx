@@ -69,7 +69,7 @@ export default function AboutPage({ profile }: ProfileProps) {
         <p>
           I'm always open to discussing new opportunities, projects, or ideas.
           If you'd like to connect or learn more about my work, feel free to get
-          in touch at <a href={`mailto:${profile.my_email}`}>{profile.my_email}</a>
+          in touch at <a href={`mailto:${profile.my_email}`}>{profile.my_email}</a>.
         </p>
       </div>
     </div>
