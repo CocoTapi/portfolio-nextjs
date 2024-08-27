@@ -3,7 +3,13 @@ import { lessonLab_image_data } from "./image-data";
 
 export const media_data: MediaData = {
     gitHub: "https://github.com/CocoTapi",
-    linkedIn: "https://linkedin.com"
+    linkedIn: "https://linkedin.com",
+    webDeveloperBootcamp-Colt: "https://github.com/CocoTapi/web_developer_bootcamp_2023/tree/main/Sections",
+    react-Max: "https://github.com/CocoTapi/REACT_2023",
+    modernReact: "https://github.com/CocoTapi/modern_react_2023",
+    algorithms-Colt: "https://github.com/CocoTapi/algorithms_and_data_structure",
+    codingInterview: "https://github.com/CocoTapi/coding_interview_bootcamp",
+    completeAngular: "https://github.com/CocoTapi/The-Complete-Angular-Course"
 }
 
 export const profile_data: ProfileData = {
@@ -22,6 +28,7 @@ export const profile_data: ProfileData = {
         'React - The Complete Guide 2023 (incl. Next.js, Redux) | Udemy',
         'Modern React with Redux 2023 | Udemy',
         'JavaScript Algorithms and Data Structures Masterclass | Udemy',
+        'Master the Coding Interview: Data Structures + Algorithms | Udemy',
         'The Complete SQL Bootcamp: Go from Zaro to Hero | Udemy',
         'The Complete Angular Course: Beginner to Advanced | Udemy (Ongoing)'
     ],
