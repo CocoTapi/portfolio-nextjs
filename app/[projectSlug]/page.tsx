@@ -4,6 +4,9 @@ import { notFound } from "next/navigation";
 import classes from "./page.module.css";
 import MediumButton from "@/components/UI/medium-button";
 import Tag from "@/components/UI/tag";
+import Accordion from "@/components/UI/accordion";
+import SmallButton from "@/components/UI/small-button";
+import Link  from "next/link";
 
 async function getProject(slug: string): Promise<ProjectData | undefined> {
     const project = projects_data.projects.find((project) => 
@@ -56,7 +59,74 @@ export default async function ProjectDetainPage({ params }: any){
                         )}
                     </div>
                 </div>
-               
+                <div className={classes.detailSection}>
+                    <h3>My Roles :</h3>
+                    <p>{project.project_details.my_roles}</p>
+                </div>
+                <div className={classes.detailSection}>
+                    <h3>Key Features :</h3>
+                    <h4>Frontend Functionally</h4>
+                    {project.project_details.frontend_features.map((feature) => (
+                           <Accordion 
+                            key={feature.feature_id}
+                            headerTitle={feature.feature_title}
+                            firstStanza={feature.feature_description}
+                            secondStanza={feature.feature_importance}
+                           />
+                    ))}
+                    <h4>Backend Operations</h4>
+                    {project.project_details.backend_features.map((feature) => (
+                        <Accordion 
+                            key={feature.feature_id}
+                            headerTitle={feature.feature_title}
+                            firstStanza={feature.feature_description}
+                            secondStanza={feature.feature_importance}
+                        />
+                    ))}
+                </div>
+                <div className={classes.detailSection}>
+                    <h3>Challenges & Solutions</h3>
+                    {project.project_details.challenges.map((item) => (
+                        <Accordion 
+                            key={item.challenge_id}
+                            headerTitle={item.challenge_title}
+                            firstStanza={item.challenge_description}
+                            secondStanza={item.solution}
+                            thirdStanza={item.outcome}
+                        />
+                    ))}
+                </div>
+                <div className={classes.detailSection}>
+                    <h3>Deployment :</h3>
+                    <div>
+                        <p className={classes.boldP}>Frontend Deployment</p>
+                        <p>{project.project_details.frontend_deployment}</p>
+                    </div>
+                    <div>
+                        <p className={classes.boldP}>Backend Deployment</p>
+                        <p>{project.project_details.backend_deployment}</p>
+                    </div>
+                </div>
+                <div className={classes.detailSection}>
+                    <h3>Code Samples :</h3>
+                    <div className={classes.codeFrame}>
+                        <div className={classes.codeGroup}>
+                            <p>Frontend :</p>
+                            <a href={project.project_details.code_samples.frontend_url} ><SmallButton>GitHub</SmallButton></a>
+                        </div>
+                        <div className={classes.codeGroup}>
+                            <p>Backend :</p>
+                            <a  href={project.project_details.code_samples.backend_url}><SmallButton>GitHub</SmallButton></a>
+                        </div>
+                    </div>
+                </div>
+                <div className={classes.detailSection}>
+                    <p>{project.project_details.outcomes_and_improvements}</p>
+                </div>
+                <div className={classes.buttonGruop}>
+                    <a href={project.project_url}><MediumButton>Visit Page</MediumButton></a>
+                    <Link href="/" >Back</Link>
+                </div>
             </div>
         </div>
     )

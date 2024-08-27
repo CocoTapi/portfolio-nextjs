@@ -40,8 +40,8 @@ export default function AboutPage({ profile }: ProfileProps) {
           <div className={classes.eduGroup}>
             <p className={classes.eduLabel}>Professional Development</p>
             <ul>
-              {profile.professional_development.map((item: string) => (
-                <li key={item}>{item}</li>
+              {profile.professional_development.map((item: string, index: number) => (
+                <li key={item}><a href={media_data[index]} className={classes.courseLink} >{item}</a></li>
               ))}
             </ul>
           </div>
@@ -64,12 +64,12 @@ export default function AboutPage({ profile }: ProfileProps) {
           </div>
         </div>
       </div>
-      <div className={classes.subComponent}>
+      <div id="contact" className={classes.subComponent}>
         <h3>Let's Connect!</h3>
         <p>
           I'm always open to discussing new opportunities, projects, or ideas.
           If you'd like to connect or learn more about my work, feel free to get
-          in touch at <a href={`mailto:${profile.my_email}`}>{profile.my_email}</a>.
+          in touch at <a href={`mailto:${profile.my_email}`} className={classes.mailLink}>{profile.my_email}</a>.
         </p>
       </div>
     </div>

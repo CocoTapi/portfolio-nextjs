@@ -73,8 +73,12 @@
     font-style: italic;
 }
 
-.subComponent a {
+.mailLink{
     background: linear-gradient(135deg, #d87366, #5e36d6); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.courseLink {
+    color: black;
 }

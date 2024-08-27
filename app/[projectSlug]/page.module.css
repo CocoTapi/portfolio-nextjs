@@ -1,0 +1,6 @@
+.detailFrame {
+    width: 90%;
+    max-width: 1250px;
+    background-color: var(--card-background);
+    margin-top: 3rem;
+}

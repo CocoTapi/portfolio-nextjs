@@ -4,12 +4,12 @@ import { lessonLab_image_data } from "./image-data";
 export const media_data: MediaData = {
     gitHub: "https://github.com/CocoTapi",
     linkedIn: "https://linkedin.com",
-    webDeveloperBootcampColt: "https://github.com/CocoTapi/web_developer_bootcamp_2023/tree/main/Sections",
-    reactMax: "https://github.com/CocoTapi/REACT_2023",
-    modernReact: "https://github.com/CocoTapi/modern_react_2023",
-    algorithmsColt: "https://github.com/CocoTapi/algorithms_and_data_structure",
-    codingInterview: "https://github.com/CocoTapi/coding_interview_bootcamp",
-    completeAngular: "https://github.com/CocoTapi/The-Complete-Angular-Course"
+    0: "https://github.com/CocoTapi/web_developer_bootcamp_2023/tree/main/Sections",
+    1: "https://github.com/CocoTapi/REACT_2023",
+    2: "https://github.com/CocoTapi/modern_react_2023",
+    3: "https://github.com/CocoTapi/algorithms_and_data_structure",
+    4: "https://github.com/CocoTapi/coding_interview_bootcamp",
+    6: "https://github.com/CocoTapi/The-Complete-Angular-Course"
 }
 
 export const profile_data: ProfileData = {
@@ -162,12 +162,10 @@ export const projects_data: ProjectsData = {
                 ],
                 frontend_deployment: `The frontend was hosted on GitHub Pages, providing a quick and cost-effective solution for static site hosting.`,
                 backend_deployment: `The backend was deployed using AWS EC2 for hosting and RDS for managing the PostgreSQL database, ensuring scalability and reliability.`,
-                code_samples: [
-                    { 
-                        frontend_url: `full-stack-project-frontend`,
-                        backend_url: `full-stack-project-backend`
-                    }
-                ],
+                code_samples: { 
+                        frontend_url: `https://github.com/CocoTapi/full-stack-project-frontend`,
+                        backend_url: `https://github.com/CocoTapi/full-stack-project-backend`
+                    },
                 outcomes_and_improvements: `Successfully integrated key features like advanced search, personalized playlists, and Google OAuth, establishing a solid foundation for a user-friendly platform. Looking ahead, improvements include optimizing the drag-and-drop functionality for mobile devices, enhancing load balancing techniques to handle larger datasets as the app scales, refining search and filtering accuracy, implementing more dynamic data loading methods, and adding multiple language options to broaden accessibility.`  
             }
         },
@@ -297,12 +295,10 @@ export const projects_data: ProjectsData = {
                 ],
                 frontend_deployment: `The frontend was hosted on GitHub Pages, providing a quick and cost-effective solution for static site hosting.`,
                 backend_deployment: `The backend was deployed using AWS EC2 for hosting and RDS for managing the PostgreSQL database, ensuring scalability and reliability.`,
-                code_samples: [
-                    { 
+                code_samples: { 
                         frontend_url: `full-stack-project-frontend`,
                         backend_url: `full-stack-project-backend`
-                    }
-                ],
+                    },
                 outcomes_and_improvements: `Successfully integrated key features like advanced search, personalized playlists, and Google OAuth, establishing a solid foundation for a user-friendly platform. Looking ahead, improvements include optimizing the drag-and-drop functionality for mobile devices, enhancing load balancing techniques to handle larger datasets as the app scales, refining search and filtering accuracy, implementing more dynamic data loading methods, and adding multiple language options to broaden accessibility.`  
             }
         },

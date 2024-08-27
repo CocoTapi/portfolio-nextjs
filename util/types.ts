@@ -11,12 +11,8 @@ export interface ImageData {
 export interface MediaData {
     gitHub: string;
     linkedIn: string;
-    webDeveloperBootcampColt: string;
-    reactMax: string;
-    modernReact: string;
-    algorithmsColt: string;
-    codingInterview: string;
-    completeAngular: string;
+    0: string
+    [key: number]: string;
 }
 
 export interface ProfileData {
@@ -64,7 +60,7 @@ interface ProjectDetails {
     challenges: Challenge[];
     frontend_deployment: string;
     backend_deployment: string;
-    code_samples: CodeSample[];
+    code_samples: CodeSample;
     outcomes_and_improvements: string;
 }
 
@@ -97,7 +93,7 @@ type ColorSchemeKey = keyof typeof colorSchemes;
 
 
 
-
+// props
 export interface NavLinkProps {
     href: string;
     children: string;
@@ -127,4 +123,11 @@ export interface ProjectProps {
 
 export interface ProfileProps {
     profile: ProfileData
+}
+
+export interface AccordionProps {
+    headerTitle: string,
+    firstStanza: string,
+    secondStanza: string,
+    thirdStanza?: string
 }

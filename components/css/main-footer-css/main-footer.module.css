@@ -18,19 +18,19 @@
 
 .footerNameGroup {
     display: grid;
-    text-align: center;
-    padding-top: 1rem;
+    text-align: start;
+    padding-top: 2rem;
 }
 
 .footerName {
-    font-size: 2.5rem;
-    font-weight: 400;
+    font-size: 3rem;
+    font-weight: 600;
     padding-bottom: 1rem;
 }
 
 .footerIcons {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     gap: 1.2rem;
     font-size: 1.5rem;
     padding-top: 1rem;

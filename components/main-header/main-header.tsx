@@ -17,7 +17,7 @@ export default function MainHeader() {
               <Link href="#about">About</Link>
             </li>
             <li>
-              <a href={`mailto:${profile_data.my_email}`}>Contact</a>
+              <Link href="#contact" >Contact</Link>
             </li>
           </ul>
         </nav>
