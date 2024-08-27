@@ -11,7 +11,7 @@ export default function MainFooter() {
       <div className={classes.footerContent}>
         <div className={classes.footerNameGroup}>
           <h3 className={classes.footerName}>Shiori Yoshida Avino</h3>
-          <p>E-mail : {profile_data.my_email}</p>
+          <a href={`mailto:${profile_data.my_email}`} className={classes.footerEmail} > Email: {profile_data.my_email}</a>
           <div className={classes.footerIcons}>
             <a href={media_data.gitHub}>
               <AiOutlineGithub />

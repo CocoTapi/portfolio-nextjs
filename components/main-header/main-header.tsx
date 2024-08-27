@@ -4,6 +4,8 @@ import NavLink from "./nav-link";
 import { profile_data } from "../../data/data";
 
 export default function MainHeader() {
+
+  //TODO: fix link for when user is not in the home page
   return (
     <header className={classes.outerHeader}>
       <div className={classes.header}>

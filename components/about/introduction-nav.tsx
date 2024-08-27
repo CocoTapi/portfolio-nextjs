@@ -3,6 +3,7 @@
 import { useState } from "react";
 import classes from "../css/about-css/introduction-nav.module.css";
 import { ProfileProps } from "@/util/types";
+import SmallButton from "../UI/small-button";
 
 export default function IntroductionNav({ profile }: ProfileProps) {
   const [showLong, setShowLong] = useState(false);
@@ -12,25 +13,18 @@ export default function IntroductionNav({ profile }: ProfileProps) {
   }
 
   function handleShortVer() {
-    setShowLong(false);
+    setShowLong(!showLong);
   }
 
   return (
     <div>
-      <nav className={classes.ctrButtons}>
-        <h4
-          onClick={handleShortVer}
-          className={showLong ? classes.nonActive : classes.active}
-        >
-          Short Version
-        </h4>
-        <h4
-          onClick={handleLongVer}
-          className={showLong ? classes.active : classes.nonActive}
-        >
-          Long Version
-        </h4>
-      </nav>
+      <div className={classes.myStoryLabel}>
+        <h3>My Story</h3>
+        {showLong ? 
+          <SmallButton colorScheme="primaryWhite" onClick={handleShortVer}>See Short Version</SmallButton> : 
+          <SmallButton colorScheme="primaryWhite" onClick={handleShortVer}>See Long Version</SmallButton>
+        }
+      </div>
       {!showLong && <p>{profile.short_self_introduction}</p>}
       {showLong && (
         <div className={classes.longParagraph}>

@@ -9,7 +9,8 @@
   --background-end: #4886BF;
   
 
-  --color-primary-400: #FFAA9E;
+  --color-primary-400: #ffa69b;
+  --color-primary-500: #ff9082;
   --color-primary-600: #F87A7A;
 
   --color-secondary-400: #386A9D;
@@ -48,6 +49,10 @@ h2 {
 
 h3 {
   font-size: 3rem;
+}
+
+h4 {
+  font-size: 2rem;
 }
 
 p {

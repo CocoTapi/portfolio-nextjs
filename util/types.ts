@@ -11,7 +11,6 @@ export interface ImageData {
 export interface MediaData {
     gitHub: string;
     linkedIn: string;
-    0: string
     [key: number]: string;
 }
 
@@ -33,18 +32,19 @@ interface Feature {
     feature_title: string;
     feature_description: string;
     feature_importance: string;
-  }
-  
+}
+
 interface Challenge {
-challenge_id: number;
-challenge_title: string;
-challenge_description: string;
-solution: string;
-outcome: string;
+    challenge_id: number;
+    challenge_title: string;
+    first_stanza: string;
+    second_stanza?: string;
+    third_stanza?: string;
+    fourth_stanza?: string;
 }
 
 interface CodeSample {
-    frontend_url: string; 
+    frontend_url: string;
     backend_url: string
 }
 
@@ -78,7 +78,7 @@ export interface ProjectData {
 
 export interface ProjectsData {
     projects: ProjectData[];
-  }
+}
 
 //color scheme
 export interface ColorScheme {
@@ -114,11 +114,11 @@ export interface ButtonStyle {
 };
 
 export interface ImageSlideshowProps {
-images: ImageData[];
+    images: ImageData[];
 }
 
 export interface ProjectProps {
-  project: ProjectData
+    project: ProjectData
 }
 
 export interface ProfileProps {
@@ -128,6 +128,7 @@ export interface ProfileProps {
 export interface AccordionProps {
     headerTitle: string,
     firstStanza: string,
-    secondStanza: string,
-    thirdStanza?: string
+    secondStanza?: string,
+    thirdStanza?: string,
+    fourthStanza?: string
 }

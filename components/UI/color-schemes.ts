@@ -7,7 +7,7 @@ export const colorSchemes: Record<string, ColorScheme> = {
         borderColor: 'none',
     },
     primaryWhite: {
-        textColor: 'var(--color-primary-400)',
+        textColor: 'var(--color-primary-500)',
         backgroundColor: 'white',
         borderColor: 'none',
     },

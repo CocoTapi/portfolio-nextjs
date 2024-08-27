@@ -7,7 +7,7 @@
 
 .topSection {
   width: 100%;
-  height: 70vh;
+  height: 85vh;
   background-color: var(--card-background);
   display: flex;
   align-items: center;
@@ -20,6 +20,10 @@
 
 .nameGroup p {
   padding-top: 1rem;
+}
+
+.introButtonFrame {
+  padding-top: 2rem;
 }
 
 .section {

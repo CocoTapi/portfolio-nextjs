@@ -2,6 +2,8 @@ import classes from "./page.module.css";
 import { profile_data, projects_data } from "../data/data";
 import ProjectSummary from "@/components/projects/project-summary";
 import AboutPage from "@/components/about/about-page";
+import MediumButton from "@/components/UI/medium-button";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -12,6 +14,11 @@ export default function HomePage() {
           <h2>Hi, I'm Shiori.</h2>
           <h2>Full stack Developer</h2>
           <p>{profile_data.top_page_description}</p>
+          <div className={classes.introButtonFrame}>
+            <Link href="#contact">
+              <MediumButton colorScheme="gradient">Get in Touch!</MediumButton>
+            </Link>
+          </div>
         </div>
       </section>
 

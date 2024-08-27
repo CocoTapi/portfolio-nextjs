@@ -26,3 +26,10 @@
 .longParagraph p:last-child {
     padding-bottom: 0;
 }
+
+.myStoryLabel {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}

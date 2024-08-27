@@ -1,6 +1,104 @@
-.detailFrame {
-    width: 90%;
-    max-width: 1250px;
-    background-color: var(--card-background);
-    margin-top: 3rem;
+.detailOuter {
+    width: 95%;
+    max-width: 1300px;
+    padding-top: 10rem;
+    margin: 0 auto;
 }
+
+.detailFrame {
+    width: 100%;
+    background-color: var(--card-background);
+    border-radius: 50px;
+    padding: 5rem 4rem;
+}
+
+.projectTitle, .projectSummary, .detailSection {
+    padding-bottom: 3rem;
+}
+
+.buttonComponent {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 6rem;
+}
+
+.imgFrame {
+    width: 1100px;
+    height: 650px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 6rem;   
+}
+
+.detailSubTitle {
+    padding-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.boldP, .backendAccordionLabel {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.techGroup {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.accordionFrame {
+    width: 80%;
+    border-radius: 20px;
+    overflow: hidden; /* Ensure that the radius is visible */
+}
+
+
+.backendAccordionLabel {
+    margin-top: 2rem;
+}
+
+.backendDeployment {
+    padding-top: 2rem;
+}
+
+.deployLabel {
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.codeFrame {
+    display: flex;
+    gap: 3rem;
+}
+
+.codeGroup {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.buttonGroup {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.buckButton {
+    margin-top: 3rem;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary-600);
+    text-shadow: rgba(0, 0, 0, 0.2) 2px 3px;
+    transition: transform 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.buckButton:hover {
+    transform: scale(1.1);
+}
+
