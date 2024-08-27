@@ -10,7 +10,13 @@ export interface ImageData {
 
 export interface MediaData {
     gitHub: string;
-    linkedIn: string
+    linkedIn: string;
+    webDeveloperBootcampColt: string;
+    reactMax: string;
+    modernReact: string;
+    algorithmsColt: string;
+    codingInterview: string;
+    completeAngular: string;
 }
 
 export interface ProfileData {

@@ -4,10 +4,10 @@ import { lessonLab_image_data } from "./image-data";
 export const media_data: MediaData = {
     gitHub: "https://github.com/CocoTapi",
     linkedIn: "https://linkedin.com",
-    webDeveloperBootcamp-Colt: "https://github.com/CocoTapi/web_developer_bootcamp_2023/tree/main/Sections",
-    react-Max: "https://github.com/CocoTapi/REACT_2023",
+    webDeveloperBootcampColt: "https://github.com/CocoTapi/web_developer_bootcamp_2023/tree/main/Sections",
+    reactMax: "https://github.com/CocoTapi/REACT_2023",
     modernReact: "https://github.com/CocoTapi/modern_react_2023",
-    algorithms-Colt: "https://github.com/CocoTapi/algorithms_and_data_structure",
+    algorithmsColt: "https://github.com/CocoTapi/algorithms_and_data_structure",
     codingInterview: "https://github.com/CocoTapi/coding_interview_bootcamp",
     completeAngular: "https://github.com/CocoTapi/The-Complete-Angular-Course"
 }
