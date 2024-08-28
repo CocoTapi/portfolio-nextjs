@@ -5,7 +5,6 @@ import { profile_data } from "../../data/data";
 
 export default function MainHeader() {
 
-  //TODO: fix link for when user is not in the home page
   return (
     <header className={classes.outerHeader}>
       <div className={classes.header}>
@@ -13,13 +12,13 @@ export default function MainHeader() {
         <nav className={classes.nav}>
           <ul>
             <li>
-              <Link href="#projects">Projects</Link>
+              <Link href="/#projects">Projects</Link>
             </li>
             <li>
-              <Link href="#about">About</Link>
+              <Link href="/#about">About</Link>
             </li>
             <li>
-              <Link href="#contact" >Contact</Link>
+              <Link href="/#contact" >Contact</Link>
             </li>
           </ul>
         </nav>
