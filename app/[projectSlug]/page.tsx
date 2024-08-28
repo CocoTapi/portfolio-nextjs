@@ -38,28 +38,36 @@ export default async function ProjectDetainPage({ params }: any) {
                     <div className={classes.detailSection}>
                         <h4 className={classes.detailSubTitle}>Tech Stack :</h4>
                         <div className={classes.techGroup}>
-                            <p className={classes.boldP}>Frontend :</p>
+                            <p className={classes.techLabel}>Frontend :</p>
+                            <div className={classes.techTagGroup}>
                             {project.project_details.frontend_tech.map((tech) =>
                                 <Tag>{tech}</Tag>
                             )}
+                            </div>
                         </div>
                         <div className={classes.techGroup}>
-                            <p className={classes.boldP}>Backend :</p>
+                            <p className={classes.techLabel}>Backend :</p>
+                            <div className={classes.techTagGroup}>
                             {project.project_details.backend_tech.map((tech) =>
                                 <Tag>{tech}</Tag>
                             )}
+                            </div>
                         </div>
                         <div className={classes.techGroup}>
-                            <p className={classes.boldP}>Tools & Testing :</p>
+                            <p className={classes.techLabel}>Tools & Testing :</p>
+                            <div className={classes.techTagGroup}>
                             {project.project_details.tools_tech.map((tech) =>
                                 <Tag>{tech}</Tag>
                             )}
+                            </div>
                         </div>
                         <div className={classes.techGroup}>
-                            <p className={classes.boldP}>Deployment :</p>
+                            <p className={classes.techLabel}>Deployment :</p>
+                            <div className={classes.techTagGroup}>
                             {project.project_details.deployment_tech.map((tech) =>
                                 <Tag>{tech}</Tag>
                             )}
+                            </div>
                         </div>
                     </div>
                     <div className={classes.detailSection}>
@@ -140,7 +148,7 @@ export default async function ProjectDetainPage({ params }: any) {
                     </div>
                     <div className={classes.buttonGroup}>
                         <a href={project.project_url}><MediumButton>Visit Page</MediumButton></a>
-                        <Link href="/" className={classes.buckButton} >Back</Link>
+                        <Link href="/" className={classes.backButton} >Back</Link>
                     </div>
                 </div>
             </div>

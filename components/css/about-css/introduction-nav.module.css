@@ -1,22 +1,8 @@
-.ctrButtons {
+.myStoryLabel {
     display: flex;
     gap: 2rem;
-    text-align: center;
     align-items: center;
-    margin-bottom: 1rem;
-}
-
-.active:hover, .nonActive:hover {
-    cursor: pointer;
-}
-
-.active {
-    font-size: 2rem;
-}
-
-.nonActive {
-    font-size: 1.5rem;
-    font-weight: 400;
+    padding-bottom: 1.5rem;
 }
 
 .longParagraph p {
@@ -27,9 +13,17 @@
     padding-bottom: 0;
 }
 
-.myStoryLabel {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    padding-bottom: 1.5rem;
+.underIcon {
+    margin-left: 1rem;
+}
+
+/* mobile */
+@media (max-width: 700px) {
+    .myStoryLabel {
+        display: block;
+    }
+
+    .myStoryLabel h3 {
+        margin-bottom: 1rem;
+    }
 }

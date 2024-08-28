@@ -30,7 +30,8 @@
   margin-bottom: 2rem;
 }
 
-.rightComponent p, .rightComponent ul {
+.rightComponent p,
+.rightComponent ul {
   margin-bottom: 1.5rem;
 }
 
@@ -43,4 +44,71 @@
 .techGroup li {
   margin-right: 10px;
   margin-bottom: 7px;
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+  .outerBox {
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+  }
+
+  .buttonComponent {
+    display: grid;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .slideshow {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .rightComponent {
+    margin-left: 0;
+  }
+
+  .rightComponent h3 {
+    font-size: 1.6rem;
+    margin: 0;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .outerBox {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+  }
+
+  .buttonComponent {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .slideshow {
+    width: 100%;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+  }
+
+  .rightComponent {
+    margin-left: 0;
+  }
+
+  .rightComponent h3 {
+    font-size: 3rem;
+    margin: 0;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
 }

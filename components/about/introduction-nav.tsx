@@ -4,6 +4,8 @@ import { useState } from "react";
 import classes from "../css/about-css/introduction-nav.module.css";
 import { ProfileProps } from "@/util/types";
 import SmallButton from "../UI/small-button";
+import { FaChevronDown } from "react-icons/fa";
+
 
 export default function IntroductionNav({ profile }: ProfileProps) {
   const [showLong, setShowLong] = useState(false);
@@ -21,8 +23,8 @@ export default function IntroductionNav({ profile }: ProfileProps) {
       <div className={classes.myStoryLabel}>
         <h3>My Story</h3>
         {showLong ? 
-          <SmallButton colorScheme="primaryWhite" onClick={handleShortVer}>See Short Version</SmallButton> : 
-          <SmallButton colorScheme="primaryWhite" onClick={handleShortVer}>See Long Version</SmallButton>
+          <SmallButton colorScheme="primaryWhite" onClick={handleShortVer}>See Short Version <FaChevronDown className={classes.underIcon} /></SmallButton> : 
+          <SmallButton colorScheme="primaryWhite" onClick={handleShortVer}>See Long Version <FaChevronDown className={classes.underIcon} /></SmallButton>
         }
       </div>
       {!showLong && <p>{profile.short_self_introduction}</p>}

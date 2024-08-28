@@ -3,7 +3,7 @@
   --border-radius: 12px;
  */
 
-  --max-width: 1440px;
+  --max-width: 1650px;
 
   --background-start: #FFAA9E;
   --background-end: #4886BF;
@@ -85,5 +85,51 @@ p {
   font-size: 1.5rem;
   font-weight: 500;
   color: #ddd8d8;
+}
+
+/* mobile */
+@media (max-width: 700px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+  }
+  
+  h4 {
+    font-size: 1,2rem;
+  }
+  
+  p {
+    font-size: 1.12rem;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  h1 {
+    font-size: 4rem;
+  }
+  
+  h2 {
+    font-size: 3rem;
+  }
+  
+  h3 {
+    font-size: 2.5rem;
+  }
+  
+  h4 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1.3rem;
+  }
 }
 

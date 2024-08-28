@@ -16,6 +16,7 @@
 
 .nameGroup {
   max-width: 700px;
+  padding-top: 3rem;
 }
 
 .nameGroup p {
@@ -82,12 +83,54 @@
 }
 
 /* Mobile */
-@media (max-width: 700px) {
+@media (max-width: 700px) { 
+  .topSection {
+    width: 100%;
+    height: 90vh;
+  }
   
+  .nameGroup {
+    max-width: 85%;
+  }
+  
+  .section {
+    margin-top: 6rem;
+    scroll-margin-top: 5rem; /* Adjust according to the height of your header */
+  }
+  
+  .section h1 {
+    margin-bottom: 3rem;
+  }
+  
+  .card {
+    width: 95%;
+    margin-bottom: 3rem;
+  }
 }
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
- 
+  .topSection {
+    width: 100%;
+    height: 90vh;
+  }
+  
+  .nameGroup {
+    max-width: 85%;
+  }
+  
+  .section {
+    margin-top: 8rem;
+    scroll-margin-top: 5rem; /* Adjust according to the height of your header */
+  }
+  
+  .section h1 {
+    margin-bottom: 4rem;
+  }
+  
+  .card {
+    width: 95%;
+    margin-bottom: 4rem;
+  }
 }
 

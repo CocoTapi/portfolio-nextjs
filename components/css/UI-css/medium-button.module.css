@@ -1,6 +1,6 @@
 .button {
-    width: 268px;
-    height: 67px;
+    width: 16.7rem;
+    height: 4.1rem;
     border-radius: 20px;
     overflow: hidden;
     border: none;
@@ -11,17 +11,25 @@
     font-size: 1.5rem;
     font-weight: 600;
     box-sizing: border-box;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     letter-spacing: 1px;
 }
 
 .button:hover,
 .button:active {
-    transform: scale(1.1); /* Slight increase in size */
-    cursor: pointer;  
+    transform: scale(1.1);
+    /* Slight increase in size */
+    cursor: pointer;
 }
 
 .button:focus {
     outline: none;
 }
 
+/* mobile */
+@media (max-width: 700px) {
+    .button {
+        height: 3.1rem;
+        border-radius: 15px;
+    }
+}

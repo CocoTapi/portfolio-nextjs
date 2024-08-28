@@ -14,7 +14,7 @@ export default function AboutPage({ profile }: ProfileProps) {
           <img src="/images/dodger-sleeping.jpg" alt="My Image" />
         </div>
         <div className={classes.introDescription}>
-          <IntroductionNav profile={profile} />
+          <IntroductionNav profile={profile} />  
           <p className={classes.hobbies}>
             <span>When I'm not coding : </span>{profile.hobbies}
           </p>

@@ -6,10 +6,20 @@
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    text-align: center;
     display: inline-flex;
     transition: transform 0.3s; 
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
     font-weight: 400;
     box-sizing: border-box; 
+}
+
+/* mobile */
+@media (max-width: 700px) {
+    .button {
+        height: 1.5rem;
+        border-radius: 15px;
+        font-size: 1.12rem;
+    }
 }

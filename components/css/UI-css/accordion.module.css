@@ -1,6 +1,6 @@
 .accordionFrame {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5) ;
+    background-color: rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1rem 2rem;
 }
@@ -19,6 +19,7 @@
     padding: 1rem 3rem 1rem 1.5rem;
     font-size: 1.5rem;
 }
+
 .headerRight {
     font-size: 2rem;
     display: flex;
@@ -31,4 +32,42 @@
 
 .detailAccordionItem {
     padding-top: 1.5rem;
+}
+
+/* mobile */
+@media (max-width: 700px) {
+    .accordionFrame {
+        padding: 0.5rem 1.2rem;
+    }
+
+    .accordionHeaderTitle {
+        font-size: 1.12rem;
+    }
+
+    .detailFrame {
+        padding: 1rem 1rem 1rem 1.12rem;
+        font-size: 1.12rem;
+    }
+
+    .headerRight {
+        font-size: 1.12rem;
+        padding-left: 0.4rem;
+    }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+    .accordionHeaderTitle {
+        font-size: 1.3rem;
+    }
+
+    .detailFrame {
+        padding: 1rem 1rem 1rem 1.12rem;
+        font-size: 1.3rem;
+    }
+
+    .headerRight {
+        font-size: 1.3rem;
+        padding-left: 1.3rem;
+    }
 }
