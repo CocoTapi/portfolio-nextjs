@@ -78,7 +78,7 @@
     background: linear-gradient(135deg, var(--color-primary-600), #704BDB); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .courseLink {
