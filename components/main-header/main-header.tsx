@@ -8,7 +8,11 @@ export default function MainHeader() {
   return (
     <header className={classes.outerHeader}>
       <div className={classes.header}>
-        <Link href="/">Logo</Link>
+        <Link href="/">
+          <div className={classes.logoFrame}>
+            <img src="/images/logo.png" alt="Logo" />
+          </div>
+        </Link>
         <nav className={classes.nav}>
           <ul>
             <li>

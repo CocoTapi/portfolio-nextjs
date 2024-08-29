@@ -41,16 +41,16 @@
     }
 
     .accordionHeaderTitle {
-        font-size: 1.12rem;
+        font-size: 1rem;
     }
 
     .detailFrame {
-        padding: 1rem 1rem 1rem 1.12rem;
-        font-size: 1.12rem;
+        padding: 1rem 1rem 1rem 1rem;
+        font-size: 1rem;
     }
 
     .headerRight {
-        font-size: 1.12rem;
+        font-size: 1rem;
         padding-left: 0.4rem;
     }
 }
@@ -62,7 +62,7 @@
     }
 
     .detailFrame {
-        padding: 1rem 1rem 1rem 1.12rem;
+        padding: 1rem 1rem 1rem 1rem;
         font-size: 1.3rem;
     }
 

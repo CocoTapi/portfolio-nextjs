@@ -4,6 +4,7 @@ import classes from "../css/about-css/about-page.module.css";
 import Skills from "./skills";
 import IntroductionNav from "./introduction-nav";
 import { media_data } from "@/data/data";
+import SmallButton from "../UI/small-button";
 
 export default function AboutPage({ profile }: ProfileProps) {
 
@@ -20,10 +21,10 @@ export default function AboutPage({ profile }: ProfileProps) {
           </p>
           <div className={classes.socialButtons}>
             <a href={media_data.gitHub}>
-              <MediumButton>GitHub</MediumButton>
+              <SmallButton>GitHub</SmallButton>
             </a>
             <a href={media_data.linkedIn}>
-              <MediumButton>LinkedIn</MediumButton>
+              <SmallButton>LinkedIn</SmallButton>
             </a>
           </div>
         </div>

@@ -27,7 +27,7 @@
 .enIcon, .jpnIcon {
     margin: auto;
     font-weight: 600;
-    background: linear-gradient(135deg, #FFAA9E, #704BDB); 
+    background: linear-gradient(135deg, var(--gradient-light), var(--gradient-dark)); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 

@@ -97,7 +97,7 @@
     }
 
     .footerEmail {
-        font-size: 1.12rem;
+        font-size: 1rem;
     }
 }
 
@@ -119,7 +119,7 @@
   
     .footerNav ul {
         gap: 2rem;
-        font-size: 1.12rem;
+        font-size: 1rem;
         padding-top: 4rem;
         padding-bottom: 3rem;
     }

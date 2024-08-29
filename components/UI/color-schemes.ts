@@ -20,6 +20,7 @@ export const colorSchemes: Record<string, ColorScheme> = {
         textColor: 'white',
         backgroundColor: 'none',
         borderColor: 'none',
-        backgroundImage: 'linear-gradient(135deg, #FFAA9E, #704BDB)'
+        backgroundImage: 'linear-gradient(135deg, var(--gradient-light), var(--gradient-dark))'
     }
 }
+

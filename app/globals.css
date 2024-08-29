@@ -7,7 +7,11 @@
 
   --background-start: #FFAA9E;
   --background-end: #4886BF;
+
+  --gradient-light: #FFAA9E;
+  --gradient-dark: #704BDB;
   
+  /* 'linear-gradient(135deg, #FFAA9E, #704BDB) */
 
   --color-primary-400: #ffa69b;
   --color-primary-500: #ff9082;
@@ -106,7 +110,7 @@ p {
   }
   
   p {
-    font-size: 1.12rem;
+    font-size: 1rem;
   }
 }
 

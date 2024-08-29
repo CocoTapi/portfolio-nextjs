@@ -88,8 +88,8 @@ export default function Skills() {
       </div>
       <svg width="0" height="0">
         <linearGradient id="icon-gradient" x1="100%" y1="100%" x2="0%" y2="0%">
-          <stop stopColor="#704BDB" offset="0%" />
-          <stop stopColor="#FFAA9E" offset="100%" />
+          <stop stopColor="var(--gradient-dark)" offset="0%" />
+          <stop stopColor="var(--gradient-light)" offset="100%" />
         </linearGradient>
       </svg>
     </>

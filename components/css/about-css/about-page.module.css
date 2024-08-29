@@ -75,9 +75,10 @@
 }
 
 .mailLink{
-    background: linear-gradient(135deg, #d87366, #5e36d6); 
+    background: linear-gradient(135deg, var(--color-primary-600), #704BDB); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 
 .courseLink {
@@ -113,7 +114,7 @@
     }
     
     .hobbies {
-        margin-top: 1.12rem;
+        margin-top: 1rem;
         margin-bottom: 1.5rem;
     }
     
@@ -132,8 +133,8 @@
     }
     
     .eduGroup ul {
-        margin-left: 1.12rem;
-        font-size: 1.12rem;
+        margin-left: 1rem;
+        font-size: 1rem;
     }
     
     
