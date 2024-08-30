@@ -26,6 +26,22 @@
   margin-left: 5rem;
 }
 
+.titleGroup {
+  display: flex;
+  align-items: center;
+}
+
+.onGoing {
+  font-size: 2rem;
+  font-style: italic;
+  color: red;
+  padding-left: 3rem;
+}
+
+.onGoingButton {
+  margin-top: 2rem;
+}
+
 .rightComponent h3 {
   margin-bottom: 2rem;
 }
@@ -107,8 +123,6 @@
 
   .rightComponent h3 {
     font-size: 3rem;
-    margin: 0;
-    margin-bottom: 1.2rem;
     text-align: center;
   }
 }

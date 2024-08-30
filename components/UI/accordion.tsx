@@ -10,7 +10,8 @@ export default function Accordion ({
     firstStanza,
     secondStanza = '',
     thirdStanza = '',
-    fourthStanza = ''
+    fourthStanza = '',
+    textDecoration = true
 }: AccordionProps){
     const [expanded, setExpanded ] = useState(false);
 
@@ -29,11 +30,14 @@ export default function Accordion ({
                 </div>
             </div>
             {expanded && 
-                <ul className={classes.detailFrame}>
+                <ul className={textDecoration ? `${classes.detailFrame}`: `${classes.detailFrame} ${classes.nonDecoration}`}>
                     <li>{firstStanza}</li>
-                    {secondStanza.length !== 0 && <li className={classes.detailAccordionItem}>{secondStanza}</li>}
-                    {thirdStanza.length !== 0 && <li className={classes.detailAccordionItem}>{thirdStanza}</li>}
-                    {fourthStanza.length !== 0 && <li className={classes.detailAccordionItem}>{fourthStanza}</li>}
+                    {secondStanza.length !== 0 && 
+                        <li className={classes.detailAccordionItem}>{secondStanza}</li>}
+                    {thirdStanza.length !== 0 && 
+                        <li className={classes.detailAccordionItem}>{thirdStanza}</li>}
+                    {fourthStanza.length !== 0 && 
+                        <li className={classes.detailAccordionItem}>{fourthStanza}</li>}
                 </ul>
             }
         </div>

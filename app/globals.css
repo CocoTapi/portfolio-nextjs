@@ -18,6 +18,8 @@
   --color-primary-600: #F87A7A;
 
   --color-secondary-400: #386A9D;
+  --color-secondary-500: #2b5287;
+  --color-secondary-600: #16293c;
 
   --color-grey-400: #747474;
 
@@ -65,22 +67,18 @@ p {
 
 .not-found,
 .error {
-  margin-top: 5rem;
+  padding: 10rem 2rem 0 2rem;
   text-align: center;
+  height: 80vh;
 }
 
 .not-found h1,
 .error h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   margin: 0px;
   font-weight: 900;
-  color: #262626;
+  color: var(--color-secondary-400);
   text-transform: uppercase;
-  background: linear-gradient(90deg, #f9572a, #ffc905);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: cover;
-  background-position: center;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -88,8 +86,10 @@ p {
 .error p {
   font-size: 1.5rem;
   font-weight: 500;
-  color: #ddd8d8;
+  color: white;
+  padding: 2rem 0;
 }
+
 
 /* mobile */
 @media (max-width: 700px) {

@@ -67,6 +67,7 @@ interface ProjectDetails {
 export interface ProjectData {
     project_id: number;
     project_title: string;
+    onGoing: boolean,
     slug: string;
     project_url: string;
     images: ImageData[];
@@ -130,5 +131,6 @@ export interface AccordionProps {
     firstStanza: string,
     secondStanza?: string,
     thirdStanza?: string,
-    fourthStanza?: string
+    fourthStanza?: string,
+    textDecoration?: boolean
 }

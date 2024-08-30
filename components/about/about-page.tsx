@@ -48,8 +48,7 @@ export default function AboutPage({ profile }: ProfileProps) {
           </div>
           <div className={classes.eduGroup}>
             <p className={classes.eduLabel}>
-              Master of Science in Teaching English to Speakers of Other
-              Languages (4.0 GPA)
+              Master of Science in TESOL (4.0 GPA)
             </p>
             <p className={classes.school}>
               University of Rochester, Rochester NY, USA

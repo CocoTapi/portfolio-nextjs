@@ -28,128 +28,144 @@ export default async function ProjectDetainPage({ params }: any) {
             <div className={classes.detailFrame}>
                 <div className={classes.detailContent}>
                     <h1 className={classes.projectTitle}>{project.project_title}</h1>
-                    <p className={classes.projectSummary}>{project.project_summary}</p>
-                    <div className={classes.buttonComponent}>
-                        <a href={project.project_url}><MediumButton>Visit Page</MediumButton></a>
-                    </div>
-                    <div className={classes.imgFrame}>
+                    {project.onGoing ?
+                        <>
+                            <p className={classes.projectSummary}>
+                                This is an ongoing project aimed at creating an app to calculate cat food calories 
+                                and help maintain your cat's weight. The app is currently under development, 
+                                and I'm actively working on its features and design. 
+                                Feel free to check out the GitHub page for the latest updates and to see the progress. 
+                            </p>
+                            <div className={classes.buttonComponent}>
+                                <a href={project.project_url}><MediumButton>GitHub</MediumButton></a>
+                            </div>
+                        </> :
+                        <>
+                            <p className={classes.projectSummary}>{project.project_summary}</p>
+                            <div className={classes.buttonComponent}>
+                                <a href={project.project_url}><MediumButton>Visit Page</MediumButton></a>
+                            </div>
+                            <div className={classes.imgFrame}>
 
-                    </div>
-                    <div className={classes.detailSection}>
-                        <h4 className={classes.detailSubTitle}>Tech Stack :</h4>
-                        <div className={classes.techGroup}>
-                            <p className={classes.techLabel}>Frontend :</p>
-                            <div className={classes.techTagGroup}>
-                            {project.project_details.frontend_tech.map((tech) =>
-                                <Tag>{tech}</Tag>
-                            )}
                             </div>
-                        </div>
-                        <div className={classes.techGroup}>
-                            <p className={classes.techLabel}>Backend :</p>
-                            <div className={classes.techTagGroup}>
-                            {project.project_details.backend_tech.map((tech) =>
-                                <Tag>{tech}</Tag>
-                            )}
+                            <div className={classes.detailSection}>
+                                <h4 className={classes.detailSubTitle}>Tech Stack :</h4>
+                                <div className={classes.techGroup}>
+                                    <p className={classes.techLabel}>Frontend :</p>
+                                    <div className={classes.techTagGroup}>
+                                        {project.project_details.frontend_tech.map((tech) =>
+                                            <Tag>{tech}</Tag>
+                                        )}
+                                    </div>
+                                </div>
+                                <div className={classes.techGroup}>
+                                    <p className={classes.techLabel}>Backend :</p>
+                                    <div className={classes.techTagGroup}>
+                                        {project.project_details.backend_tech.map((tech) =>
+                                            <Tag>{tech}</Tag>
+                                        )}
+                                    </div>
+                                </div>
+                                <div className={classes.techGroup}>
+                                    <p className={classes.techLabel}>Tools & Testing :</p>
+                                    <div className={classes.techTagGroup}>
+                                        {project.project_details.tools_tech.map((tech) =>
+                                            <Tag>{tech}</Tag>
+                                        )}
+                                    </div>
+                                </div>
+                                <div className={classes.techGroup}>
+                                    <p className={classes.techLabel}>Deployment :</p>
+                                    <div className={classes.techTagGroup}>
+                                        {project.project_details.deployment_tech.map((tech) =>
+                                            <Tag>{tech}</Tag>
+                                        )}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div className={classes.techGroup}>
-                            <p className={classes.techLabel}>Tools & Testing :</p>
-                            <div className={classes.techTagGroup}>
-                            {project.project_details.tools_tech.map((tech) =>
-                                <Tag>{tech}</Tag>
-                            )}
+                            <div className={classes.detailSection}>
+                                <h4 className={classes.detailSubTitle}>My Roles :</h4>
+                                <p>{project.project_details.my_roles}</p>
                             </div>
-                        </div>
-                        <div className={classes.techGroup}>
-                            <p className={classes.techLabel}>Deployment :</p>
-                            <div className={classes.techTagGroup}>
-                            {project.project_details.deployment_tech.map((tech) =>
-                                <Tag>{tech}</Tag>
-                            )}
+                            <div className={classes.detailSection}>
+                                <h4 className={classes.detailSubTitle}>Key Features :</h4>
+                                <h5 className={classes.boldP}>Frontend Functionally :</h5>
+                                <div className={classes.accordionFrame}>
+                                    {project.project_details.frontend_features.map((feature) => (
+                                        <Accordion
+                                            key={feature.feature_id}
+                                            headerTitle={feature.feature_title}
+                                            firstStanza={feature.feature_description}
+                                            secondStanza={feature.feature_importance}
+                                        />
+                                    ))}
+                                </div>
+                                <h5 className={classes.backendAccordionLabel}>Backend Operations :</h5>
+                                <div className={classes.accordionFrame}>
+                                    {project.project_details.backend_features.map((feature) => (
+                                        <Accordion
+                                            key={feature.feature_id}
+                                            headerTitle={feature.feature_title}
+                                            firstStanza={feature.feature_description}
+                                            secondStanza={feature.feature_importance}
+                                        />
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className={classes.detailSection}>
-                        <h4 className={classes.detailSubTitle}>My Roles :</h4>
-                        <p>{project.project_details.my_roles}</p>
-                    </div>
-                    <div className={classes.detailSection}>
-                        <h4 className={classes.detailSubTitle}>Key Features :</h4>
-                        <h5 className={classes.boldP}>Frontend Functionally :</h5>
-                        <div className={classes.accordionFrame}>
-                            {project.project_details.frontend_features.map((feature) => (
-                                <Accordion
-                                    key={feature.feature_id}
-                                    headerTitle={feature.feature_title}
-                                    firstStanza={feature.feature_description}
-                                    secondStanza={feature.feature_importance}
-                                />
-                            ))}
-                        </div>
-                        <h5 className={classes.backendAccordionLabel}>Backend Operations :</h5>
-                        <div className={classes.accordionFrame}>
-                            {project.project_details.backend_features.map((feature) => (
-                                <Accordion
-                                    key={feature.feature_id}
-                                    headerTitle={feature.feature_title}
-                                    firstStanza={feature.feature_description}
-                                    secondStanza={feature.feature_importance}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                    <div className={classes.detailSection}>
-                        <h4 className={classes.detailSubTitle}>Challenges & Solutions</h4>
-                        <div className={classes.accordionFrame}>
-                            {project.project_details.challenges.map((item) => (
-                                <div className={classes.accordionItem}>
-                                    <Accordion
-                                        key={item.challenge_id}
-                                        headerTitle={item.challenge_title}
-                                        firstStanza={item.first_stanza}
-                                        secondStanza={item.second_stanza}
-                                        thirdStanza={item.third_stanza}
-                                        fourthStanza={item.fourth_stanza}
-                                    />
+                            <div className={classes.detailSection}>
+                                <h4 className={classes.detailSubTitle}>Challenges & Solutions</h4>
+                                <div className={classes.accordionFrame}>
+                                    {project.project_details.challenges.map((item) => (
+                                        <div className={classes.accordionItem}>
+                                            <Accordion
+                                                key={item.challenge_id}
+                                                headerTitle={item.challenge_title}
+                                                firstStanza={item.first_stanza}
+                                                secondStanza={item.second_stanza}
+                                                thirdStanza={item.third_stanza}
+                                                fourthStanza={item.fourth_stanza}
+                                                textDecoration={false}
+                                            />
+                                        </div>
+
+                                    ))}
                                 </div>
 
-                            ))}
-                        </div>
-
-                    </div>
-                    <div className={classes.detailSection}>
-                        <h4 className={classes.detailSubTitle}>Deployment :</h4>
-                        <div>
-                            <p className={classes.deployLabel}>Frontend Deployment :</p>
-                            <p>{project.project_details.frontend_deployment}</p>
-                        </div>
-                        <div className={classes.backendDeployment}>
-                            <p className={classes.deployLabel}>Backend Deployment :</p>
-                            <p>{project.project_details.backend_deployment}</p>
-                        </div>
-                    </div>
-                    <div className={classes.detailSection}>
-                        <h4 className={classes.detailSubTitle}>Code Samples :</h4>
-                        <div className={classes.codeFrame}>
-                            <div className={classes.codeGroup}>
-                                <p>Frontend :</p>
-                                <a href={project.project_details.code_samples.frontend_url} ><SmallButton colorScheme="primaryWhite">GitHub</SmallButton></a>
                             </div>
-                            <div className={classes.codeGroup}>
-                                <p>Backend :</p>
-                                <a href={project.project_details.code_samples.backend_url}><SmallButton colorScheme="primaryWhite">GitHub</SmallButton></a>
+                            <div className={classes.detailSection}>
+                                <h4 className={classes.detailSubTitle}>Deployment :</h4>
+                                <div>
+                                    <p className={classes.deployLabel}>Frontend Deployment :</p>
+                                    <p>{project.project_details.frontend_deployment}</p>
+                                </div>
+                                <div className={classes.backendDeployment}>
+                                    <p className={classes.deployLabel}>Backend Deployment :</p>
+                                    <p>{project.project_details.backend_deployment}</p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className={classes.detailSection}>
-                        <h4 className={classes.detailSubTitle}>Outcomes & Improvements</h4>
-                        <p>{project.project_details.outcomes_and_improvements}</p>
-                    </div>
-                    <div className={classes.buttonGroup}>
-                        <a href={project.project_url}><MediumButton>Visit Page</MediumButton></a>
-                        <Link href="/" className={classes.backButton} >Back</Link>
-                    </div>
+                            <div className={classes.detailSection}>
+                                <h4 className={classes.detailSubTitle}>Code Samples :</h4>
+                                <div className={classes.codeFrame}>
+                                    <div className={classes.codeGroup}>
+                                        <p>Frontend :</p>
+                                        <a href={project.project_details.code_samples.frontend_url} ><SmallButton colorScheme="primaryWhite">GitHub</SmallButton></a>
+                                    </div>
+                                    <div className={classes.codeGroup}>
+                                        <p>Backend :</p>
+                                        <a href={project.project_details.code_samples.backend_url}><SmallButton colorScheme="primaryWhite">GitHub</SmallButton></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={classes.detailSection}>
+                                <h4 className={classes.detailSubTitle}>Outcomes & Improvements</h4>
+                                <p>{project.project_details.outcomes_and_improvements}</p>
+                            </div>
+                            <div className={classes.buttonGroup}>
+                                <a href={project.project_url}><MediumButton>Visit Page</MediumButton></a>
+                                <Link href="/" className={classes.backButton} >Back</Link>
+                            </div>
+                        </>
+                    }
                 </div>
             </div>
 
