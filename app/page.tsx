@@ -5,7 +5,7 @@ import AboutPage from "@/components/about/about-page";
 import MediumButton from "@/components/UI/medium-button";
 import Link from "next/link";
 
-export default function HomePage() {
+export default function HomePage(): JSX.Element {
   return (
     <main className={classes.main}>
       {/* top image */}

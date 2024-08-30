@@ -1,6 +1,7 @@
 .detailOuter {
     width: 100%;
     max-width: var(--max-width);
+    min-height: 80vh;
     padding: 13rem 2.5rem 0 2.5rem;
     margin: 0 auto;
 }

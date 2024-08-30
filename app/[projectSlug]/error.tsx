@@ -3,7 +3,7 @@
 import Link from "next/link";
 import MediumButton from "@/components/UI/medium-button";
 
-export default function Error(){
+export default function Error(): JSX.Element {
     //console.log(error);
 
     return  (

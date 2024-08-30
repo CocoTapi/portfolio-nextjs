@@ -1,4 +1,4 @@
-export default function NotFoundProject() {
+export default function NotFoundProject(): JSX.Element {
     return (
         <main className="not-found">
             <h1>Not Found</h1>

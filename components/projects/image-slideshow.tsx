@@ -7,7 +7,7 @@ import { ImageSlideshowProps } from '@/util/types';
 
 
 
-export default function ImageSlideshow({ images }: ImageSlideshowProps) {
+export default function ImageSlideshow({ images }: ImageSlideshowProps): JSX.Element {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {

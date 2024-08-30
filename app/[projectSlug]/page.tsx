@@ -16,7 +16,7 @@ async function getProject(slug: string): Promise<ProjectData | undefined> {
     return project ? project : undefined;
 }
 
-export default async function ProjectDetainPage({ params }: any) {
+export default async function ProjectDetainPage({ params }: any): Promise<JSX.Element>{
     const project = await getProject(params.projectSlug);
 
     if (!project) {
@@ -28,20 +28,20 @@ export default async function ProjectDetainPage({ params }: any) {
             <div className={classes.detailFrame}>
                 <div className={classes.detailContent}>
                     <h1 className={classes.projectTitle}>{project.project_title}</h1>
+                    <p className={classes.projectSummary}>{project.project_summary}</p>
                     {project.onGoing ?
                         <>
                             <p className={classes.projectSummary}>
-                                This is an ongoing project aimed at creating an app to calculate cat food calories 
-                                and help maintain your cat's weight. The app is currently under development, 
-                                and I'm actively working on its features and design. 
-                                Feel free to check out the GitHub page for the latest updates and to see the progress. 
+                                The app is currently under development,
+                                and I'm actively working on its features and design.
+                                Feel free to check out the GitHub page for the latest updates and to see the progress.
                             </p>
-                            <div className={classes.buttonComponent}>
+                            <div className={classes.buttonGroup}>
                                 <a href={project.project_url}><MediumButton>GitHub</MediumButton></a>
+                                <Link href="/" className={classes.backButton} >Back</Link>
                             </div>
                         </> :
                         <>
-                            <p className={classes.projectSummary}>{project.project_summary}</p>
                             <div className={classes.buttonComponent}>
                                 <a href={project.project_url}><MediumButton>Visit Page</MediumButton></a>
                             </div>

@@ -6,7 +6,7 @@ import IntroductionNav from "./introduction-nav";
 import { media_data } from "@/data/data";
 import SmallButton from "../UI/small-button";
 
-export default function AboutPage({ profile }: ProfileProps) {
+export default function AboutPage({ profile }: ProfileProps): JSX.Element {
 
   return (
     <div className={classes.aboutComponent}>

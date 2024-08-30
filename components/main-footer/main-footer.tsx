@@ -5,7 +5,7 @@ import { profile_data } from "@/data/data";
 import { media_data } from "@/data/data";
 import Link from "next/link";
 
-export default function MainFooter() {
+export default function MainFooter(): JSX.Element {
   return (
     <footer className={classes.footer}>
       <div className={classes.footerContent}>

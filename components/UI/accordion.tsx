@@ -12,7 +12,7 @@ export default function Accordion ({
     thirdStanza = '',
     fourthStanza = '',
     textDecoration = true
-}: AccordionProps){
+}: AccordionProps): JSX.Element {
     const [expanded, setExpanded ] = useState(false);
 
     const handleClick = () => {

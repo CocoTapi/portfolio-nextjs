@@ -49,6 +49,7 @@
   width: 80%;
   margin-bottom: 5rem;
   background-color: var(--card-background);
+  transition: transform all 0.3s ease;
 }
 
 .evenCard {
@@ -133,7 +134,12 @@
   
   .card {
     width: 95%;
-    margin-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1120px) and (max-width: 1330px) {
+  .card {
+    width: 90%;
   }
 }
 

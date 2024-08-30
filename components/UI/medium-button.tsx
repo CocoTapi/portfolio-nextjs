@@ -2,9 +2,14 @@ import { colorSchemes } from "./color-schemes";
 import classes from "../css/UI-css/medium-button.module.css";
 import { ButtonProps, ButtonStyle, ColorScheme } from "@/util/types";
 
-export default function MediumButton({ className, children, colorScheme = 'primary', ...rest }: ButtonProps){
+export default function MediumButton({
+    className,
+    children,
+    colorScheme = 'primary',
+    ...rest
+}: ButtonProps): JSX.Element {
     const { textColor, backgroundColor, borderColor, backgroundImage }: ColorScheme = colorSchemes[colorScheme] || colorSchemes.primary;
-    
+
     const buttonStyle: ButtonStyle = {
         color: textColor,
         backgroundColor: backgroundColor,
@@ -14,11 +19,11 @@ export default function MediumButton({ className, children, colorScheme = 'prima
 
     return (
         <button
-        className={`${classes.button} ${className}`}
-        style={buttonStyle}
-        {...rest}
-    >
-        {children}
-    </button>
+            className={`${classes.button} ${className}`}
+            style={buttonStyle}
+            {...rest}
+        >
+            {children}
+        </button>
     )
 }

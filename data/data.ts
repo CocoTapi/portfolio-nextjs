@@ -176,14 +176,10 @@ export const projects_data: ProjectsData = {
             slug: 'calorie-calc',
             project_url: `https://github.com/CocoTapi/Calorie-Calc-Frontend`,
             images: lessonLab_image_data,
-            project_summary: `Lesson Lab App is a Web 2.0 application designed to empower educators 
-                                          to manage high-quality class activities while reducing workload.`,
-            tech_list: ['React', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Node.js', 'Node Express', 'PostgreSQL', 'PgAdmin', 'Postman', 'AWS', 'Git', 'GitHub', 'Figma'],
-            tech_summary: `I focused on creating a seamless and responsive user experience. 
-                                       On the frontend, I built a multi-page application using React Router DOM with login options, 
-                                       including OAuth. The backend was engineered to handle data efficiently using REST APIs and 
-                                       PostgreSQL, ensuring secure authorization. The entire application is deployed on AWS, 
-                                       with the frontend hosted on GitHub.`,
+            project_summary: `This is an ongoing project aimed at creating a mobile app to calculate cat food calories 
+                                and help maintain your cat's weight.`,
+            tech_list: ['Angular', 'TypeScript', 'HTML', 'SCSS', 'Git', 'GitHub', 'Figma'],
+            tech_summary: ``,
             project_details: {
                 project_description: ``,
                 frontend_tech: ['Angular', 'TypeScript', 'HTML', 'SCSS'],
