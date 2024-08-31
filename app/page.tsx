@@ -4,9 +4,12 @@ import ProjectSummary from "@/components/projects/project-summary";
 import AboutPage from "@/components/about/about-page";
 import MediumButton from "@/components/UI/medium-button";
 import Link from "next/link";
+import Footprint from "@/components/UI/footprint";
 
 export default function HomePage(): JSX.Element {
   return (
+    <>
+    <Footprint />
     <main className={classes.main}>
       {/* top image */}
       <section className={classes.topSection}>
@@ -45,5 +48,6 @@ export default function HomePage(): JSX.Element {
         <AboutPage profile={profile_data} />
       </section>
     </main>
+    </>
   );
 }
