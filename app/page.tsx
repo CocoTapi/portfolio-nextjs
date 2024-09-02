@@ -4,18 +4,18 @@ import ProjectSummary from "@/components/projects/project-summary";
 import AboutPage from "@/components/about/about-page";
 import MediumButton from "@/components/UI/medium-button";
 import Link from "next/link";
-import Footprint from "@/components/UI/footprint";
+//    import Footprint from "@/components/UI/footprint";
 
 export default function HomePage(): JSX.Element {
   return (
     <>
-    <Footprint />
+    {/* <Footprint /> */}
     <main className={classes.main}>
       {/* top image */}
       <section className={classes.topSection}>
         <div className={classes.nameGroup}>
-          <h2>Hi, I'm Shiori.</h2>
-          <h2>Full stack Developer</h2>
+          <h2>Hi, I'm Shiori,</h2>
+          <h2>Full-stack Developer.</h2>
           <p>{profile_data.top_page_description}</p>
           <div className={classes.introButtonFrame}>
             <Link href="#contact">

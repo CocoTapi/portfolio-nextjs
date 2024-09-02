@@ -9,9 +9,12 @@ import SmallButton from "@/components/UI/small-button";
 import Link from "next/link";
 
 async function getProject(slug: string): Promise<ProjectData | undefined> {
+    //await new Promise((resolve) => setTimeout(resolve, 5000));
     const project = projects_data.projects.find((project) =>
         project.slug === slug
     );
+
+
 
     return project ? project : undefined;
 }

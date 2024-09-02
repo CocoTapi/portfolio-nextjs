@@ -2,7 +2,7 @@
     width: 100%;
     max-width: var(--max-width);
     min-height: 80vh;
-    padding: 13rem 2.5rem 0 2.5rem;
+    padding: 10rem 2.5rem 0 2.5rem;
     margin: 0 auto;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .imgFrame {
-    width: 68rem;
+    width: 100%;
     height: 40rem;
     background-color: white;
     margin: auto;

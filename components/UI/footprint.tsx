@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import styles from '../css/UI-css/footprint.module.css';
+import classes from '../css/UI-css/footprint.module.css';
 
 export default function Footprint() {
     const [footprints, setFootprints] = useState<Array<{ id: number; left: number; top: number; type: 'right' | 'left' }>>([]);
@@ -42,11 +42,11 @@ export default function Footprint() {
     };
   
     return (
-      <div className={styles.footprintContainer}>
+      <div className={classes.footprintContainer}>
           <img
             src={`/images/footprint.png`}
             alt={`paw print`}
-            className={styles.footprint}
+            className={classes.footprint}
             style={{ left: `30px`, top: `30px` }}
           />
       </div>
