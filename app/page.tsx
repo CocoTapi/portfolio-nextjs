@@ -13,10 +13,12 @@ export default function HomePage(): JSX.Element {
     <main className={classes.main}>
       {/* top image */}
       <section className={classes.topSection}>
-        <div className={classes.nameGroup}>
-          <h2>Hi, I'm Shiori,</h2>
-          <h2>Full-stack Developer.</h2>
-          <p>{profile_data.top_page_description}</p>
+        <div className={classes.textGroup}>
+          <h2 className={classes.mainText}>
+            <span className={classes.mainTextName}>Hi, I'm Shiori,</span>
+            <span className={classes.mainTextJobTitle}>Full-stack Developer.</span>
+          </h2>
+          <p className={classes.mainTextSub}>{profile_data.top_page_description}</p>
           <div className={classes.introButtonFrame}>
             <Link href="#contact">
               <MediumButton colorScheme="gradient">Get in Touch!</MediumButton>

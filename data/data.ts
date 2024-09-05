@@ -9,7 +9,8 @@ export const media_data: MediaData = {
     2: "https://github.com/CocoTapi/modern_react_2023",
     3: "https://github.com/CocoTapi/algorithms_and_data_structure",
     4: "https://github.com/CocoTapi/coding_interview_bootcamp",
-    6: "https://github.com/CocoTapi/The-Complete-Angular-Course"
+    6: "https://github.com/CocoTapi/The-Complete-Angular-Course",
+    7: "https://github.com/CocoTapi/advanced-css-and-sass",
 }
 
 export const profile_data: ProfileData = {
@@ -30,7 +31,8 @@ export const profile_data: ProfileData = {
         'JavaScript Algorithms and Data Structures Masterclass | Udemy',
         'Master the Coding Interview: Data Structures + Algorithms | Udemy',
         'The Complete SQL Bootcamp: Go from Zaro to Hero | Udemy',
-        'The Complete Angular Course: Beginner to Advanced | Udemy (Ongoing)'
+        'The Complete Angular Course: Beginner to Advanced | Udemy (Ongoing)',
+        'The Advanced CSS and Sass: Flexbox, Grid, Animations and More | Udemy (Ongoing)'
     ],
 }
 
@@ -74,30 +76,7 @@ export const projects_data: ProjectsData = {
                         feature_description: `Users can log in using their Google account, streamlining the authentication process and reducing the need for remembering additional passwords.`,
                         feature_importance: `This feature enhances user experience by offering a quick and secure way to log in, leveraging the trust and convenience of Google’s OAuth system.`,
                     },
-                    {
-                        feature_id: 3,
-                        feature_title: `Personalized Playlists`,
-                        feature_description: `Users can create and manage playlists of their favorite activities, allowing them to organize lessons in a sequence that fits their teaching plan.`,
-                        feature_importance: `This feature helps educators plan their lessons more effectively, ensuring a smooth flow of activities throughout the school day.`,
-                    },
-                    {
-                        feature_id: 4,
-                        feature_title: `User Engagement & Feedback`,
-                        feature_description: ``,
-                        feature_importance: ``,
-                    },
-                    {
-                        feature_id: 5,
-                        feature_title: `Advanced Search & Filtering`,
-                        feature_description: `Users can search for class activities using keywords, filter them based on various criteria (e.g., subject, grade level, duration), and sort results by popularity or relevance.`,
-                        feature_importance: `This feature ensures that educators can quickly find activities that perfectly match their teaching needs, saving them time and effort.`,
-                    },
-                    {
-                        feature_id: 6,
-                        feature_title: `Responsive Design`,
-                        feature_description: `Implemented responsive design principles to ensure the application provides an optimal viewing experience across a wide range of devices, including desktops, tablets, and mobile phones.`,
-                        feature_importance: `This feature guarantees that the application is accessible and user-friendly on any device, improving the overall user experience and reaching a broader audience.`,
-                    }
+                    
                 ],
                 backend_features: [
                     {
@@ -171,22 +150,83 @@ export const projects_data: ProjectsData = {
         },
         {
             project_id: 2,
+            project_title: 'Packing Lists',
+            onGoing: false,
+            slug: 'packing-lists',
+            project_url: `https://github.com/CocoTapi/packing-list`,
+            images: lessonLab_image_data,
+            project_summary: `The Packing List App is designed to simplify travel preparation by allowing users to create and manage packing lists for their trips. 
+                                Each trip can have multiple pieces of luggage, and users can add, organize, and track items within each luggage, ensuring they never forget an essential item.`,          
+            tech_list: ['Angular', 'TypeScript', 'HTML', 'SCSS', 'Git', 'GitHub', 'Figma'],
+            tech_summary: `In the Packing List App, I used Redux Toolkit's createApi to manage API endpoints for trips, luggage, and items. 
+                            Using tags with type and id in your setup is effective in preventing unnecessary refetching. The store was configured 
+                            to handle API calls, with middleware integrated for streamlined operations. This approach ensures a clean, scalable solution for managing complex state and CRUD operations across the app.`,
+            project_details: {
+                project_description: `The Packing List App is a user-friendly platform that helps travelers organize their packing needs efficiently. Users can create a new trip, add different pieces of luggage under each trip, and list items within each luggage. The app allows for easy tracking and updating of items, making it an essential tool for organized travel planning.`,
+                frontend_tech: ['React', 'JavaScript', 'HTML','CSS', 'Tailwind', 'Redux Toolkit'],
+                backend_tech: [],
+                tools_tech: ['Git', 'GitHub'],
+                deployment_tech: [],
+                my_roles: `UI/UX design, Frontend Development`,
+                frontend_features: [
+                    {
+                        feature_id: 1,
+                        feature_title: `Trip Management`,
+                        feature_description: `Users can create, view, and manage multiple trips, each with its unique packing list.`,
+                        feature_importance: `This feature allows users to organize their travel packing efficiently, ensuring that no trip detail is overlooked.`,
+                    },
+                    {
+                        feature_id: 2,
+                        feature_title: "Efficient Data Invalidation with Redux Toolkit Tags",
+                        feature_description: "To optimize data fetching and prevent unnecessary API calls, I implemented tag-based data invalidation using Redux Toolkit's createApi. By using type and id tags, the app invalidates and re-fetches specific entities efficiently.",
+                        feature_importance: "This feature ensures that only the relevant data that has changed (e.g., a deleted trip) is re-fetched, avoiding unnecessary network requests for data that remains unchanged."
+                    }
+    
+                ],
+                backend_features: [
+                    {
+                        feature_id: 1,
+                        feature_title: ``,
+                        feature_description: ``,
+                        feature_importance: ``,
+                    }
+                ],
+                challenges: [
+                    {
+                        challenge_id: 1,
+                        challenge_title: ``,
+                        first_stanza: ``,
+                        second_stanza: ``,
+                        fourth_stanza: ``
+                    }
+                ],
+                frontend_deployment: ``,
+                backend_deployment: ``,
+                code_samples: { 
+                        frontend_url: `https://github.com/CocoTapi/packing-list`,
+                        backend_url: ``
+                    },
+                outcomes_and_improvements: `Successfully developed a fully functional packing list app that makes travel organization simple and effective. Future improvements include adding features like drag-and-drop item organization, reminders for essential items, and the ability to share packing lists with others.`  
+            }
+        },
+        {
+            project_id: 3,
             project_title: 'Calorie Calc App',
             onGoing: true,
             slug: 'calorie-calc',
             project_url: `https://github.com/CocoTapi/Calorie-Calc-Frontend`,
             images: lessonLab_image_data,
             project_summary: `This is an ongoing project aimed at creating a mobile app to calculate cat food calories 
-                                and help maintain your cat's weight.`,
-            tech_list: ['Angular', 'TypeScript', 'HTML', 'SCSS', 'Git', 'GitHub', 'Figma'],
+                                and help maintain your cat's weight.`,            
+            tech_list: ['React', 'JavaScript', 'HTML','CSS', 'Tailwind', 'Redux Toolkit', 'Git', 'GitHub'],
             tech_summary: ``,
             project_details: {
-                project_description: ``,
+                project_description: ``,                
                 frontend_tech: ['Angular', 'TypeScript', 'HTML', 'SCSS'],
                 backend_tech: [],
                 tools_tech: ['Git', 'GitHub'],
                 deployment_tech: [],
-                my_roles: ``,
+                my_roles: `UI/UX design, Frontend Development`,
                 frontend_features: [
                     {
                         feature_id: 1,
