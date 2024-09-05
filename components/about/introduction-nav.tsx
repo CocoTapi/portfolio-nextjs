@@ -23,8 +23,8 @@ export default function IntroductionNav({ profile }: ProfileProps): JSX.Element 
       <div className={classes.myStoryLabel}>
         <h3>My Story</h3>
         {showLong ? 
-          <SmallButton colorScheme="primaryWhite" onClick={handleShortVer}>See Short Version <FaChevronDown className={classes.underIcon} /></SmallButton> : 
-          <SmallButton colorScheme="primaryWhite" onClick={handleShortVer}>See Long Version <FaChevronDown className={classes.underIcon} /></SmallButton>
+          <button className={classes.seeLongButton} onClick={handleShortVer}>See Short Version <FaChevronDown className={classes.underIcon} /></button> : 
+          <button className={classes.seeLongButton} onClick={handleShortVer}>See Long Version <FaChevronDown className={classes.underIcon} /></button>
         }
       </div>
       {!showLong && <p>{profile.short_self_introduction}</p>}
