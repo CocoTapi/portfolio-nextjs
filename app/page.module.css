@@ -25,26 +25,23 @@
 .mainText {
   backface-visibility: hidden;
   margin-bottom: 1rem;
-  animation: moveInLeft;
-  animation-duration: 3s;
-  animation-timing-function: ease-out;
 }
 
 .mainTextName {
   display: block;
-
+  animation: moveInLeft 2s ease-out;
 }
 
 .mainTextJobTitle {
   display: block;
-
+  animation: moveInLeft 2s ease-out .2s;
+  animation-fill-mode:  backwards;
 }
 
 .mainTextSub {
   display: block;
-  animation: moveInRight;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
+  animation: moveInLeft .5s ease-out 1.5s;
+  animation-fill-mode:  backwards;
 }
 
 @keyframes moveInLeft {
@@ -62,6 +59,8 @@
 
 .introButtonFrame {
   padding-top: 2rem;
+  animation: moveInLeft .5s ease-out 1.5s;
+  animation-fill-mode:  backwards;
 }
 
 .section {

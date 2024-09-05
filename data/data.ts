@@ -23,7 +23,7 @@ export const profile_data: ProfileData = {
     long_self_introduction3: `Inspired, I began learning to code and quickly found joy in building programs, solving complex puzzles, and crafting designs that reflected my vision. The journey has been far from easy—every new challenge brings unknown errors and difficulties. But with the support of engineer friends and incredible resources available online, I’ve found fulfillment in overcoming them.`,
     long_self_introduction4: `Now, as a software engineer, I combine my passion for education with the problem-solving and creative power of coding, continuously striving to create impactful and innovative solutions.`,
     hobbies: `I love spending time with my cat (who is also my coding partner), cooking, baking, and gardening. Recently, I like playing pickle ball too!`,
-    skills: ['JavaScript', 'TypeScript','React', 'Angular', 'HTML', 'CSS', 'Sass', 'Node.js', 'Node Express', 'PostgreSQL', 'MongoDB', 'PgAdmin', 'Postman', 'AWS', 'Git', 'GitHub', 'Figma', 'English', 'Japanese'],
+    skills: ['JavaScript', 'TypeScript', 'React', 'Angular', 'HTML', 'CSS', 'Sass', 'Node.js', 'Node Express', 'PostgreSQL', 'MongoDB', 'PgAdmin', 'Postman', 'AWS', 'Git', 'GitHub', 'Figma', 'English', 'Japanese'],
     professional_development: [
         'Web Developer Bootcamp 2023 | Udemy',
         'React - The Complete Guide 2023 (incl. Next.js, Redux) | Udemy',
@@ -45,7 +45,7 @@ export const projects_data: ProjectsData = {
             slug: 'lesson-lab',
             project_url: `https://cocotapi.github.io/full-stack-project-frontend/`,
             images: lessonLab_image_data,
-            project_summary: `Lesson Lab App is a Web 2.0 application designed to empower educators 
+            project_summary: `Lesson Lab is a Web 2.0 application designed to empower educators 
                                           to manage high-quality class activities while reducing workload.`,
             tech_list: ['React', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Node.js', 'Node Express', 'PostgreSQL', 'PgAdmin', 'Postman', 'AWS', 'Git', 'GitHub', 'Figma'],
             tech_summary: `I focused on creating a seamless and responsive user experience. 
@@ -54,13 +54,13 @@ export const projects_data: ProjectsData = {
                                        PostgreSQL, ensuring secure authorization. The entire application is deployed on AWS, 
                                        with the frontend hosted on GitHub.`,
             project_details: {
-                project_description: `Lesson Lab App is an innovative Web 2.0 platform crafted to empower educators by streamlining 
+                project_description: `This is a Web 2.0 platform crafted to empower educators by streamlining 
                                   the creation and sharing of classroom activities. The app features a dynamic playlist system, 
                                   enabling teachers to organize and customize learning activities to meet their educational 
                                   objectives effortlessly.`,
                 frontend_tech: ['React', 'JavaScript', 'HTML', 'CSS'],
-                backend_tech: ['TypeScript', 'Node.js','Node Express', 'PostgreSQL'],
-                tools_tech: ['PgAdmin', 'Postman','AWS', 'Git', 'GitHub'],
+                backend_tech: ['TypeScript', 'Node.js', 'Node Express', 'PostgreSQL'],
+                tools_tech: ['PgAdmin', 'Postman', 'AWS', 'Git', 'GitHub'],
                 deployment_tech: ['AWS', 'GitHub'],
                 my_roles: `UI/UX design, Frontend Development, Backend Development, and Deployment.`,
                 frontend_features: [
@@ -76,7 +76,7 @@ export const projects_data: ProjectsData = {
                         feature_description: `Users can log in using their Google account, streamlining the authentication process and reducing the need for remembering additional passwords.`,
                         feature_importance: `This feature enhances user experience by offering a quick and secure way to log in, leveraging the trust and convenience of Google’s OAuth system.`,
                     },
-                    
+
                 ],
                 backend_features: [
                     {
@@ -141,11 +141,11 @@ export const projects_data: ProjectsData = {
                 ],
                 frontend_deployment: `The frontend was hosted on GitHub Pages, providing a quick and cost-effective solution for static site hosting.`,
                 backend_deployment: `The backend was deployed using AWS EC2 for hosting and RDS for managing the PostgreSQL database, ensuring scalability and reliability.`,
-                code_samples: { 
-                        frontend_url: `https://github.com/CocoTapi/full-stack-project-frontend`,
-                        backend_url: `https://github.com/CocoTapi/full-stack-project-backend`
-                    },
-                outcomes_and_improvements: `Successfully integrated key features like advanced search, personalized playlists, and Google OAuth, establishing a solid foundation for a user-friendly platform. Looking ahead, improvements include optimizing the drag-and-drop functionality for mobile devices, enhancing load balancing techniques to handle larger datasets as the app scales, refining search and filtering accuracy, implementing more dynamic data loading methods, and adding multiple language options to broaden accessibility.`  
+                code_samples: {
+                    frontend_url: `https://github.com/CocoTapi/full-stack-project-frontend`,
+                    backend_url: `https://github.com/CocoTapi/full-stack-project-backend`
+                },
+                outcomes_and_improvements: `Successfully integrated key features like advanced search, personalized playlists, and Google OAuth, establishing a solid foundation for a user-friendly platform. Looking ahead, improvements include optimizing the drag-and-drop functionality for mobile devices, enhancing load balancing techniques to handle larger datasets as the app scales, refining search and filtering accuracy, implementing more dynamic data loading methods, and adding multiple language options to broaden accessibility.`
             }
         },
         {
@@ -153,17 +153,18 @@ export const projects_data: ProjectsData = {
             project_title: 'Packing Lists',
             onGoing: false,
             slug: 'packing-lists',
-            project_url: `https://github.com/CocoTapi/packing-list`,
+            project_url: ``,
             images: lessonLab_image_data,
-            project_summary: `The Packing List App is designed to simplify travel preparation by allowing users to create and manage packing lists for their trips. 
-                                Each trip can have multiple pieces of luggage, and users can add, organize, and track items within each luggage, ensuring they never forget an essential item.`,          
+            project_summary: `The Packing List is designed to simplify travel preparation by allowing users to create and manage packing lists for their trips.`,
             tech_list: ['Angular', 'TypeScript', 'HTML', 'SCSS', 'Git', 'GitHub', 'Figma'],
-            tech_summary: `In the Packing List App, I used Redux Toolkit's createApi to manage API endpoints for trips, luggage, and items. 
-                            Using tags with type and id in your setup is effective in preventing unnecessary refetching. The store was configured 
-                            to handle API calls, with middleware integrated for streamlined operations. This approach ensures a clean, scalable solution for managing complex state and CRUD operations across the app.`,
+            tech_summary: `I used Redux Toolkit's createApi to manage API endpoints and CRUD operations for trips, luggage, and items. 
+                            By implementing tags with type and ID, I prevented unnecessary refetching, 
+                             while integrating middleware to handle API calls efficiently.`,
             project_details: {
-                project_description: `The Packing List App is a user-friendly platform that helps travelers organize their packing needs efficiently. Users can create a new trip, add different pieces of luggage under each trip, and list items within each luggage. The app allows for easy tracking and updating of items, making it an essential tool for organized travel planning.`,
-                frontend_tech: ['React', 'JavaScript', 'HTML','CSS', 'Tailwind', 'Redux Toolkit'],
+                project_description: `The Packing List is a platform that helps travelers organize their packing needs efficiently. 
+                                        Users can create a new trip, add different pieces of luggage under each trip, and list items within each luggage. 
+                                        The app allows for easy tracking and updating of items, making it an essential tool for organized travel planning.`,
+                frontend_tech: ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind', 'Redux Toolkit'],
                 backend_tech: [],
                 tools_tech: ['Git', 'GitHub'],
                 deployment_tech: [],
@@ -177,11 +178,11 @@ export const projects_data: ProjectsData = {
                     },
                     {
                         feature_id: 2,
-                        feature_title: "Efficient Data Invalidation with Redux Toolkit Tags",
+                        feature_title: "Efficient Data Invalidation",
                         feature_description: "To optimize data fetching and prevent unnecessary API calls, I implemented tag-based data invalidation using Redux Toolkit's createApi. By using type and id tags, the app invalidates and re-fetches specific entities efficiently.",
                         feature_importance: "This feature ensures that only the relevant data that has changed (e.g., a deleted trip) is re-fetched, avoiding unnecessary network requests for data that remains unchanged."
                     }
-    
+
                 ],
                 backend_features: [
                     {
@@ -202,11 +203,13 @@ export const projects_data: ProjectsData = {
                 ],
                 frontend_deployment: ``,
                 backend_deployment: ``,
-                code_samples: { 
-                        frontend_url: `https://github.com/CocoTapi/packing-list`,
-                        backend_url: ``
-                    },
-                outcomes_and_improvements: `Successfully developed a fully functional packing list app that makes travel organization simple and effective. Future improvements include adding features like drag-and-drop item organization, reminders for essential items, and the ability to share packing lists with others.`  
+                code_samples: {
+                    frontend_url: `https://github.com/CocoTapi/packing-list`,
+                    backend_url: ``
+                },
+                outcomes_and_improvements: `This project strengthened my understanding of React fundamentals, including building reusable components, managing forms, handling reducers, and integrating API queries using Redux Toolkit. 
+                                            It also enhanced my knowledge of CRUD operations.
+                                            Adding drag-and-drop item organization, reminders for essential items, and the ability to share packing lists would improve the user experience.`
             }
         },
         {
@@ -217,11 +220,11 @@ export const projects_data: ProjectsData = {
             project_url: `https://github.com/CocoTapi/Calorie-Calc-Frontend`,
             images: lessonLab_image_data,
             project_summary: `This is an ongoing project aimed at creating a mobile app to calculate cat food calories 
-                                and help maintain your cat's weight.`,            
-            tech_list: ['React', 'JavaScript', 'HTML','CSS', 'Tailwind', 'Redux Toolkit', 'Git', 'GitHub'],
+                                and help maintain your cat's weight.`,
+            tech_list: ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind', 'Redux Toolkit', 'Git', 'GitHub'],
             tech_summary: ``,
             project_details: {
-                project_description: ``,                
+                project_description: ``,
                 frontend_tech: ['Angular', 'TypeScript', 'HTML', 'SCSS'],
                 backend_tech: [],
                 tools_tech: ['Git', 'GitHub'],
@@ -234,7 +237,7 @@ export const projects_data: ProjectsData = {
                         feature_description: ``,
                         feature_importance: ``,
                     },
-                   
+
                 ],
                 backend_features: [
                     {
@@ -255,13 +258,13 @@ export const projects_data: ProjectsData = {
                 ],
                 frontend_deployment: ``,
                 backend_deployment: ``,
-                code_samples: { 
-                        frontend_url: `https://github.com/CocoTapi/Calorie-Calc-Frontend`,
-                        backend_url: ``
-                    },
-                outcomes_and_improvements: ``  
+                code_samples: {
+                    frontend_url: `https://github.com/CocoTapi/Calorie-Calc-Frontend`,
+                    backend_url: ``
+                },
+                outcomes_and_improvements: ``
             }
         },
-       
+
     ]
 }

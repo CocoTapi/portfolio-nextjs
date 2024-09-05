@@ -27,9 +27,11 @@ export default function ProjectSummary({ project }: ProjectProps): JSX.Element {
               <Link href={`/${project.slug}`}>
                 <MediumButton colorScheme="primaryWhite">See Details</MediumButton>
               </Link>
+              {project.project_url.length > 0 &&
               <a href={project.project_url}>
                 <MediumButton>Visit Page</MediumButton>
               </a>
+              }
             </div>
           </>
         }
