@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i,400,500);
+
 :root {
   /* --max-width: 1100px;
   --border-radius: 12px;
@@ -21,24 +23,43 @@
   --color-secondary-500: #2b5287;
   --color-secondary-600: #16293c;
 
+  --color-grey-100: #fdf9f9;
+  --color-grey-200: #aaa;
   --color-grey-400: #747474;
+  --color-grey-400: #7c6765;
+  --color-grey-400: #493f3e;
 
-  --card-background: rgba(255, 255, 255, 0.5)
+  --card-background: rgba(255, 255, 255, 0.5);
+
+  --font-primary: 'Nunito', sans-serif;
+  --font-heading: 'Josefin Sans', sans-serif;
+
+  --font-weight-heading: 400;
+
+  --mb-large: 4rem;
+  --mb-middle: 3rem;
+
 }
 
-* {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
   padding: 0;
   margin: 0;
 }
 
 html {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-sizing: border-box;
+
+  font-size: 62.5%;
 }
 
 body {
+  font-family: var(--font-primary);
+  font-weight: 300;
+  line-height: 1.6;
   background-image: linear-gradient(135deg, var(--background-start), var(--background-end));  
-  line-height: 1.5;
 }
 
 a {
@@ -47,23 +68,34 @@ a {
 }
 
 h1 {
-  font-size: 6rem;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  
 }
 
 h2 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
   font-size: 4rem;
 }
 
 h3 {
-  font-size: 3rem;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  font-size: 1.9rem;
 }
 
 h4 {
-  font-size: 2rem;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  font-size: 1.6rem;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-family: var(--font-primary);
 }
 
 .not-found,
@@ -92,49 +124,5 @@ p {
 }
 
 
-/* mobile */
-@media (max-width: 700px) {
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.6rem;
-  }
-  
-  h3 {
-    font-size: 1.4rem;
-  }
-  
-  h4 {
-    font-size: 1,2rem;
-  }
-  
-  p {
-    font-size: 1rem;
-  }
-}
 
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  h1 {
-    font-size: 4rem;
-  }
-  
-  h2 {
-    font-size: 3rem;
-  }
-  
-  h3 {
-    font-size: 2.5rem;
-  }
-  
-  h4 {
-    font-size: 2rem;
-  }
-  
-  p {
-    font-size: 1.3rem;
-  }
-}
 

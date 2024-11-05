@@ -1,10 +1,10 @@
 import { ProfileProps } from "@/util/types";
-import MediumButton from "../UI/medium-button";
+import MediumButton from "../UI/btn-medium";
 import classes from "../css/about-css/about-page.module.css";
 import Skills from "./skills";
 import IntroductionNav from "./introduction-nav";
 import { media_data } from "@/data/data";
-import SmallButton from "../UI/small-button";
+import SmallButton from "../UI/btn-small";
 
 export default function AboutPage({ profile }: ProfileProps): JSX.Element {
 
@@ -30,13 +30,13 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
         </div>
       </div>
       <div className={classes.subComponent}>
-        <h3>Skills & Tools :</h3>
+        <h2>Skills & Tools :</h2>
         <div className={classes.skillsComponent}>
           <Skills />
         </div>
       </div>
       <div className={classes.subComponent}>
-        <h3>Education :</h3>
+        <h2>Education :</h2>
         <div>
           <div className={classes.eduGroup}>
             <p className={classes.eduLabel}>Professional Development</p>
@@ -65,7 +65,7 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
         </div>
       </div>
       <div id="contact" className={classes.subComponent}>
-        <h3>Let's Connect!</h3>
+        <h2>Let's Connect!</h2>
         <p>
           I'm always open to discussing new opportunities, projects, or ideas.
           If you'd like to connect or learn more about my work, feel free to get

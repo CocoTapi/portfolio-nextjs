@@ -1,5 +1,5 @@
 .button {
-    width: 16.7rem;
+    width: 20rem;
     height: 4.1rem;
     border-radius: 20px;
     overflow: hidden;
@@ -7,14 +7,16 @@
     justify-content: center;
     align-items: center;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
+    font-family: var(--font-primary);
     box-sizing: border-box;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     letter-spacing: 1px;
     cursor: pointer;
     transition: all .2s;
     position: relative;
+    z-index: 10;
 }
 
 .button:hover {

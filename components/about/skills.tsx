@@ -78,11 +78,11 @@ export default function Skills(): JSX.Element {
         <FiFigma className={classes.skillIcon} style={{ fill: "url(#icon-gradient)" }} />
         <p>Figma</p>
       </div>
-      <div className={classes.skillGroup}>
+      <div className={classes.skillGroup2}>
         <p className={classes.enIcon}>En</p>
         <p>English</p>
       </div>
-      <div className={classes.skillGroup}>
+      <div className={classes.skillGroup2}>
         <p className={classes.jpnIcon}>あa</p>
         <p>Japanese</p>
       </div>

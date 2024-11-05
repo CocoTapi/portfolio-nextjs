@@ -2,10 +2,10 @@ import { projects_data } from "@/data/data"
 import { ProjectData } from "@/util/types";
 import { notFound } from "next/navigation";
 import classes from "./page.module.css";
-import MediumButton from "@/components/UI/medium-button";
+import MediumButton from "@/components/UI/btn-medium";
 import Tag from "@/components/UI/tag";
 import Accordion from "@/components/UI/accordion";
-import SmallButton from "@/components/UI/small-button";
+import SmallButton from "@/components/UI/btn-small";
 import Link from "next/link";
 
 async function getProject(slug: string): Promise<ProjectData | undefined> {

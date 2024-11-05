@@ -9,8 +9,8 @@ export const media_data: MediaData = {
     2: "https://github.com/CocoTapi/modern_react_2023",
     3: "https://github.com/CocoTapi/algorithms_and_data_structure",
     4: "https://github.com/CocoTapi/coding_interview_bootcamp",
-    6: "https://github.com/CocoTapi/The-Complete-Angular-Course",
-    7: "https://github.com/CocoTapi/advanced-css-and-sass",
+    6: "https://github.com/CocoTapi/advanced-css-and-sass",
+    7: "https://github.com/CocoTapi/The-Complete-Angular-Course",
 }
 
 export const profile_data: ProfileData = {
@@ -30,9 +30,9 @@ export const profile_data: ProfileData = {
         'Modern React with Redux 2023 | Udemy',
         'JavaScript Algorithms and Data Structures Masterclass | Udemy',
         'Master the Coding Interview: Data Structures + Algorithms | Udemy',
-        'The Complete SQL Bootcamp: Go from Zaro to Hero | Udemy',
+        'The Complete SQL Bootcamp: Go from Zero to Hero | Udemy',
+        'The Advanced CSS and Sass: Flexbox, Grid, Animations and More | Udemy',
         'The Complete Angular Course: Beginner to Advanced | Udemy (Ongoing)',
-        'The Advanced CSS and Sass: Flexbox, Grid, Animations and More | Udemy (Ongoing)'
     ],
 }
 

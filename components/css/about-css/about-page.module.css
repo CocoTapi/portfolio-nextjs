@@ -1,19 +1,29 @@
 .aboutComponent {
     background-color: var(--card-background);
-    max-width: 1256px;
+    width: 90vw;
     border-radius: 50px;
-    margin: auto  ;
-    padding: 5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 8rem;
+
+}
+
+.introComponent, .subComponent {
+    margin-bottom: 4rem;
+}
+
+.subComponent h2 {
+    margin-bottom: 2rem;
 }
 
 .introComponent {
-    margin-bottom: 3rem;
     display: flex;
     width: 100%;
 }
 
 .myImg {
-    width: 17rem;
+    width: 25%;
 }
 
 
@@ -22,7 +32,7 @@
 }
 
 .introDescription {
-    padding-left: 3rem;
+    padding-left: 6.5rem;
     width: 70%;
 }
 
@@ -32,24 +42,22 @@
 }
 
 .hobbies span{
-    font-weight: 600;
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 
 .socialButtons {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    padding: 3rem 0;
+    padding: 2rem 0;
 }
 
 .skillsComponent {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); 
     margin-bottom: 0;
-}
-
-.subComponent {
-    margin-bottom: 5rem;
 }
 
 .subComponent h3 {
@@ -57,147 +65,48 @@
 }
 
 .eduGroup {
-    margin-bottom: 1.5rem;
+    margin-bottom: 3.5rem;
 }
 
 .eduLabel {
-    font-weight: 600;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
 .eduGroup ul {
     margin-left: 1.5rem;
-    font-size: 1.5rem;
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
     line-height: 1.6;
+}
+
+.eduGroup li {
+    position: relative;
+    cursor: pointer;
+}
+
+.eduGroup li a:hover {
+    color: var(--color-primary-600);
 }
 
 
 .school {
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
     font-style: italic;
 }
 
 .mailLink{
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
     background: linear-gradient(135deg, var(--color-primary-600), #704BDB); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 400;
+    font-weight: 500;
+    margin-left: .5rem;
+
+    transform: all .2s;
 }
 
-.courseLink {
-    color: black;
-}
-
-/* mobile */
-@media (max-width: 700px) {
-    .aboutComponent {
-        width: 90%;
-        border-radius: 20px;
-        padding: 3rem 1.5rem;
-    }
-
-    .introComponent {
-        margin-bottom: 3rem;
-        display: grid ;
-    }
-    
-    .myImg {
-        width: 17rem;
-    }
-    
-    
-    .myImg img {
-        width: 100%;
-    }
-    
-    .introDescription {
-        width: 100%;
-        padding-left: 0;
-        padding-top: 2rem;
-    }
-    
-    .hobbies {
-        margin-top: 1rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .socialButtons {
-        display: grid;
-        padding: 1rem 0;
-    }
-    
-    .skillsComponent {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); 
-    }
-    
-    .subComponent {
-        margin-bottom: 3rem;
-    }
-    
-    .eduGroup ul {
-        margin-left: 1rem;
-        font-size: 1rem;
-    }
-    
-    
-    .school {
-        margin-top: 0.3rem;
-    }
-}
-  
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-    .aboutComponent {
-        width: 95%;
-        border-radius: 20px;
-        padding: 3rem 2rem;
-    }
-
-    .introComponent {
-        margin-bottom: 3rem;
-        display: grid ;
-    }
-    
-    .myImg {
-        width: 17rem;
-    }
-    
-    
-    .myImg img {
-        width: 100%;
-    }
-    
-    .introDescription {
-        width: 100%;
-        padding-left: 0;
-        padding-top: 2rem;
-    }
-    
-    .hobbies {
-        margin-top: 1.3rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .socialButtons {
-        display: flex;
-        padding: 1rem 0;
-    }
-    
-    .skillsComponent {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr); 
-    }
-    
-    .subComponent {
-        margin-bottom: 3rem;
-    }
-    
-    .eduGroup ul {
-        margin-left: 1.3rem;
-        font-size: 1.3rem;
-    }
-    
-    
-    .school {
-        margin-top: 0.3rem;
-    }
-}

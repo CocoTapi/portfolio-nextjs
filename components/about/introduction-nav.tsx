@@ -3,7 +3,7 @@
 import { useState } from "react";
 import classes from "../css/about-css/introduction-nav.module.css";
 import { ProfileProps } from "@/util/types";
-import SmallButton from "../UI/small-button";
+import SmallButton from "../UI/btn-small";
 import { FaChevronDown } from "react-icons/fa";
 
 
@@ -21,7 +21,7 @@ export default function IntroductionNav({ profile }: ProfileProps): JSX.Element 
   return (
     <div>
       <div className={classes.myStoryLabel}>
-        <h3>My Story</h3>
+        <h2>My Story</h2>
         {showLong ? 
           <button className={classes.seeLongButton} onClick={handleShortVer}>See Short Version <FaChevronDown className={classes.underIcon} /></button> : 
           <button className={classes.seeLongButton} onClick={handleShortVer}>See Long Version <FaChevronDown className={classes.underIcon} /></button>

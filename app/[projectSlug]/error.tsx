@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link";
-import MediumButton from "@/components/UI/medium-button";
+import MediumButton from "@/components/UI/btn-medium";
 
 export default function Error(): JSX.Element {
     //console.log(error);

@@ -1,8 +1,8 @@
 import { colorSchemes } from "./color-schemes";
-import classes from "../css/UI-css/small-button.module.css";
+import classes from "../css/UI-css/medium-button.module.css";
 import { ButtonProps, ButtonStyle, ColorScheme } from "@/util/types";
 
-export default function SmallButton({
+export default function BtnMedium({
     className,
     children,
     colorScheme = 'primary',

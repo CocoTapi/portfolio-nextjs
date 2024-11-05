@@ -1,31 +1,41 @@
 .outerBox {
-  min-height: 750px;
   padding: 5rem;
   display: flex;
   justify-content: center;
 }
 
 .leftComponent {
-  display: grid;
-  max-width: 42rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(1.1rem);
 }
 
 .buttonComponent {
-  display: grid;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+  gap: 2rem;
+}
+
+.onGoingImg {
+  width: 35rem;
+  height: 25rem;
+  background-color: antiquewhite;
+  transform: translateY(3.2rem);
 }
 
 .slideshow {
-  width: 25rem;
-  height: 17rem;
+  width: 35rem;
+  height: 25rem;
   background-color: antiquewhite;
 }
 
 .rightComponent {
-  max-width: 42rem;
+  max-width: 55rem;
   margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .titleGroup {
@@ -48,7 +58,7 @@
 
 .rightComponent p,
 .rightComponent ul {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .techGroup {
@@ -61,6 +71,14 @@
   margin-right: 10px;
   margin-bottom: 7px;
 }
+
+.link {
+  position: relative;
+  z-index: 99;
+  align-self: flex-end;
+  margin-right: 2rem;
+}
+
 
 
 /* Mobile */

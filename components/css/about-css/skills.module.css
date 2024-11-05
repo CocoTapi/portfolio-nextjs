@@ -4,7 +4,16 @@
     text-align: center;
     justify-content: center;
     padding-bottom: 1.7rem;
-    gap: 0.7rem;
+    gap: .7rem;
+}
+
+.skillGroup2 {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 1.7rem;
+    gap: .5rem;
 }
 
 .skillIcon, .skillCss, .skillPostman {
@@ -13,15 +22,15 @@
 }
 
 .skillIcon {
-    font-size: 4rem;
+    font-size: 6rem;
 }
 
 .skillCss {
-    font-size: 3.7rem;
+    font-size: 6.2rem;
 }
 
 .skillPostman {
-    font-size: 3.2rem;
+    font-size: 4.2rem;
 }
 
 .enIcon, .jpnIcon {
@@ -34,11 +43,11 @@
 }
 
 .enIcon {
-    font-size: 3rem;
+    font-size: 4.2rem;
 }
 
 .jpnIcon {
-    font-size: 2.8rem;
+    font-size: 3.4rem;
 }
 
 
