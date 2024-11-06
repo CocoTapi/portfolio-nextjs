@@ -83,8 +83,8 @@ export default function Skills(): JSX.Element {
         <p>English</p>
       </div>
       <div className={classes.skillGroup2}>
-        <p className={classes.jpnIcon}>あa</p>
-        <p>Japanese</p>
+        <p className={classes.jpIcon}>あa</p>
+        <p className={classes.JpLetter}>Japanese</p>
       </div>
       <svg width="0" height="0">
         <linearGradient id="icon-gradient" x1="100%" y1="100%" x2="0%" y2="0%">

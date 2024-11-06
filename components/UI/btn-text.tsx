@@ -7,7 +7,8 @@ export default function BtnText({
     children,
     ...rest
 }: any): JSX.Element {
- return (
+   
+    return (
         <button
             className={`${classes.button} ${className}`}
             {...rest}

@@ -31,10 +31,14 @@ export default function ProjectSummary({ project }: ProjectProps): JSX.Element {
         }
       </div>
       <div className={classes.rightComponent}>
-        <div className={classes.titleGroup}>
-          {project.onGoing && <span className={classes.onGoing}>On Going</span>}
-          <h2>{project.project_title}</h2>
-        </div>
+          {project.onGoing ? 
+          <>
+            <p className={classes.onGoing}>On Going</p>
+            <h2 className={classes.onGoingTitle}>{project.project_title}</h2>
+          </> 
+          : 
+            <h2>{project.project_title}</h2>
+          }
         <p>{project.project_summary}</p>
         <ul className={classes.techGroup}>
           {project.tech_list.map((tech: string) => (

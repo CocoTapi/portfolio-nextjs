@@ -1,6 +1,7 @@
 .aboutComponent {
     background-color: var(--card-background);
     width: 90vw;
+    max-width: var(--max-width);
     border-radius: 50px;
     margin: auto;
     display: flex;
@@ -37,21 +38,46 @@
 }
 
 .hobbies {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
 .hobbies span{
     font-family: var(--font-primary);
+    color: var(--color-grey-dark-1);
     font-size: 1.6rem;
     font-weight: 500;
 }
 
-.socialButtons {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem 0;
+.socialMediaGroup {
+    font-family: var(--font-primary);
+    color: var(--color-grey-dark-1);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.socialItem,
+.socialItem2 {
+    font-family: var(--font-primary);
+    color: var(--color-grey-dark-1);
+    font-size: 1.6rem;
+    font-weight: 300;
+    border-bottom: 1px solid var(--color-grey-dark-1);
+    transition: all .2s;
+}
+
+.socialItem {
+    margin-right: 1rem;
+
+}
+
+.socialItem2 {
+    margin-left: 1rem;
+}
+
+.socialItem:hover,
+.socialItem2:hover {
+    color: var(--color-primary-dark-1);
+    border-bottom: 1px solid var(--color-primary-600);
 }
 
 .skillsComponent {
@@ -101,12 +127,21 @@
 .mailLink{
     font-family: var(--font-primary);
     font-size: 1.6rem;
-    background: linear-gradient(135deg, var(--color-primary-600), #704BDB); 
+    background: linear-gradient(135deg, var(--color-primary-dark-1), #704BDB); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 500;
     margin-left: .5rem;
+    position: relative;
+    z-index: 100;
+
+    text-transform: uppercase;
 
     transform: all .2s;
 }
+
+/* .mailLink:hover {
+    transform: translateY(-2px);
+} */
+
 

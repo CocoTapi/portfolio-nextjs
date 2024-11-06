@@ -5,6 +5,9 @@ import Skills from "./skills";
 import IntroductionNav from "./introduction-nav";
 import { media_data } from "@/data/data";
 import SmallButton from "../UI/btn-small";
+import { AiOutlineGithub } from "react-icons/ai";
+import { SiLinkedin } from "react-icons/si";
+import BtnText from "../UI/btn-text";
 
 export default function AboutPage({ profile }: ProfileProps): JSX.Element {
 
@@ -19,12 +22,14 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
           <p className={classes.hobbies}>
             <span>When I'm not coding : </span>{profile.hobbies}
           </p>
-          <div className={classes.socialButtons}>
-            <a href={media_data.gitHub}>
-              <SmallButton>GitHub</SmallButton>
+          <div className={classes.socialMediaGroup}>
+            <span>My social media : </span>
+            <a href={media_data.gitHub} className={classes.socialItem}>
+              <AiOutlineGithub  className={classes.iconGit}/> GitHub 
             </a>
-            <a href={media_data.linkedIn}>
-              <SmallButton>LinkedIn</SmallButton>
+            <span>,</span>
+            <a href={media_data.linkedIn} className={classes.socialItem2}>
+              <SiLinkedin className={classes.iconLinked}/> LinkedIn
             </a>
           </div>
         </div>
@@ -69,7 +74,7 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
         <p>
           I'm always open to discussing new opportunities, projects, or ideas.
           If you'd like to connect or learn more about my work, feel free to get
-          in touch at <a href={`mailto:${profile.my_email}`} className={classes.mailLink}>{profile.my_email}</a>.
+          in touch at <a href={`mailto:${profile.my_email}`} className={classes.mailLink}>{profile.my_email}.</a>
         </p>
       </div>
     </div>

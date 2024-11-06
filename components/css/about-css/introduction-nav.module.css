@@ -37,7 +37,7 @@
 }
 
 /* mobile */
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
     .myStoryLabel {
         display: block;
     }
@@ -53,4 +53,4 @@
         font-size: 1rem;
 
     }
-}
+} */

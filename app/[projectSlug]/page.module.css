@@ -60,7 +60,7 @@
 }
 
 .accordionFrame {
-    width: 80%;
+    width: 85rem;
     border-radius: 20px;
     overflow: hidden;
     /* Ensure that the radius is visible */
@@ -98,6 +98,10 @@
 }
 
 .backButton {
+    margin-top: 6.5rem;
+}
+
+/* .backButton {
     margin-top: 3rem;
     padding: 1rem 3rem;
     font-size: 1.5rem;
@@ -111,7 +115,7 @@
 
 .backButton:hover {
     transform: scale(1.1);
-}
+} */
 
 /* TODO: fix imgFrame size */
 

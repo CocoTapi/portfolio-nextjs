@@ -33,7 +33,7 @@
     font-size: 4.2rem;
 }
 
-.enIcon, .jpnIcon {
+.enIcon, .jpIcon {
     margin: auto;
     font-weight: 600;
     background: linear-gradient(135deg, var(--gradient-light), var(--gradient-dark)); 
@@ -46,10 +46,14 @@
     font-size: 4.2rem;
 }
 
-.jpnIcon {
-    font-size: 3.4rem;
+.jpIcon {
+    font-size: 3.5rem;
+    transform: translateY(3px);
 }
 
+.JpLetter {
+    transform: translateY(1px);
+}
 
 
 

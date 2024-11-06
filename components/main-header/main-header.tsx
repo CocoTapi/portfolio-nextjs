@@ -1,31 +1,27 @@
 import Link from "next/link";
 import classes from "../css/main-header-css/main-header.module.css";
-import NavLink from "./nav-link";
-import { profile_data } from "../../data/data";
 
 export default function MainHeader() {
 
   return (
-    <header className={classes.outerHeader}>
-      <div className={classes.header}>
+    <header className={classes.header}>
+      <div className={classes.headerContents}>
         <Link href="/">
           <div className={classes.logoFrame}>
             <img src="/images/logo.png" alt="Logo" />
           </div>
         </Link>
-        <nav className={classes.nav}>
-          <ul>
-            <li>
-              <Link href="/#projects">Projects</Link>
-            </li>
-            <li>
-              <Link href="/#about">About</Link>
-            </li>
-            <li>
-              <Link href="/#contact" >Contact</Link>
-            </li>
-          </ul>
-        </nav>
+        <ul className={classes.nav}>
+          <li>
+            <Link href="/#projects" className={classes.navItem}>Projects</Link>
+          </li>
+          <li>
+            <Link href="/#about" className={classes.navItem}>About</Link>
+          </li>
+          <li>
+            <Link href="/#contact" className={classes.navItem}>Contact</Link>
+          </li>
+        </ul>
       </div>
     </header>
   );

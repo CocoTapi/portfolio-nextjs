@@ -9,7 +9,7 @@
     display: inline-block;
     font-size: 1.6rem;
     font-weight: 600;
-    font-family: var(--font-primary);
+    font-family: var(--font-heading);
     box-sizing: border-box;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     letter-spacing: 1px;

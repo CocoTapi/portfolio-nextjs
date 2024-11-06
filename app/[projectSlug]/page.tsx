@@ -7,6 +7,7 @@ import Tag from "@/components/UI/tag";
 import Accordion from "@/components/UI/accordion";
 import SmallButton from "@/components/UI/btn-small";
 import Link from "next/link";
+import BtnText from "@/components/UI/btn-text";
 
 async function getProject(slug: string): Promise<ProjectData | undefined> {
     //await new Promise((resolve) => setTimeout(resolve, 5000));
@@ -41,13 +42,13 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
                             </p>
                             <div className={classes.buttonGroup}>
                                 <a href={project.project_url}><MediumButton>GitHub</MediumButton></a>
-                                <Link href="/" className={classes.backButton} >Back</Link>
+                                <Link href="/" className={classes.backButton} ><BtnText>BACK &rarr;</BtnText></Link>
                             </div>
                         </> :
                         <>
                             {project.project_url.length > 0 &&
                             <div className={classes.buttonComponent}>
-                                <a href={project.project_url}><MediumButton>Visit Page</MediumButton></a>
+                                <a href={project.project_url}><MediumButton>Visit Application</MediumButton></a>
                             </div>
                             }
                             <div className={classes.imgFrame}>
@@ -98,6 +99,8 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
                                 <h4 className={classes.detailSubTitle}>My Roles :</h4>
                                 <p>{project.project_details.my_roles}</p>
                             </div>
+
+                            {/* KEY FEATURE */}
                             <div className={classes.detailSection}>
                                 <h4 className={classes.detailSubTitle}>Key Features :</h4>
                                {project.project_details.frontend_features.length > 0 &&
@@ -193,9 +196,10 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
                             </div>
                             <div className={classes.buttonGroup}>
                                 {project.project_url.length > 0 &&
-                                <a href={project.project_url}><MediumButton>Visit Page</MediumButton></a>
+                                <a href={project.project_url}><MediumButton>Visit Application</MediumButton></a>
                                 }
-                                <Link href="/" className={classes.backButton} >Back</Link>
+                                {/* <Link href="/" className={classes.backButton} >Back</Link> */}
+                                <Link href="/" className={classes.backButton} ><BtnText>BACK &rarr;</BtnText></Link>
                             </div>
                         </>
                     }
