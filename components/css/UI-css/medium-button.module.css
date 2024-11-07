@@ -41,11 +41,3 @@
     z-index: -1;
     transition: all .4s;
 }
-
-/* mobile */
-@media (max-width: 700px) {
-    .button {
-        height: 3.1rem;
-        border-radius: 15px;
-    }
-}

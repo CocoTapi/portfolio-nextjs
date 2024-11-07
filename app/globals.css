@@ -38,8 +38,27 @@
 
   --font-weight-heading: 400;
 
-  --mb-large: 10rem;
+  --mb-largest: 8rem;
+  --mb-large: 6rem;
   --mb-middle: 3rem;
+
+  
+  /* RESPONSIVE BREAKPOINTS */
+
+  /* 1200px largest */
+  --bp-largest: 75em; 
+
+  /* 1000px large*/
+  --bp-large: 62.5em; 
+
+  /* 889.6px middle*/
+  --bp-medium: 55.6em;  
+
+  /* 810px semi */
+  --bp-medium: 50.6em;  
+
+  /* --600px small */
+  --bp-small: 37.5em;
 
 }
 
@@ -55,6 +74,10 @@ html {
   box-sizing: border-box;
 
   font-size: 62.5%;
+
+  @media only screen and (max-width: 75em) {
+    font-size: 50%;
+  }
 }
 
 body {

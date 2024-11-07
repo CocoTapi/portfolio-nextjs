@@ -13,7 +13,7 @@
     padding-bottom: 8rem;
    
     display: grid;
-    grid-template-rows: max-content max-content min-content;
+    grid-template-rows: max-content max-content min-content min-content;
     grid-template-columns: [icon-start] min-content [name-start] max-content [name-end nav-start] 1fr [nav-end];
     
     justify-content: start;
@@ -29,6 +29,7 @@
 
     justify-self: center;
     margin-right: 1rem;
+    margin-left: 2rem;
 }
 
 .footerLogoFrame img {
@@ -93,7 +94,6 @@
 }
 
 .footerNavItem:link {
-    
     text-decoration: none;
     font-size: 1.6rem;
     color: var(--color-grey-light-1);
@@ -103,6 +103,10 @@
     border-radius: 19px;
     padding: 1rem 1.5rem;
     display: block;
+
+    position: relative;
+    z-index: 10;
+
     transition: all .2s;
   }
   
@@ -118,5 +122,75 @@
     justify-self: end;
     
     color: #8a8989;
+
+    margin-right: 3.5rem;
+}
+
+@media only screen and (max-width: 62.5em) {
+    .footerNav {
+        gap: 1rem;
+    
+        margin-right: 6rem;
+    }
+}
+
+@media only screen and (max-width: 55.6em) {
+    .footerContent {
+        margin: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+       
+        grid-template-rows: max-content max-content min-content min-content;
+        
+        justify-content: center;
+    }
+
+    .footerLogoFrame {
+        grid-row: 1 / 2;
+        grid-column: icon-start / span 3;
+        width: 7rem;
+
+        justify-self: center;
+    }
+
+    .footerNameGroup {
+        grid-row: 2 / 3;
+        grid-column: icon-start / span 3;
+        justify-self: center;
+    
+        text-align: center;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .footerIcons {
+        justify-content: center;
+        gap: 3rem;
+        padding-top: 1rem;
+    }
+
+    .footerNav {
+        grid-row: 3 / 4;
+        grid-column: icon-start / span 3;
+        justify-self: center;
+    
+        list-style: none;
+        display: flex;
+        gap: 3rem;
+    
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .copyright {
+        grid-row: 4 / 5;
+        grid-column: icon-start / span 3;
+    
+        justify-self: end;
+        
+        color: #8a8989;
+    
+        margin-right: 3.5rem;
+    }
 }
 

@@ -15,18 +15,15 @@
   justify-self: center;
 }
 
+.slideshow,
 .onGoingImg {
   width: 35rem;
   height: 25rem;
   background-color: antiquewhite;
-  transform: translateY(3rem);
-
 }
 
-.slideshow {
-  width: 35rem;
-  height: 25rem;
-  background-color: antiquewhite;
+.onGoingImg {
+  transform: translateY(3rem);
 }
 
 .rightComponent {
@@ -58,7 +55,6 @@
 
   padding: .2rem 1rem;
   font-weight: 600;
-
 }
 
 .onGoingTitle {
@@ -88,75 +84,31 @@
   margin-right: 2rem;
 }
 
-
-
-/* Mobile */
-@media (max-width: 700px) {
+@media only screen and (max-width: 50.6em) {
   .outerBox {
-    padding: 2rem 2rem;
+    padding: 5rem;
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .leftComponent {
+    display: flex;
+    justify-content: center;
   }
 
   .buttonComponent {
-    display: grid;
-    justify-content: center;
-    gap: 1.5rem;
-  }
-
-  .slideshow {
-    width: 100%;
-    margin-bottom: 1.5rem;
+    display: none;
   }
 
   .rightComponent {
+    margin-top: 5rem;
     margin-left: 0;
-  }
-
-  .titleGroup {
-    margin-bottom: 1.2rem;
-  }
-
-  .rightComponent h3 {
-    font-size: 1.6rem;
-  }
-
-  .onGoing {
-    font-size: 1.3rem;
-  }
-
-}
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .outerBox {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: start;
-  }
-
-  .buttonComponent {
-    display: grid;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .slideshow {
+    max-width: none;
     width: 100%;
-    margin-bottom: 3rem;
-    margin-top: 1rem;
-  }
-
-  .rightComponent {
-    margin-left: 0;
-  }
-
-  .rightComponent h3 {
-    font-size: 3rem;
   }
 
   .onGoing {
-    font-size: 1.5rem;
+    top: -31.5rem;
   }
 }
