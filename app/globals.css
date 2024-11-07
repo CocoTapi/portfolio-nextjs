@@ -40,7 +40,8 @@
 
   --mb-largest: 8rem;
   --mb-large: 6rem;
-  --mb-middle: 3rem;
+  --mb-middle: 5rem;
+  --mb-small: 3rem;
 
   
   /* RESPONSIVE BREAKPOINTS */
@@ -57,8 +58,8 @@
   /* 810px semi */
   --bp-medium: 50.6em;  
 
-  /* --600px small */
-  --bp-small: 37.5em;
+  /* --520px small */
+  --bp-small: 32.5em;
 
 }
 

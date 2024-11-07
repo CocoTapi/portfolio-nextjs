@@ -148,3 +148,28 @@
         padding: 6rem 4rem;
     }
   }
+
+@media only screen and (max-width: 32.5em) {
+.aboutComponent {
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+.introComponent {
+    flex-direction: column;
+}
+
+/* TODO */
+.myImg {
+    width: 50%;
+}
+
+.introDescription {
+    padding-left: 0;
+    width: 100%;
+}
+
+.skillsComponent {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); 
+}
+}

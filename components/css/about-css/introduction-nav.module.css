@@ -44,3 +44,9 @@
         padding-bottom: 1rem;
     } 
 } 
+
+@media only screen and (max-width: 32.5em) {
+    .myStoryLabel {
+        padding-top: 3rem;
+    }
+}

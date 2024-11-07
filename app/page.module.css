@@ -3,7 +3,6 @@
 
   display: grid;
   grid-row-gap: 15rem;
-
 }
 
 .topSection {
@@ -68,6 +67,7 @@
 }
 
 .section {
+  width: 100vw;
   scroll-margin-top: 10rem;
   /* Adjust according to the height of your header */
   display: flex;
@@ -110,6 +110,9 @@
 }
 
 @media only screen and (max-width: 62.5em) {
+  .main {
+    grid-row-gap: 10rem;
+  }
   .textGroup {
     width: 600px;
   }
@@ -134,6 +137,46 @@
   .card {
     width: 90%;
   }
+
+  .section h1 {
+    margin-bottom: var(--mb-middle);
+  }
+}
+
+@media only screen and (max-width: 32.5em) {
+  .topSection {
+    height: 95vh;
+  }
+
+  .textGroup {
+    width: 80vw;
+    left: 4rem;
+    transform: translate(0, -50%);
+  }
+
+  .section h1 {
+    margin-bottom: var(--mb-small);
+  }
+
+  .card {
+    width: 90vw;
+  }
+  
+  .card:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  
+  .evenCard {
+    align-self: center;
+    border-radius: 20px;
+  }
+  
+  
+  .oddCard {
+    align-self: center;
+    border-radius: 20px;
+  }
+
 }
 
 

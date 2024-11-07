@@ -87,7 +87,6 @@
 @media only screen and (max-width: 50.6em) {
   .outerBox {
     padding: 5rem;
-    display: flex;
     flex-direction: column;
     align-items: start;
   }
@@ -110,5 +109,17 @@
 
   .onGoing {
     top: -31.5rem;
+  }
+}
+
+@media only screen and (max-width: 32.5em) {
+  .outerBox {
+    padding: 3rem;
+    align-items: center;
+  }
+
+  .rightComponent {
+    margin-top: 5rem;
+    width: 35rem;
   }
 }
