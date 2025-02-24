@@ -10,7 +10,8 @@ export const media_data: MediaData = {
     3: "https://github.com/CocoTapi/algorithms_and_data_structure",
     4: "https://github.com/CocoTapi/coding_interview_bootcamp",
     6: "https://github.com/CocoTapi/advanced-css-and-sass",
-    7: "https://github.com/CocoTapi/The-Complete-Angular-Course",
+    7: "https://www.udemy.com/course/the-complete-guide-to-angular-2/",
+    8: "https://www.udemy.com/course/angular-testing-course"
 }
 
 export const profile_data: ProfileData = {
@@ -24,16 +25,17 @@ export const profile_data: ProfileData = {
     long_self_introduction4: `Now, as a software engineer, I combine my passion for education with the problem-solving and creative power of coding, continuously striving to create impactful and innovative solutions.`,
     hobbies: `I love spending time with my cat (who is also my coding partner), cooking, baking, and gardening. Recently, I like playing pickle ball too!`,
     skills: ['JavaScript', 'TypeScript', 'React', 'Angular', 'HTML', 'CSS', 'Sass', 'Node.js', 'Node Express', 'PostgreSQL', 'MongoDB', 'PgAdmin', 'Postman', 'AWS', 'Git', 'GitHub', 'Figma', 'English', 'Japanese'],
-    professional_development: [
-        'Web Developer Bootcamp 2023 | Udemy',
-        'React - The Complete Guide 2023 (incl. Next.js, Redux) | Udemy',
-        'Modern React with Redux 2023 | Udemy',
-        'JavaScript Algorithms and Data Structures Masterclass | Udemy',
-        'Master the Coding Interview: Data Structures + Algorithms | Udemy',
-        'The Complete SQL Bootcamp: Go from Zero to Hero | Udemy',
-        'The Advanced CSS and Sass: Flexbox, Grid, Animations and More | Udemy',
-        'The Complete Angular Course: Beginner to Advanced | Udemy (Ongoing)',
-    ],
+    professional_development: {
+        0: 'Web Developer Bootcamp 2023 | Udemy',
+        1: 'React - The Complete Guide 2023 (incl. Next.js, Redux) | Udemy',
+        2: 'Modern React with Redux 2023 | Udemy',
+        3: 'JavaScript Algorithms and Data Structures Masterclass | Udemy',
+        4: 'Master the Coding Interview: Data Structures + Algorithms | Udemy',
+        5: 'The Complete SQL Bootcamp: Go from Zero to Hero | Udemy',
+        6: 'The Advanced CSS and Sass: Flexbox, Grid, Animations and More | Udemy',
+        7: 'Angular - The Complete Guide (2025 Edition) | Udemy',
+        8: 'A complete guide to Angular 19 Unit Testing and End to End (E2E) Testing, including Testing best practices and CI | Udemy (Ongoing)'
+    },
 }
 
 export const projects_data: ProjectsData = {

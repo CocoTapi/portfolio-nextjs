@@ -14,6 +14,10 @@ export interface MediaData {
     [key: number]: string;
 }
 
+interface OnlineCourses {
+    [key: number]: string
+}
+
 export interface ProfileData {
     my_email: string;
     top_page_description: string;
@@ -24,7 +28,7 @@ export interface ProfileData {
     long_self_introduction4: string;
     hobbies: string;
     skills: string[];
-    professional_development: string[];
+    professional_development: OnlineCourses;
 }
 
 interface Feature {

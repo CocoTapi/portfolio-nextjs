@@ -46,7 +46,7 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
           <div className={classes.eduGroup}>
             <p className={classes.eduLabel}>Professional Development</p>
             <ul>
-              {profile.professional_development.map((item: string, index: number) => (
+              {Object.values(profile.professional_development).map((item: string, index: number) => (
                 <li key={item}><a href={media_data[index]} className={classes.courseLink} >{item}</a></li>
               ))}
             </ul>
