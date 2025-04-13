@@ -1,4 +1,4 @@
-import classes from "../css/about-css/skills.module.css";
+import classes from "./skills.module.css";
 import { RiJavascriptFill } from "react-icons/ri";
 import { BiLogoTypescript } from "react-icons/bi";
 import { BiLogoReact } from "react-icons/bi";

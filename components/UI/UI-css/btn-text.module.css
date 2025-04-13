@@ -1,0 +1,40 @@
+
+.button {
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    color: var(--color-primary-500);
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: var(--color-primary-dark-1);
+    padding: .5rem;
+    border-radius: 5px;
+  
+    position: relative;
+    z-index: 100;
+  
+    transition: all .2s;
+  }
+  
+.button:hover {
+cursor: pointer;
+background-color: var(--color-primary-500);
+
+color: white;
+box-shadow: 0 1rem 2rem rgba(0,0,0,0, .15);
+transform: translateY(-2px);
+}
+  
+.button::after {
+content: "";  /* you need this */
+display: inline-block;
+height: 100%;
+width: 100%;
+border-radius: 100px;
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+transition: all .4s;
+}

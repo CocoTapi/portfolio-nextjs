@@ -1,0 +1,175 @@
+.aboutComponent {
+    background-color: var(--card-background);
+    width: 90vw;
+    max-width: var(--max-width);
+    border-radius: 50px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 8rem;
+}
+
+.introComponent, .subComponent {
+    margin-bottom: 4rem;
+}
+
+.subComponent h2 {
+    margin-bottom: 2rem;
+}
+
+.introComponent {
+    display: flex;
+    width: 100%;
+}
+
+.myImg {
+    width: 25%;
+}
+
+
+.myImg img {
+    width: 100%;
+}
+
+.introDescription {
+    padding-left: 6.5rem;
+    width: 70%;
+}
+
+.hobbies {
+    margin: 2rem 0;
+}
+
+.hobbies span{
+    font-family: var(--font-primary);
+    color: var(--color-grey-dark-1);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.socialMediaGroup {
+    font-family: var(--font-primary);
+    color: var(--color-grey-dark-1);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.socialItem,
+.socialItem2 {
+    font-family: var(--font-primary);
+    color: var(--color-grey-dark-1);
+    font-size: 1.6rem;
+    font-weight: 300;
+    border-bottom: 1px solid var(--color-grey-dark-1);
+    transition: all .2s;
+}
+
+.socialItem {
+    margin-right: 1rem;
+
+}
+
+.socialItem2 {
+    margin-left: 1rem;
+}
+
+.socialItem:hover,
+.socialItem2:hover {
+    color: var(--color-primary-dark-1);
+    border-bottom: 1px solid var(--color-primary-600);
+}
+
+.skillsComponent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); 
+    margin-bottom: 0;
+}
+
+.subComponent h3 {
+    margin-bottom: 1.5rem;
+}
+
+.eduGroup {
+    margin-bottom: 3.5rem;
+}
+
+.eduLabel {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.eduGroup ul {
+    margin-left: 1.5rem;
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.eduGroup li {
+    position: relative;
+    cursor: pointer;
+}
+
+.eduGroup li a:hover {
+    color: var(--color-primary-600);
+}
+
+
+.school {
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+.mailLink{
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    background: linear-gradient(135deg, var(--color-primary-dark-1), #704BDB); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+    margin-left: .5rem;
+    position: relative;
+    z-index: 100;
+
+    text-transform: uppercase;
+
+    transform: all .2s;
+}
+
+/* .mailLink:hover {
+    transform: translateY(-2px);
+} */
+
+@media only screen and (max-width: 55.6em) {
+    .aboutComponent {
+        padding: 6rem 4rem;
+    }
+  }
+
+@media only screen and (max-width: 32.5em) {
+.aboutComponent {
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+.introComponent {
+    flex-direction: column;
+}
+
+/* TODO */
+.myImg {
+    width: 50%;
+}
+
+.introDescription {
+    padding-left: 0;
+    width: 100%;
+}
+
+.skillsComponent {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); 
+}
+}

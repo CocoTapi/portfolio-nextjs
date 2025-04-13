@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation";
-import classes from "../css/main-header-css/nav-link.module.css";
+import classes from "./nav-link.module.css";
 import { NavLinkProps } from "@/util/types";
 
 export default function NavLink({ href, children }: NavLinkProps){

@@ -1,6 +1,6 @@
 'use client';
 
-import classes from "../css/UI-css/accordion.module.css";
+import classes from "./UI-css/accordion.module.css";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import { useState } from "react";
 import { AccordionProps } from "@/util/types";

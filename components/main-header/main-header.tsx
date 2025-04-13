@@ -1,5 +1,5 @@
 import Link from "next/link";
-import classes from "../css/main-header-css/main-header.module.css";
+import classes from "./main-header.module.css";
 
 export default function MainHeader() {
 
@@ -8,7 +8,7 @@ export default function MainHeader() {
       <div className={classes.headerContents}>
         <Link href="/">
           <div className={classes.logoFrame}>
-            <img src="/images/logo.png" alt="Logo" />
+            <img src="/images/sLogo.png" alt="Logo" />
           </div>
         </Link>
         <ul className={classes.nav}>

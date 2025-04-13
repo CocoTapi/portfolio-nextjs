@@ -10,6 +10,8 @@
   --background-start: #FFAA9E;
   --background-end: #4886BF;
 
+  --background-s: #2773a5;
+
   --gradient-light: #FFAA9E;
   --gradient-dark: #704BDB;
   
@@ -85,7 +87,7 @@ body {
   font-family: var(--font-primary);
   font-weight: 300;
   line-height: 1.6;
-  background-image: linear-gradient(135deg, var(--background-start), var(--background-end));  
+  background-image: linear-gradient(135deg, var(--background-s), var(--background-start));  
 }
 
 a {

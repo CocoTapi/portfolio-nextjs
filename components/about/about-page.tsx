@@ -1,34 +1,43 @@
 import { ProfileProps } from "@/util/types";
 import MediumButton from "../UI/btn-medium";
-import classes from "../css/about-css/about-page.module.css";
+import classes from "./about-page.module.css";
 import Skills from "./skills";
 import IntroductionNav from "./introduction-nav";
-import { media_data } from "@/data/data";
+// import { media_data } from "@/data/data";
 import SmallButton from "../UI/btn-small";
 import { AiOutlineGithub } from "react-icons/ai";
 import { SiLinkedin } from "react-icons/si";
 import BtnText from "../UI/btn-text";
+import { course_list } from "@/data/data";
 
 export default function AboutPage({ profile }: ProfileProps): JSX.Element {
 
   return (
     <div className={classes.aboutComponent}>
+      {/* Introduction component */}
       <div className={classes.introComponent}>
+        
+        {/* img */}
         <div className={classes.myImg}>
           <img src="/images/dodger-sleeping.jpg" alt="My Image" />
         </div>
+
+        {/* Description */}
         <div className={classes.introDescription}>
+
           <IntroductionNav profile={profile} />  
+
           <p className={classes.hobbies}>
             <span>When I'm not coding : </span>{profile.hobbies}
           </p>
+          
           <div className={classes.socialMediaGroup}>
             <span>My social media : </span>
-            <a href={media_data.gitHub} className={classes.socialItem}>
+            <a href={profile.social_media.gitHub} className={classes.socialItem}>
               <AiOutlineGithub  className={classes.iconGit}/> GitHub 
             </a>
             <span>,</span>
-            <a href={media_data.linkedIn} className={classes.socialItem2}>
+            <a href={profile.social_media.linkedIn} className={classes.socialItem2}>
               <SiLinkedin className={classes.iconLinked}/> LinkedIn
             </a>
           </div>
@@ -46,8 +55,12 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
           <div className={classes.eduGroup}>
             <p className={classes.eduLabel}>Professional Development</p>
             <ul>
-              {Object.values(profile.professional_development).map((item: string, index: number) => (
-                <li key={item}><a href={media_data[index]} className={classes.courseLink} >{item}</a></li>
+              {profile.professional_development.map((course) => (
+                <li key={course.name}>
+                  <a href={course.link} className={classes.courseLink} >
+                    {course.name}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>

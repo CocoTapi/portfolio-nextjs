@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import classes from "../css/about-css/introduction-nav.module.css";
+import classes from "./introduction-nav.module.css";
 import { ProfileProps } from "@/util/types";
 import SmallButton from "../UI/btn-small";
 import { FaChevronDown } from "react-icons/fa";

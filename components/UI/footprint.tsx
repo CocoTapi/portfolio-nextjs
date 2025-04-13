@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import classes from '../css/UI-css/footprint.module.css';
+import classes from './UI-css/footprint.module.css';
 
 export default function Footprint() {
     const [footprints, setFootprints] = useState<Array<{ id: number; left: number; top: number; type: 'right' | 'left' }>>([]);

@@ -1,22 +1,28 @@
 import { ReactNode } from "react";
 import { colorSchemes } from "@/components/UI/color-schemes";
-import { StaticImageData } from "next/image";
+// import { StaticImage_Data } from "next/image";
 
 // data
-export interface ImageData {
+export interface Image_Data {
     image: string;
     alt: string;
+}
+
+
+export interface Course_List {
+    media_id: number,
+    name: string,
+    link: string
 }
 
 export interface MediaData {
     gitHub: string;
     linkedIn: string;
-    [key: number]: string;
 }
 
-interface OnlineCourses {
-    [key: number]: string
-}
+// interface OnlineCourses {
+//     [key: number]: string
+// }
 
 export interface ProfileData {
     my_email: string;
@@ -27,8 +33,9 @@ export interface ProfileData {
     long_self_introduction3: string;
     long_self_introduction4: string;
     hobbies: string;
+    social_media: MediaData;
     skills: string[];
-    professional_development: OnlineCourses;
+    professional_development: Course_List[];
 }
 
 interface Feature {
@@ -74,7 +81,7 @@ export interface ProjectData {
     onGoing: boolean,
     slug: string;
     project_url: string;
-    images: ImageData[];
+    images: Image_Data[];
     project_summary: string;
     tech_list: string[];
     tech_summary: string;
@@ -119,7 +126,7 @@ export interface ButtonStyle {
 };
 
 export interface ImageSlideshowProps {
-    images: ImageData[];
+    images: Image_Data[];
 }
 
 export interface ProjectProps {

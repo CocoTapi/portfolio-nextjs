@@ -1,41 +1,102 @@
-import { MediaData, ProfileData, ProjectsData } from "@/util/types";
+import { Course_List, ProfileData, ProjectsData } from "@/util/types";
 import { lessonLab_image_data } from "./image-data";
 
-export const media_data: MediaData = {
+export const social = {
     gitHub: "https://github.com/CocoTapi",
-    linkedIn: "https://linkedin.com",
-    0: "https://github.com/CocoTapi/web_developer_bootcamp_2023/tree/main/Sections",
-    1: "https://github.com/CocoTapi/REACT_2023",
-    2: "https://github.com/CocoTapi/modern_react_2023",
-    3: "https://github.com/CocoTapi/algorithms_and_data_structure",
-    4: "https://github.com/CocoTapi/coding_interview_bootcamp",
-    6: "https://github.com/CocoTapi/advanced-css-and-sass",
-    7: "https://www.udemy.com/course/the-complete-guide-to-angular-2/",
-    8: "https://www.udemy.com/course/angular-testing-course"
+    linkedIn: "https://github.com/CocoTapi"
 }
+
+export const course_list: Course_List[] = [
+    {
+        media_id: 0,
+        name: 'Web Developer Bootcamp 2023 | Udemy',
+        link: "https://github.com/CocoTapi/web_developer_bootcamp_2023/tree/main/Sections"
+    },
+    {
+        media_id: 1,
+        name: 'React - The Complete Guide 2023 (incl. Next.js, Redux) | Udemy',
+        link: "https://github.com/CocoTapi/REACT_2023"
+    },
+    {
+        media_id: 2,
+        name: 'Modern React with Redux 2023 | Udemy',
+        link: "https://github.com/CocoTapi/modern_react_2023"
+    },
+    {
+        media_id: 3,
+        name: 'JavaScript Algorithms and Data Structures Masterclass | Udemy',
+        link: "https://github.com/CocoTapi/algorithms_and_data_structure"
+    },
+    {
+        media_id: 4,
+        name: 'Master the Coding Interview: Data Structures + Algorithms | Udemy',
+        link: "https://github.com/CocoTapi/coding_interview_bootcamp"
+    },
+    {
+        media_id: 5,
+        name: 'The Advanced CSS and Sass: Flexbox, Grid, Animations and More | Udemy',
+        link: "https://github.com/CocoTapi/advanced-css-and-sass"
+    },
+    {
+        media_id: 6,
+        name: 'The Complete SQL Bootcamp: Go from Zero to Hero | Udemy',
+        link: ""
+    },
+    {
+        media_id: 7,
+        name: 'Angular - The Complete Guide (2025 Edition) | Udemy',
+        link: "https://www.udemy.com/course/the-complete-guide-to-angular-2/"
+    },
+    {
+        media_id: 8,
+        name: 'A complete guide to Angular 19 Unit Testing and End to End (E2E) Testing, including Testing best practices and CI | Udemy (Ongoing)',
+        link: "https://www.udemy.com/course/angular-testing-course"
+    },
+]
 
 export const profile_data: ProfileData = {
     my_email: 'shioriavino@gmail.com',
-    top_page_description: `I combine my passion for education with problem-solving and 
-                           creative power of coding, striving to create impactful and innovative solutions.`,
-    short_self_introduction: `I began my career as an ESL teacher, a role I cherished deeply. When faced with an unexpected career pause, I was inspired by a friend who quickly launched a project using his software engineering skills. Seizing the opportunity, I explored software engineering and quickly found joy in building programs, solving complex puzzles, and crafting designs that reflected my vision. Though the journey has been challenging, with the support of engineer friends and incredible online resources, I’ve found fulfillment in overcoming obstacles.`,
-    long_self_introduction1: `I began my career as an ESL teacher, a role I cherished deeply, but I always had a curiosity to explore something new. When the time came to change my visa, I faced the reality of being unable to work for nearly two years. Rather than see this as a setback, I viewed it as an opportunity to grow my skills and complete a project I had been planning during my master's degree.`,
-    long_self_introduction2: `I refined my project, diving into data and technologies, and sought advice from software engineers. While they encouraged me to learn coding, I initially resisted. However, that all changed when my software engineer friend successfully launched a project we had been discussing, quickly turning it into a business. This moment opened my eyes to the incredible power and potential of software engineering.`,
-    long_self_introduction3: `Inspired, I began learning to code and quickly found joy in building programs, solving complex puzzles, and crafting designs that reflected my vision. The journey has been far from easy—every new challenge brings unknown errors and difficulties. But with the support of engineer friends and incredible resources available online, I’ve found fulfillment in overcoming them.`,
-    long_self_introduction4: `Now, as a software engineer, I combine my passion for education with the problem-solving and creative power of coding, continuously striving to create impactful and innovative solutions.`,
-    hobbies: `I love spending time with my cat (who is also my coding partner), cooking, baking, and gardening. Recently, I like playing pickle ball too!`,
-    skills: ['JavaScript', 'TypeScript', 'React', 'Angular', 'HTML', 'CSS', 'Sass', 'Node.js', 'Node Express', 'PostgreSQL', 'MongoDB', 'PgAdmin', 'Postman', 'AWS', 'Git', 'GitHub', 'Figma', 'English', 'Japanese'],
-    professional_development: {
-        0: 'Web Developer Bootcamp 2023 | Udemy',
-        1: 'React - The Complete Guide 2023 (incl. Next.js, Redux) | Udemy',
-        2: 'Modern React with Redux 2023 | Udemy',
-        3: 'JavaScript Algorithms and Data Structures Masterclass | Udemy',
-        4: 'Master the Coding Interview: Data Structures + Algorithms | Udemy',
-        5: 'The Complete SQL Bootcamp: Go from Zero to Hero | Udemy',
-        6: 'The Advanced CSS and Sass: Flexbox, Grid, Animations and More | Udemy',
-        7: 'Angular - The Complete Guide (2025 Edition) | Udemy',
-        8: 'A complete guide to Angular 19 Unit Testing and End to End (E2E) Testing, including Testing best practices and CI | Udemy (Ongoing)'
-    },
+    top_page_description: 
+        `I combine my passion for education with problem-solving and 
+        creative power of coding, striving to create impactful and innovative solutions.`,
+    short_self_introduction: 
+        `I began my career as an ESL teacher, a role I cherished deeply. 
+        When faced with an unexpected career pause, I was inspired by a friend who quickly launched a project 
+        using his software engineering skills. Seizing the opportunity, I explored software engineering and 
+        quickly found joy in building programs, solving complex puzzles, and crafting designs that reflected 
+        my vision. Though the journey has been challenging, with the support of engineer friends and 
+        incredible online resources, I’ve found fulfillment in overcoming obstacles.`,
+    long_self_introduction1: 
+        `I began my career as an ESL teacher, a role I cherished deeply, but I always had a curiosity 
+        to explore something new. When the time came to change my visa, I faced the reality of being unable to 
+        work for nearly two years. Rather than see this as a setback, I viewed it as an opportunity 
+        to grow my skills and complete a project I had been planning during my master's degree.`,
+    long_self_introduction2: 
+        `I refined my project, diving into data and technologies, and sought advice from software engineers. 
+        While they encouraged me to learn coding, I initially resisted. However, that all changed 
+        when my software engineer friend successfully launched a project we had been discussing, 
+        quickly turning it into a business. This moment opened my eyes to the incredible power and 
+        potential of software engineering.`,
+    long_self_introduction3: 
+        `Inspired, I began learning to code and quickly found joy in building programs, 
+        solving complex puzzles, and crafting designs that reflected my vision. The journey has been far 
+        from easy—every new challenge brings unknown errors and difficulties. But with the support of engineer 
+        friends and incredible resources available online, I’ve found fulfillment in overcoming them.`,
+    long_self_introduction4: 
+        `Now, as a software engineer, I combine my passion for education with the problem-solving 
+        and creative power of coding, continuously striving to create impactful and innovative solutions.`,
+    hobbies: 
+        `I love spending time with my cat (who is also my coding partner), cooking, baking, and gardening. 
+        Recently, I like playing pickle ball too!`,
+    social_media: social,
+    skills: [
+        'JavaScript', 'TypeScript', 'React', 'Angular', 'HTML', 'CSS', 'Sass', 
+        'Node.js', 'Node Express', 'PostgreSQL', 'MongoDB', 'PgAdmin', 'Postman', 
+        'AWS', 'Git', 'GitHub', 
+        'Figma', 
+        'English', 'Japanese'
+    ],
+    professional_development: course_list,
 }
 
 export const projects_data: ProjectsData = {

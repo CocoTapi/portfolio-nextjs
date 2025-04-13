@@ -1,0 +1,60 @@
+.skillGroup {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 1.7rem;
+    gap: .7rem;
+}
+
+.skillGroup2 {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 1.7rem;
+    gap: .5rem;
+}
+
+.skillIcon, .skillCss, .skillPostman {
+    margin: auto;
+    color: transparent;
+}
+
+.skillIcon {
+    font-size: 6rem;
+}
+
+.skillCss {
+    font-size: 6.2rem;
+}
+
+.skillPostman {
+    font-size: 4.2rem;
+}
+
+.enIcon, .jpIcon {
+    margin: auto;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--gradient-light), var(--gradient-dark)); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.enIcon {
+    font-size: 4.2rem;
+}
+
+.jpIcon {
+    font-size: 3.5rem;
+    transform: translateY(3px);
+}
+
+.JpLetter {
+    transform: translateY(1px);
+}
+
+
+
+

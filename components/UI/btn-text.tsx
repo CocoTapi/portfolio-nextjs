@@ -1,5 +1,5 @@
 import { colorSchemes } from "./color-schemes";
-import classes from "../css/UI-css/btn-text.module.css";
+import classes from "./UI-css/btn-text.module.css";
 import { ButtonProps, ButtonStyle, ColorScheme } from "@/util/types";
 
 export default function BtnText({
