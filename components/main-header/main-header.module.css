@@ -1,7 +1,7 @@
 .header {
   width: 100vw;
   height: 7rem;
-  background-color: rgb(250, 233, 233);
+  background-color: var(--color-primary-600);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   position: fixed;
   z-index: 1000;
@@ -16,7 +16,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding-right: 2rem;
+  color: white;
 }
 
 .nav {
@@ -31,7 +32,8 @@
 }
 
 .logoFrame img {
-  width: 100%;
+  width: 270%;
+  padding-top: 1rem;
 }
 
 .navItem:link {

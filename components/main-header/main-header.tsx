@@ -8,7 +8,7 @@ export default function MainHeader() {
       <div className={classes.headerContents}>
         <Link href="/">
           <div className={classes.logoFrame}>
-            <img src="/images/sLogo.png" alt="Logo" />
+            <img src="/images/logo.png" alt="Logo" />
           </div>
         </Link>
         <ul className={classes.nav}>

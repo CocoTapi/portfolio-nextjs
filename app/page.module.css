@@ -1,113 +1,55 @@
 .main {
   margin: auto;
-
   display: grid;
   grid-row-gap: 15rem;
 }
 
 .topSection {
-  width: 100%;
+  width: 100vw;
   height: 90vh;
   position: relative;
 
-  padding-top: 1rem;
-  background-color: var(--card-background);
+  margin-top: 7rem;
+  background-image: linear-gradient(45deg, var(--gradient-dark), var(--gradient-light));  
 
   transition: all .2s ease;
 }
 
-.textGroup {
-  width: 700px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all .2s ease;
-}
-
-.mainText {
-  backface-visibility: hidden;
-  margin-bottom: 1rem;
-}
-
-.mainTextName {
-  display: block;
-  animation: moveInLeft 2s ease-out;
-}
-
-.mainTextJobTitle {
-  display: block;
-  animation: moveInLeft 2s ease-out .2s;
-  animation-fill-mode:  backwards;
-}
-
-.mainTextSub {
-  display: block;
-  animation: moveInLeft .5s ease-out 1.5s;
-  animation-fill-mode:  backwards;
-}
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10px)
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-
-.introButtonFrame {
-  padding-top: 2rem;
-  animation: moveInLeft .5s ease-out 1.5s;
-  animation-fill-mode:  backwards;
-}
-
-.section {
+.projectSection, .aboutSection {
   width: 100vw;
-  scroll-margin-top: 10rem;
+
   /* Adjust according to the height of your header */
+  scroll-margin-top: 10rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.section h1 {
+.projectSection h1 {
   margin-bottom: var(--mb-largest);
 
   transition: all .2s ease;
 }
 
-.cardComponent {
-  display: flex;
-  flex-direction: column;
-}
-
 .card {
   width: 80%;
-  background-color: var(--card-background);
+  height: 50%;
+  background-color: var(--color-primary-400);
+  box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, .2);
+  margin-bottom: 10rem;
+
   transition: transform all .3s ease;
 }
 
-.card:not(:last-child) {
-  margin-bottom: 5rem;
+.aboutSection {
+  width: 100%;
+  background-image: 
+    linear-gradient(to bottom, rgba(219, 236, 242,.9), rgba(78, 148, 186,.98)),
+    url('/images/background200.png');  
+
 }
 
-.evenCard {
-  align-self: flex-end;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-}
-
-
-.oddCard {
-  align-self: flex-start;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
 
 @media only screen and (max-width: 62.5em) {
   .main {

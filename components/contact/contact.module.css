@@ -1,0 +1,24 @@
+.contactBox {
+    width: 95vw;
+    max-width: 1360px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactBox h1{
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.comment {
+    width: 70%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.plateGroup {
+    display: flex;
+    gap: 8rem;
+    margin: 9rem auto;
+}

@@ -1,0 +1,5 @@
+.plate {
+    width: 32.5rem;
+    height: 32.5rem;
+    background-color: var(--color-primary-400);
+}

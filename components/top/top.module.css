@@ -1,0 +1,73 @@
+.contentBox {
+    width: 85%;
+    max-width: 1200px;
+    height: 90vh;
+    margin: auto;
+ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: all .2s ease;
+}
+
+.topImgFrame img {
+    width: 40vw;
+    height: 40vw;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.textBox {
+    width: 35vw;
+    max-width: 530px;
+}
+  
+.mainText {
+backface-visibility: hidden;
+margin-bottom: 1rem;
+}
+
+.mainTextName {
+display: block;
+animation: moveInLeft 2s ease-out;
+}
+
+.mainTextJobTitle {
+display: block;
+animation: moveInLeft 2s ease-out .2s;
+animation-fill-mode:  backwards;
+}
+
+.mainTextSub {
+display: block;
+animation: moveInLeft .5s ease-out 1.5s;
+animation-fill-mode:  backwards;
+}
+
+@keyframes moveInLeft {
+0% {
+    opacity: 0;
+    transform: translateX(-10px)
+}
+
+100% {
+    opacity: 1;
+    transform: translate(0);
+}
+}
+
+.introButtonFrame {
+padding-top: 2rem;
+animation: moveInLeft .5s ease-out 1.5s;
+animation-fill-mode:  backwards;
+}
+
+.topButton {
+    padding: 1.2rem 3.5rem;
+    border: none;
+    background-color: var(--color-primary-500);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+}
+

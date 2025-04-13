@@ -14,6 +14,7 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
 
   return (
     <div className={classes.aboutComponent}>
+      <h1>About</h1>
       {/* Introduction component */}
       <div className={classes.introComponent}>
         
@@ -52,6 +53,23 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
       <div className={classes.subComponent}>
         <h2>Education :</h2>
         <div>
+        <div className={classes.eduGroup}>
+            <p className={classes.eduLabel}>
+              Master of Science in TESOL (4.0 GPA)
+            </p>
+            <p className={classes.school}>
+              University of Rochester, Rochester NY, USA
+            </p>
+          </div>
+          <div className={classes.eduGroup}>
+            <p className={classes.eduLabel}>
+              Bachelor of Arts in English and Master of Arts in English 
+            </p>
+            <p className={classes.school}>
+              Japan Women’s University, Tokyo, Japan
+            </p>
+          </div>
+          
           <div className={classes.eduGroup}>
             <p className={classes.eduLabel}>Professional Development</p>
             <ul>
@@ -64,31 +82,8 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
               ))}
             </ul>
           </div>
-          <div className={classes.eduGroup}>
-            <p className={classes.eduLabel}>
-              Master of Science in TESOL (4.0 GPA)
-            </p>
-            <p className={classes.school}>
-              University of Rochester, Rochester NY, USA
-            </p>
-          </div>
-          <div className={classes.eduGroup}>
-            <p className={classes.eduLabel}>
-              Master of Arts in English and Bachelor of Arts in English
-            </p>
-            <p className={classes.school}>
-              Japan Women’s University, Tokyo, Japan
-            </p>
-          </div>
+          
         </div>
-      </div>
-      <div id="contact" className={classes.subComponent}>
-        <h2>Let's Connect!</h2>
-        <p>
-          I'm always open to discussing new opportunities, projects, or ideas.
-          If you'd like to connect or learn more about my work, feel free to get
-          in touch at <a href={`mailto:${profile.my_email}`} className={classes.mailLink}>{profile.my_email}.</a>
-        </p>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 .footer {
     width: 100%;
-    background-color: #021b355e;
+    background-color: var(--color-primary-600);
 
     margin-top: 10rem;
 }
@@ -14,7 +14,7 @@
    
     display: grid;
     grid-template-rows: max-content max-content min-content min-content;
-    grid-template-columns: [icon-start] min-content [name-start] max-content [name-end nav-start] 1fr [nav-end];
+    grid-template-columns: [name-start] max-content [name-end nav-start] 1fr [nav-end];
     
     justify-content: start;
     align-items: center;
@@ -23,13 +23,16 @@
 }
 
 .footerLogoFrame {
-    grid-row: 2 / 3;
-    grid-column: icon-start / name-start;
+    grid-row: 1 / 2;
+    grid-column: name-start / name-end;
     width: 18rem;
 
     justify-self: center;
-    margin-right: 1rem;
-    margin-left: 2rem;
+    align-self: center;
+    margin-left: 7rem;
+
+    height: 60%;
+    
 }
 
 .footerLogoFrame img {
@@ -43,6 +46,8 @@
     display: grid;
     text-align: start;
     padding-top: 2rem;
+
+    margin-left: 10rem;
 
 }
 

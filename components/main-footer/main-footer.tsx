@@ -11,7 +11,7 @@ export default function MainFooter(): JSX.Element {
 
         {/* Cat Logo */}
         <div className={classes.footerLogoFrame}>
-          <img src="/images/sLogo.png" alt="Logo" />
+          <img src="/images/logo.png" alt="Logo" />
         </div>
 
         <div className={classes.footerNameGroup}>

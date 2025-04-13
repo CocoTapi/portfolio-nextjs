@@ -4,6 +4,8 @@ import ProjectSummary from "@/components/projects/project-summary";
 import AboutPage from "@/components/about/about-page";
 import BtnMedium from "@/components/UI/btn-medium";
 import Link from "next/link";
+import Top from "@/components/top/top";
+import Contact from "@/components/contact/contact";
 
 export default function HomePage(): JSX.Element {
   return (
@@ -11,41 +13,33 @@ export default function HomePage(): JSX.Element {
     <main className={classes.main}>
       {/* top image */}
       <section className={classes.topSection}>
-        <div className={classes.textGroup}>
-          <h2 className={classes.mainText}>
-            <span className={classes.mainTextName}>Hi, I'm Shiori,</span>
-            <span className={classes.mainTextJobTitle}>Full-stack Developer.</span>
-          </h2>
-          <p className={classes.mainTextSub}>{profile_data.top_page_description}</p>
-          <div className={classes.introButtonFrame}>
-            <Link href="#contact">
-              <BtnMedium colorScheme="gradient">Get in Touch!</BtnMedium>
-            </Link>
-          </div>
-        </div>
+        <Top />
       </section>
 
       {/* projects */}
-      <section id="projects" className={classes.section}>
+      <section id="projects" className={classes.projectSection}>
         <h1>Projects</h1>
         {projects_data.projects.map((project, index) => (
           <div
-            key={project.project_id}
+            key={project.project_title}
             className={`
               ${classes.card} 
-              ${ index % 2 === 0 ? classes.evenCard : classes.oddCard}
             `}
           >
             <ProjectSummary key={project.project_id} project={project} />
           </div>
         ))}
-        
+  
       </section>
 
       {/* About */}
-      <section id="about" className={classes.section}>
-        <h1>About</h1>
+      <section id="about" className={classes.aboutSection}>
         <AboutPage profile={profile_data} />
+      </section>
+
+      {/* About */}
+      <section id="contact" className={classes.contactSection}>
+        <Contact />
       </section>
     </main>
     </>
