@@ -19,10 +19,10 @@
   
 .button:hover {
 cursor: pointer;
-background-color: var(--color-primary-500);
+background-color: var(--color-secondary-500);
 
 color: white;
-box-shadow: 0 1rem 2rem rgba(0,0,0,0, .15);
+box-shadow: 0 1rem 2rem rgba(0,0,0,0, .2);
 transform: translateY(-2px);
 }
   

@@ -78,14 +78,7 @@ export default function Skills(): JSX.Element {
         <FiFigma className={classes.skillIcon} style={{ fill: "url(#icon-gradient)" }} />
         <p>Figma</p>
       </div>
-      <div className={classes.skillGroup2}>
-        <p className={classes.enIcon}>En</p>
-        <p>English</p>
-      </div>
-      <div className={classes.skillGroup2}>
-        <p className={classes.jpIcon}>あa</p>
-        <p className={classes.JpLetter}>Japanese</p>
-      </div>
+     
       <svg width="0" height="0">
         <linearGradient id="icon-gradient" x1="100%" y1="100%" x2="0%" y2="0%">
           <stop stopColor="var(--color-secondary-500)" offset="0%" />

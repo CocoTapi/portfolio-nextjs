@@ -16,8 +16,9 @@ export interface Course_List {
 }
 
 export interface MediaData {
-    gitHub: string;
-    linkedIn: string;
+    gitHub: string,
+    linkedIn: string,
+    email: string
 }
 
 // interface OnlineCourses {

@@ -113,7 +113,7 @@ h2 {
 
 h3 {
   font-family: var(--font-heading);
-  font-weight: var(--font-weight-heading);
+  font-weight: 600;
   font-size: 3rem;
   color: var(--color-grey-dark-1);
 }

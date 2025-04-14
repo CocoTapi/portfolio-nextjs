@@ -37,9 +37,9 @@ export default function HomePage(): JSX.Element {
         <AboutPage profile={profile_data} />
       </section>
 
-      {/* About */}
+      {/* Contact */}
       <section id="contact" className={classes.contactSection}>
-        <Contact />
+        <Contact profile={profile_data}/>
       </section>
     </main>
     </>

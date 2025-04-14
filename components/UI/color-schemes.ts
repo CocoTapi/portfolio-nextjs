@@ -3,7 +3,7 @@ import { ColorScheme } from "@/util/types";
 export const colorSchemes: Record<string, ColorScheme> = {
     primary: {
         textColor: 'var(--color-grey-light-1)',
-        backgroundColor: 'var(--color-primary-400)',
+        backgroundColor: 'var(--color-secondary-400)',
         borderColor: 'none',
     },
     primaryWhite: {

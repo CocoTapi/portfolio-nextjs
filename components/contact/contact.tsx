@@ -1,7 +1,8 @@
+import { ProfileProps } from '@/util/types';
 import classes from './contact.module.css';
 import Plate from './plate';
 
-export default function Contact(){
+export default function Contact({ profile }: ProfileProps): JSX.Element{
     return (
         <div id="contact" className={classes.contactBox}>
             <h1>Get in Touch</h1>
@@ -10,9 +11,10 @@ export default function Contact(){
                 If you'd like to connect or learn more about my work, feel free to contact me!
             </p>
             <div className={classes.plateGroup}>
-                <Plate></Plate>
-                <Plate></Plate>
-                <Plate></Plate>
+                <Plate profile={profile} />
+                <div className={classes.obi}>
+                    {/* <img src="/images/background200.png" alt="obi" /> */}
+                </div>
             </div>  
       </div>
 

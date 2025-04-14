@@ -3,7 +3,8 @@ import { lessonLab_image_data } from "./image-data";
 
 export const social = {
     gitHub: "https://github.com/CocoTapi",
-    linkedIn: "https://github.com/CocoTapi"
+    linkedIn: "https://www.linkedin.com/in/shiori-yoshida/",
+    email: "shioriavino@gmail.com"
 }
 
 export const course_list: Course_List[] = [
