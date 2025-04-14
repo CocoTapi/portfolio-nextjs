@@ -3,6 +3,7 @@
     background-color: var(--color-primary-600);
 
     margin-top: 10rem;
+    padding-left: 10rem;
 }
 
 .footerContent {
@@ -25,17 +26,14 @@
 .footerLogoFrame {
     grid-row: 1 / 2;
     grid-column: name-start / name-end;
-    width: 16rem;
+    width: 30rem;
 
     justify-self: center;
     align-self: center;
-
-    height: 60%;
-    
 }
 
 .footerLogoFrame img {
-    width: 150%;
+    width: 100%;
 }
 
 .footerNameGroup {
@@ -44,15 +42,12 @@
 
     display: grid;
     text-align: start;
-    padding-top: 2rem;
-
-    margin-left: 10rem;
 
 }
 
 .footerName {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
 
     border-bottom: 1px solid var(--color-grey-light-1);
    
@@ -116,7 +111,8 @@
   
 .footerNavItem:hover,
 .footerNavItem:active {
-    background-color: #aaaaaa29;
+    background-color: var(--color-primary-400);
+    color: black;
 }
 
 .copyright {
@@ -125,7 +121,7 @@
 
     justify-self: end;
     
-    color: #8a8989;
+    color: #474747;
 
     margin-right: 3.5rem;
 }
@@ -139,9 +135,11 @@
 }
 
 @media only screen and (max-width: 55.6em) {
+    .footer {
+        padding-left: 0;
+    }
+
     .footerContent {
-        margin: auto;
-       
         grid-template-rows: max-content max-content min-content min-content;
         
         justify-content: center;
@@ -149,50 +147,37 @@
 
     .footerLogoFrame {
         grid-row: 1 / 2;
-        grid-column: icon-start / span 3;
-        width: 7rem;
+        grid-column: name-start / span 3;
 
-        justify-self: center;
     }
 
     .footerNameGroup {
-        grid-row: 2 / 3;
-        grid-column: icon-start / span 3;
+        grid-column: name-start / span 3;
         justify-self: center;
     
         text-align: center;
-        padding-top: 4rem;
         padding-bottom: 4rem;
     }
 
     .footerIcons {
         justify-content: center;
         gap: 3rem;
-        padding-top: 1rem;
     }
 
     .footerNav {
         grid-row: 3 / 4;
-        grid-column: icon-start / span 3;
+        grid-column: name-start / span 3;
         justify-self: center;
     
-        list-style: none;
-        display: flex;
-        gap: 3rem;
-    
-        margin-right: 0;
+        margin: 0;
         margin-bottom: 4rem;
     }
 
     .copyright {
         grid-row: 4 / 5;
-        grid-column: icon-start / span 3;
+        grid-column: name-start / span 3;
     
         justify-self: end;
-        
-        color: #8a8989;
-    
-        margin-right: 3.5rem;
     }
 }
 
