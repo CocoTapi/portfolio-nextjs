@@ -1,7 +1,7 @@
 import { ProjectProps } from "@/util/types";
 import classes from "./project-summary.module.css";
-import BtnMedium from "../UI/btn-medium";
-import BtnText from "../UI/btn-text";
+import BtnMedium from "../UI/btnMedium";
+import BtnText from "../UI/btnText";
 import ImageSlideshow from "./image-slideshow";
 import Link from "next/link";
 import Tag from "../UI/tag";

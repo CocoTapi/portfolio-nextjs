@@ -1,6 +1,6 @@
 import Link from "next/link";
 import classes from "./top.module.css";
-import BtnMedium from "../UI/btn-medium";
+import BtnMedium from "../UI/btnMedium";
 import { profile_data } from "@/data/data";
 import Image from "next/image";
 0
@@ -22,9 +22,7 @@ export default function Top() {
                 </p>
                 <div className={classes.introButtonFrame}>
                     <Link href="#contact">
-                        <button className={classes.topButton}>
-                            Get in Touch !
-                        </button>
+                        <BtnMedium>Get in Touch !</BtnMedium>
                     </Link>
                 </div>
             </div>

@@ -2,12 +2,12 @@ import { projects_data } from "@/data/data"
 import { ProjectData } from "@/util/types";
 import { notFound } from "next/navigation";
 import classes from "./page.module.css";
-import MediumButton from "@/components/UI/btn-medium";
+import MediumButton from "@/components/UI/btnMedium";
 import Tag from "@/components/UI/tag";
 import Accordion from "@/components/UI/accordion";
-import SmallButton from "@/components/UI/btn-small";
+import SmallButton from "@/components/UI/btnSmall";
 import Link from "next/link";
-import BtnText from "@/components/UI/btn-text";
+import BtnText from "@/components/UI/btnText";
 
 async function getProject(slug: string): Promise<ProjectData | undefined> {
     //await new Promise((resolve) => setTimeout(resolve, 5000));

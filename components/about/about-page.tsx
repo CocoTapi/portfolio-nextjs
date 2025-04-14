@@ -1,13 +1,13 @@
 import { ProfileProps } from "@/util/types";
-import MediumButton from "../UI/btn-medium";
+import MediumButton from "../UI/btnMedium";
 import classes from "./about-page.module.css";
 import Skills from "./skills";
 import IntroductionNav from "./introduction-nav";
 // import { media_data } from "@/data/data";
-import SmallButton from "../UI/btn-small";
+import SmallButton from "../UI/btnSmall";
 import { AiOutlineGithub } from "react-icons/ai";
 import { SiLinkedin } from "react-icons/si";
-import BtnText from "../UI/btn-text";
+import BtnText from "../UI/btnText";
 import { course_list } from "@/data/data";
 
 export default function AboutPage({ profile }: ProfileProps): JSX.Element {
@@ -72,7 +72,7 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
           
           <div className={classes.eduGroup}>
             <p className={classes.eduLabel}>Professional Development</p>
-            <ul>
+            <ul className={classes.courseList}>
               {profile.professional_development.map((course) => (
                 <li key={course.name}>
                   <a href={course.link} className={classes.courseLink} >

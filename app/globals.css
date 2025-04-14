@@ -23,7 +23,8 @@
 
   --color-secondary-400: #ffa69b;
   --color-secondary-500: #ff9082;
-  --color-secondary-dark-1: #F87A7A;
+  /* --color-secondary-dark-1: #F87A7A; */
+  --color-secondary-dark-1: #fa5f5f;
 
   --color-grey-light-1: #fdf9f9;
   --color-grey-light-2: #aaa;
@@ -55,10 +56,13 @@
   --bp-large: 62.5em; 
 
   /* 889.6px middle*/
-  --bp-medium: 55.6em;  
+  --bp-mediumLarge: 55.6em;  
 
   /* 810px semi */
-  --bp-medium: 50.6em;  
+  --bp-mediumSmall: 50.6em;  
+
+  /* 740px */
+  --bp-semi-small: 46.25em;
 
   /* --520px small */
   --bp-small: 32.5em;

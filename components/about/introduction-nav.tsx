@@ -3,7 +3,7 @@
 import { useState } from "react";
 import classes from "./introduction-nav.module.css";
 import { ProfileProps } from "@/util/types";
-import SmallButton from "../UI/btn-small";
+import SmallButton from "../UI/btnSmall";
 import { FaChevronDown } from "react-icons/fa";
 
 

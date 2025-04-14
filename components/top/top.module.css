@@ -2,6 +2,7 @@
     width: 85%;
     max-width: 1200px;
     height: 90vh;
+    max-height: 1033px;
     margin: auto;
  
     display: flex;
@@ -71,3 +72,10 @@ animation-fill-mode:  backwards;
 
 }
 
+@media only screen and (max-width: 62.5em) {
+    .contentBox {
+        height: 60vh;
+    }
+}
+
+    

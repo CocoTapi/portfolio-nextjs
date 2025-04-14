@@ -12,9 +12,6 @@ export default function Contact({ profile }: ProfileProps): JSX.Element{
             </p>
             <div className={classes.plateGroup}>
                 <Plate profile={profile} />
-                <div className={classes.obi}>
-                    {/* <img src="/images/background200.png" alt="obi" /> */}
-                </div>
             </div>  
       </div>
 

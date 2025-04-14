@@ -1,4 +1,4 @@
-import MediumButton from "@/components/UI/btn-medium";
+import MediumButton from "@/components/UI/btnMedium";
 import Link from "next/link";
 
 export default function NotFoundProject(): JSX.Element {

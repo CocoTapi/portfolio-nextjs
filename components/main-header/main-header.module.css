@@ -51,7 +51,8 @@
 
 .navItem:hover,
 .navItem:active {
-  background-color: var(--color-grey-light-1);
+  background-color: var(--color-primary-400);
+  color: black;
 }
 
 /* TODO */

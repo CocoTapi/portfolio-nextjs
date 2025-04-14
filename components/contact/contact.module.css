@@ -27,14 +27,14 @@
     z-index: 100;
 }
 
-.obi {
-    position: absolute;
-    z-index: 1;
-    width: 125rem;
-    height: 22rem;
-    background-image: 
-    linear-gradient(to right, rgba(78, 148, 186,.2), rgba(78, 148, 186,.4)),
-    url('/images/background200.png');  
-    background-size: 60% 60%; 
+@media only screen and (max-width: 32.5em) {
+    .contactBox {
+        width: 90vw;
+    }
+
+    .comment {
+        width: 100%;
+        padding: 0 4rem;
+    }
 }
 

@@ -1,11 +1,16 @@
-
 .plateBox {
     display: flex;
-    gap: 8rem;
+    gap: 7rem;
     margin: 9rem auto;
+    align-items: center;
+    justify-content: center;
 
-    z-index: 100;
+    position: relative;
 }
+
+.plateWrapper {
+    position: relative;
+  }
 
 .plate {
     width: 32.5rem;
@@ -15,11 +20,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     padding: 0 5rem;
     padding-top: 7rem;
 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 
+    position: relative;
+    z-index: 20;
 }
 
 .plate h3 {
@@ -47,4 +55,92 @@
 
 .socialLink:hover {
    color: var(--color-secondary-dark-1);
+}
+
+.obi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* center obi behind plate */
+    z-index: 10;
+
+    width: 100rem;
+    height: 22rem;
+    background-image: 
+    linear-gradient(to right, rgba(78, 148, 186,.2), rgba(78, 148, 186,.4)),
+    url('/images/background200.png');  
+    background-size: auto 60%; 
+}
+
+@media only screen and (max-width: 62.5em) {
+    .plateBox {
+        gap: 5rem;
+        margin: 5rem auto;
+    }
+
+    .plate {
+        width: 25rem;
+        height: 25rem;
+
+        padding: 0 2rem;
+        padding-top: 4rem;
+    }
+
+    .plate h3 {
+        font-size: 2.5rem;
+    }
+
+    .iconEmail {
+        font-size: 5rem;
+        margin-bottom: 2rem;
+    
+    }
+    
+    .iconLinkedIn {
+        font-size: 4rem;
+        margin-bottom: 2.7rem;
+        margin-top: .5rem;
+    }
+    
+    
+    .iconGitHub {
+        font-size: 5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .obi {
+        width: 105rem;
+        height: 17rem;
+        background-size: 60% auto; 
+    }
+}
+
+@media only screen and (max-width: 50.6em) {
+    .plateBox {
+        gap: 5rem;
+        margin: 5rem auto;
+    }
+}
+
+@media only screen and (max-width: 46.25em) {
+    .plateBox {
+        flex-direction: column;
+        gap: 5rem;
+        margin: 0 auto;
+    }
+
+    .plate {
+        width: 40rem;
+        height: 25rem;
+
+        padding: 0 2rem;
+        padding-top: 4rem;
+    }
+
+    .obi {
+        width: 100vw;
+        height: 17rem;
+        background-size: 60% auto; 
+
+    }
 }

@@ -9,8 +9,8 @@
     width: 100%;
     max-width: var(--max-width);
     margin: auto;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
    
     display: grid;
     grid-template-rows: max-content max-content min-content min-content;
@@ -25,18 +25,17 @@
 .footerLogoFrame {
     grid-row: 1 / 2;
     grid-column: name-start / name-end;
-    width: 18rem;
+    width: 16rem;
 
     justify-self: center;
     align-self: center;
-    margin-left: 7rem;
 
     height: 60%;
     
 }
 
 .footerLogoFrame img {
-    width: 100%;
+    width: 150%;
 }
 
 .footerNameGroup {
@@ -142,8 +141,6 @@
 @media only screen and (max-width: 55.6em) {
     .footerContent {
         margin: auto;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
        
         grid-template-rows: max-content max-content min-content min-content;
         
