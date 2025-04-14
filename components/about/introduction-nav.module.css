@@ -31,7 +31,7 @@
     font-weight: 600;
     box-sizing: border-box;
     position: relative;
-    color: var(--color-primary-500);
+    color: var(--color-secondary-500);
     background-color: white;
     cursor: pointer;
 }

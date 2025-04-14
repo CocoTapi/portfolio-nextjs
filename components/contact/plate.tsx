@@ -15,7 +15,7 @@ export default function Plate({ profile }: ProfileProps) : JSX.Element{
                 <div className={classes.plate}>
                     <MdOutlineMail className={classes.iconEmail}/>
                     <h3>E-Mail</h3>
-                    <a href={profile.social_media.email} className={classes.socialLink}>
+                    <a href={`mailto:${profile.social_media.email}`} className={classes.socialLink}>
                         {profile.social_media.email}
                     </a>
                 </div>

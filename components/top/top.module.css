@@ -3,7 +3,8 @@
     max-width: 1200px;
     height: 90vh;
     max-height: 1033px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 0;
  
     display: flex;
     justify-content: space-between;
@@ -17,6 +18,7 @@
     height: 40vw;
     max-width: 600px;
     max-height: 600px;
+
 }
 
 .textBox {
@@ -64,17 +66,33 @@ animation: moveInLeft .5s ease-out 1.5s;
 animation-fill-mode:  backwards;
 }
 
-.topButton {
-    padding: 1.2rem 3.5rem;
-    border: none;
-    background-color: var(--color-primary-500);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-
-}
-
 @media only screen and (max-width: 62.5em) {
     .contentBox {
         height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 46.25em) {
+    .contentBox {
+        height: 50vh;
+    }
+}
+
+@media only screen and (max-width: 32.5em) {
+    .contentBox {
+        height: 65vh;
+
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 6rem;
+
+    }
+
+    .textBox {
+        width: 100%;
+        max-width: 530px;
     }
 }
 

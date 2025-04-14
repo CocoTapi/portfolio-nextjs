@@ -26,12 +26,15 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
         {/* Description */}
         <div className={classes.introDescription}>
 
+          {/* My Story */}
           <IntroductionNav profile={profile} />  
 
+          {/* Hobbies */}
           <p className={classes.hobbies}>
             <span>When I'm not coding : </span>{profile.hobbies}
           </p>
           
+          {/* Social Media */}
           <div className={classes.socialMediaGroup}>
             <span>My social media : </span>
             <a href={profile.social_media.gitHub} className={classes.socialItem}>
@@ -44,16 +47,22 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
           </div>
         </div>
       </div>
+
+      {/* Skill & Tools */}
       <div className={classes.subComponent}>
         <h2>Skills & Tools :</h2>
         <div className={classes.skillsComponent}>
           <Skills />
         </div>
       </div>
+
+      {/* Education */}
       <div className={classes.subComponent}>
         <h2>Education :</h2>
+
         <div>
-        <div className={classes.eduGroup}>
+          {/* U of R */}
+          <div className={classes.eduGroup}>
             <p className={classes.eduLabel}>
               Master of Science in TESOL (4.0 GPA)
             </p>
@@ -61,6 +70,8 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
               University of Rochester, Rochester NY, USA
             </p>
           </div>
+
+          {/* Japan */}
           <div className={classes.eduGroup}>
             <p className={classes.eduLabel}>
               Bachelor of Arts in English and Master of Arts in English 
@@ -70,6 +81,7 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
             </p>
           </div>
           
+          {/* Self study */}
           <div className={classes.eduGroup}>
             <p className={classes.eduLabel}>Professional Development</p>
             <ul className={classes.courseList}>

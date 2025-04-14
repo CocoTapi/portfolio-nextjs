@@ -113,6 +113,11 @@
         height: 17rem;
         background-size: 60% auto; 
     }
+
+    
+    .socialLink {
+        font-size: 1.6rem;
+    }
 }
 
 @media only screen and (max-width: 50.6em) {
