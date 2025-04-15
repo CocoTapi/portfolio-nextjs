@@ -40,19 +40,25 @@ export interface ProfileData {
 }
 
 interface Feature {
-    feature_id: number;
-    feature_title: string;
-    feature_description: string;
-    feature_importance: string;
+    id: number;
+    title: string;
+    paragraph_1: string;
+    paragraph_2: string;
+    paragraph_3?: string;
+    paragraph_4?: string;
+    imgURL?: string;
 }
 
 interface Challenge {
-    challenge_id: number;
-    challenge_title: string;
-    first_stanza: string;
-    second_stanza?: string;
-    third_stanza?: string;
-    fourth_stanza?: string;
+    id: number;
+    title: string;
+    paragraph_1: string;
+    paragraph_2?: string;
+    paragraph_3?: string;
+    paragraph_4?: string;
+    imgURL?: string;
+
+
 }
 
 interface CodeSample {
@@ -67,6 +73,8 @@ interface ProjectDetails {
     tools_tech: string[];
     deployment_tech: string[];
     my_roles: string;
+    ui_img: string;
+    ui_description: string,
     frontend_features: Feature[];
     backend_features: Feature[];
     challenges: Challenge[];
@@ -138,11 +146,6 @@ export interface ProfileProps {
     profile: ProfileData
 }
 
-export interface AccordionProps {
-    headerTitle: string,
-    firstStanza: string,
-    secondStanza?: string,
-    thirdStanza?: string,
-    fourthStanza?: string,
-    textDecoration?: boolean
+export interface DetailCardProps {
+    item: Feature | Challenge
 }

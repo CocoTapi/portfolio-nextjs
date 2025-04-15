@@ -1,14 +1,14 @@
 import { ColorScheme } from "@/util/types";
 
 export const colorSchemes: Record<string, ColorScheme> = {
-    primary: {
+    secondary: {
         textColor: 'white',
         backgroundColor: 'var(--color-secondary-400)',
         borderColor: 'none',
     },
-    primaryWhite: {
-        textColor: 'var(--color-primary-500)',
-        backgroundColor: 'var(--color-grey-light-1)',
+    primary: {
+        textColor: 'var(--color-grey-light-1)',
+        backgroundColor: 'var(--color-primary-600)',
         borderColor: 'none',
     },
     grey: {

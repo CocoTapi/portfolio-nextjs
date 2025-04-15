@@ -16,7 +16,7 @@
 .projectTitle,
 .projectSummary,
 .detailSection {
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
 }
 
 .buttonComponent {
@@ -31,12 +31,6 @@
     background-color: white;
     margin: auto;
     margin-bottom: 6rem;
-}
-
-.detailSubTitle {
-    padding-bottom: 2rem;
-    font-size: 2.5rem;
-    font-weight: 400;
 }
 
 .boldP,
@@ -57,13 +51,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-}
-
-.accordionFrame {
-    width: 85rem;
-    border-radius: 20px;
-    overflow: hidden;
-    /* Ensure that the radius is visible */
 }
 
 .backendAccordionLabel {
@@ -101,26 +88,27 @@
     margin-top: 6.5rem;
 }
 
-/* .backButton {
-    margin-top: 3rem;
-    padding: 1rem 3rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--color-primary-600);
-    text-shadow: rgba(0, 0, 0, 0.2) 2px 3px;
-    transition: transform 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+.devImgFrame {
+    width: 100%;
+    margin-top: 2rem;
 }
 
-.backButton:hover {
-    transform: scale(1.1);
-} */
+.devImgFrame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 /* TODO: fix imgFrame size */
 
-/* Mobile */
-@media (max-width: 700px) {
+@media only screen and (max-width: 62.5em) {
+    .devImgFrame img {
+        width: auto;
+        max-height: 600px;
+    }
+}
+
+@media only screen and (max-width: 46.25em){
     .detailOuter {
         padding: 6rem 1rem 0 1rem;
     }
@@ -151,11 +139,6 @@
         margin-bottom: 3rem;
     }
 
-    .detailSubTitle {
-        padding-bottom: 1rem;
-        font-size: 1.4rem;
-    }
-
     .boldP,
     .backendAccordionLabel {
         font-size: 1rem;
@@ -178,10 +161,6 @@
         padding-bottom: 0.2rem;
     }
 
-    .accordionFrame {
-        width: 100%;
-    }
-
     .codeFrame {
         display: grid;
         gap: 0.5rem
@@ -199,82 +178,17 @@
         font-size: 1.2rem;
         text-shadow: rgba(0, 0, 0, 0.2) 1px 2px;
     }
+
+    .devImgFrame img {
+        width: auto;
+        max-height: 430px;
+    }
 }
 
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-    .detailOuter {
-        padding: 8rem 1.5rem 0 1.5rem;
-    }
-
-    .detailFrame {
-        border-radius: 30px;
-        padding: 2.5rem;
-    }
-
-    .projectTitle,
-    .projectSummary {
-        padding-bottom: 2rem;
-    }
-
-    .buttonComponent {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 3rem;
-    }
-
-    .imgFrame {
-        width: 100%;
-        height: 16rem;
-        margin-bottom: 3rem;
-    }
-
-    .detailSubTitle {
-        padding-bottom: 1rem;
-        font-size: 2rem;
-    }
-
-    .boldP,
-    .backendAccordionLabel {
-        font-size: 1.3rem;
-        padding-bottom: 1.3rem;
-        padding-right: 1.3rem;
-    }
-
-    .techGroup {
-        display: grid;
-        padding-bottom: 1rem;
-    }
-
-    .techTagGroup {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .techLabel {
-        font-size: 1.3rem;
-        padding-bottom: 0.2rem;
-    }
-
-    .accordionFrame {
-        width: 100%;
-    }
-
-    .codeFrame {
-        display: flex;
-        gap: 2.5rem;
-    }
-    
-    .codeGroup {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-    }
-
-    .backButton {
-        margin-top: 2rem;
-        padding: 1rem 3rem;
-        font-size: 1.2rem;
-        text-shadow: rgba(0, 0, 0, 0.2) 1px 2px;
+@media only screen and (max-width: 32.5em){
+    .devImgFrame img {
+        width: auto;
+        max-height: 320px;
     }
 }
+

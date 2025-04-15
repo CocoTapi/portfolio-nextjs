@@ -129,10 +129,14 @@ h4 {
   color: var(--color-grey-dark-1);
 }
 
-p {
+p, li {
   font-size: 2rem;
   font-family: var(--font-primary);
   color: var(--color-grey-dark-1);
+}
+
+li {
+  list-style-position: inside;
 }
 
 .not-found,

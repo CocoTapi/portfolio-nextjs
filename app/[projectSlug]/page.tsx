@@ -4,10 +4,10 @@ import { notFound } from "next/navigation";
 import classes from "./page.module.css";
 import MediumButton from "@/components/UI/btnMedium";
 import Tag from "@/components/UI/tag";
-import Accordion from "@/components/UI/accordion";
 import SmallButton from "@/components/UI/btnSmall";
 import Link from "next/link";
 import BtnText from "@/components/UI/btnText";
+import DetailCard from "@/components/UI/detailCard";
 
 async function getProject(slug: string): Promise<ProjectData | undefined> {
     //await new Promise((resolve) => setTimeout(resolve, 5000));
@@ -31,178 +31,202 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
         <div className={classes.detailOuter}>
             <div className={classes.detailFrame}>
                 <div className={classes.detailContent}>
+                    {/* Title */}
                     <h1 className={classes.projectTitle}>{project.project_title}</h1>
+
+                    {/* Description */}
                     <p className={classes.projectSummary}>{project.project_details.project_description}</p>
-                    {project.onGoing ?
-                        <>
-                            <p className={classes.projectSummary}>
-                                The app is currently under development,
-                                and I'm actively working on its features and design.
-                                Feel free to check out the GitHub page for the latest updates and to see the progress.
-                            </p>
-                            <div className={classes.buttonGroup}>
-                                <a href={project.project_url}><MediumButton>GitHub</MediumButton></a>
-                                <Link href="/" className={classes.backButton} ><BtnText>BACK &rarr;</BtnText></Link>
-                            </div>
-                        </> :
-                        <>
-                            {project.project_url.length > 0 &&
-                            <div className={classes.buttonComponent}>
-                                <a href={project.project_url}><MediumButton>Visit Application</MediumButton></a>
+
+                        {/* Visit Application Button */}
+                        {project.project_url.length > 0 &&
+                        <div className={classes.buttonComponent}>
+                            <a href={project.project_url}>
+                                <MediumButton>Visit Application</MediumButton>
+                            </a>
+                        </div>
+                        }
+
+                        {/* TODO */}
+                        {/* Image slide show */}
+                        {/* <div className={classes.imgFrame}>
+                        </div> */}
+
+                        {/* Tech Stack */}
+                        <div className={classes.detailSection}>
+                            <h3 className={classes.detailSubTitle}>
+                                Tech Stack :
+                            </h3>
+
+                            {/* Frontend tech stack */}
+                            {project.project_details.frontend_tech.length > 0 &&
+                            <div className={classes.techGroup}>
+                                <p className={classes.techLabel}>Frontend :</p>
+                                <div className={classes.techTagGroup}>
+                                    {project.project_details.frontend_tech.map((tech) =>
+                                        <Tag>{tech}</Tag>
+                                    )}
+                                </div>
                             </div>
                             }
-                            <div className={classes.imgFrame}>
 
+                            {/* Backend tech stack */}
+                            {project.project_details.backend_tech.length > 0 &&
+                            <div className={classes.techGroup}>
+                                <p className={classes.techLabel}>Backend :</p>
+                                <div className={classes.techTagGroup}>
+                                    {project.project_details.backend_tech.map((tech) =>
+                                        <Tag>{tech}</Tag>
+                                    )}
+                                </div>
                             </div>
-                            <div className={classes.detailSection}>
-                                <h4 className={classes.detailSubTitle}>Tech Stack :</h4>
-                               {project.project_details.frontend_tech.length > 0 &&
-                                <div className={classes.techGroup}>
-                                    <p className={classes.techLabel}>Frontend :</p>
-                                    <div className={classes.techTagGroup}>
-                                        {project.project_details.frontend_tech.map((tech) =>
-                                            <Tag>{tech}</Tag>
-                                        )}
-                                    </div>
-                                </div>
-                                }
-                               {project.project_details.backend_tech.length > 0 &&
-                                <div className={classes.techGroup}>
-                                    <p className={classes.techLabel}>Backend :</p>
-                                    <div className={classes.techTagGroup}>
-                                        {project.project_details.backend_tech.map((tech) =>
-                                            <Tag>{tech}</Tag>
-                                        )}
-                                    </div>
-                                </div>
-                                }
-                                <div className={classes.techGroup}>
-                                    <p className={classes.techLabel}>Tools & Testing :</p>
-                                    <div className={classes.techTagGroup}>
-                                        {project.project_details.tools_tech.map((tech) =>
-                                            <Tag>{tech}</Tag>
-                                        )}
-                                    </div>
-                                </div>
-                               {project.project_details.deployment_tech.length > 0 &&
-                                <div className={classes.techGroup}>
-                                    <p className={classes.techLabel}>Deployment :</p>
-                                    <div className={classes.techTagGroup}>
-                                        {project.project_details.deployment_tech.map((tech) =>
-                                            <Tag>{tech}</Tag>
-                                        )}
-                                    </div>
-                                </div>
-                                }
-                            </div>
-                            <div className={classes.detailSection}>
-                                <h4 className={classes.detailSubTitle}>My Roles :</h4>
-                                <p>{project.project_details.my_roles}</p>
-                            </div>
+                            }
 
-                            {/* KEY FEATURE */}
-                            <div className={classes.detailSection}>
-                                <h4 className={classes.detailSubTitle}>Key Features :</h4>
-                               {project.project_details.frontend_features.length > 0 &&
-                               <> 
-                               <h5 className={classes.boldP}>Frontend Functionally :</h5>
-                                <div className={classes.accordionFrame}>
-                                    {project.project_details.frontend_features.map((feature) => (
-                                        <Accordion
-                                            key={feature.feature_id}
-                                            headerTitle={feature.feature_title}
-                                            firstStanza={feature.feature_description}
-                                            secondStanza={feature.feature_importance}
-                                        />
-                                    ))}
+                            {/* Tools and Testing */}
+                            {project.project_details.tools_tech.length > 0 &&
+                            <div className={classes.techGroup}>
+                                <p className={classes.techLabel}>Tools & Testing :</p>
+                                <div className={classes.techTagGroup}>
+                                    {project.project_details.tools_tech.map((tech) =>
+                                        <Tag>{tech}</Tag>
+                                    )}
                                 </div>
-                                </>
-                                }
-                               {project.project_details.backend_features[0].feature_title.length > 0 &&
-                                <>
-                                <h5 className={classes.backendAccordionLabel}>Backend Operations :</h5>
-                                <div className={classes.accordionFrame}>
-                                    {project.project_details.backend_features.map((feature) => (
-                                        <Accordion
-                                            key={feature.feature_id}
-                                            headerTitle={feature.feature_title}
-                                            firstStanza={feature.feature_description}
-                                            secondStanza={feature.feature_importance}
-                                        />
-                                    ))}
-                                </div>
-                                </>
-                                }
                             </div>
-                            <div className={classes.detailSection}>
-                                <h4 className={classes.detailSubTitle}>Challenges & Solutions</h4>
-                                <div className={classes.accordionFrame}>
-                                    {project.project_details.challenges.map((item) => (
-                                        <div className={classes.accordionItem}>
-                                            <Accordion
-                                                key={item.challenge_id}
-                                                headerTitle={item.challenge_title}
-                                                firstStanza={item.first_stanza}
-                                                secondStanza={item.second_stanza}
-                                                thirdStanza={item.third_stanza}
-                                                fourthStanza={item.fourth_stanza}
-                                                textDecoration={false}
-                                            />
-                                        </div>
+                            }
 
-                                    ))}
+                            {/* Deployment */}
+                            {project.project_details.deployment_tech.length > 0 &&
+                            <div className={classes.techGroup}>
+                                <p className={classes.techLabel}>Deployment :</p>
+                                <div className={classes.techTagGroup}>
+                                    {project.project_details.deployment_tech.map((tech) =>
+                                        <Tag>{tech}</Tag>
+                                    )}
                                 </div>
-
                             </div>
-                            {project.project_details.frontend_deployment.length > 0 ||
-                               project.project_details.backend_deployment.length > 0 ? 
+                            }
+                        </div>
+
+                        {/* My Roles */}
+                        <div className={classes.detailSection}>
+                            <h3 className={classes.detailSubTitle}>
+                                My Roles :
+                            </h3>
+                            <p>{project.project_details.my_roles}</p>
+                        </div>
+
+                        {/* UI/UX Design */}
+                        <div className={classes.detailSection}>
+                            <h3>Design</h3>
+                            <p>{project.project_details.ui_description}</p>
+                            <div className={classes.devImgFrame}>
+                                <img src={`/images/${project.project_details.ui_img}`} alt="ui image"/>
+                            </div>
+                        </div>
+
+                        {/* Frontend Development */}
+                        <div className={classes.detailSection}>
+                            <h3>Frontend Development</h3>
+                            {project.project_details.frontend_features.map((feature) => (
+                                <DetailCard item={feature} key={feature.title}/>
+                            ))}
+                        </div>
+
+                        {/* Backend Development */}
+                        <div className={classes.detailSection}>
+                            <h3>Backend Development</h3>
+                            {project.project_details.backend_features.map((feature) => (
+                                <DetailCard item={feature} key={feature.title}/>
+                            ))}
+                        </div>
+
+                         {/* Key Challenges */}
+                         <div className={classes.detailSection}>
+                            <h3>Key Challenges & Solutions</h3>
+                            {project.project_details.challenges.map((challenge) => (
+                                <DetailCard item={challenge} key={challenge.title}/>
+                            ))}
+                        </div>
+
+                        {/* Deployment */}
+                        {project.project_details.frontend_deployment.length > 0 ||
+                            project.project_details.backend_deployment.length > 0 ? (
                             <div className={classes.detailSection}>
-                                <h4 className={classes.detailSubTitle}>Deployment :</h4> 
+                                <h3 className={classes.detailSubTitle}>
+                                    Deployment :
+                                </h3> 
+
+                                {/* Frontend Deployment */}
                                 {project.project_details.frontend_deployment.length > 0 &&
                                     <div>
                                     <p className={classes.deployLabel}>Frontend Deployment :</p>
                                     <p>{project.project_details.frontend_deployment}</p>
                                 </div>
                                 }
+
+                                {/* Backend Deployment */}
                                 {project.project_details.backend_deployment.length > 0 &&
                                 <div className={classes.backendDeployment}>
                                     <p className={classes.deployLabel}>Backend Deployment :</p>
                                     <p>{project.project_details.backend_deployment}</p>
                                 </div>
                                 }
-                            </div> : 
+
+                            </div> 
+                            ) : (
                             ''
-                            }
-                            <div className={classes.detailSection}>
-                                <h4 className={classes.detailSubTitle}>Code Samples :</h4>
-                                <div className={classes.codeFrame}>
-                                    {project.project_details.code_samples.frontend_url.length > 0 &&
-                                    <div className={classes.codeGroup}>
-                                        <p>Frontend :</p>
-                                        <a href={project.project_details.code_samples.frontend_url} ><SmallButton colorScheme="primaryWhite">GitHub</SmallButton></a>
-                                    </div>
-                                    }
-                                    {project.project_details.code_samples.backend_url.length > 0 &&
-                                    <div className={classes.codeGroup}>
-                                        <p>Backend :</p>
-                                        <a href={project.project_details.code_samples.backend_url}><SmallButton colorScheme="primaryWhite">GitHub</SmallButton></a>
-                                    </div>
-                                    }
+                            )
+                        }
+
+                        {/* Code Sample */}
+                        <div className={classes.detailSection}>
+                            <h3>
+                                Code Samples :
+                            </h3>
+                            <div className={classes.codeFrame}>
+                                {/* Frontend */}
+                                {project.project_details.code_samples.frontend_url.length > 0 &&
+                                <div className={classes.codeGroup}>
+                                    <p>Frontend :</p>
+                                    <a href={project.project_details.code_samples.frontend_url} >
+                                        <SmallButton colorScheme="primary">GitHub</SmallButton>
+                                    </a>
                                 </div>
-                            </div>
-                            <div className={classes.detailSection}>
-                                <h4 className={classes.detailSubTitle}>Outcomes & Improvements</h4>
-                                <p>{project.project_details.outcomes_and_improvements}</p>
-                            </div>
-                            <div className={classes.buttonGroup}>
-                                {project.project_url.length > 0 &&
-                                <a href={project.project_url}><MediumButton>Visit Application</MediumButton></a>
                                 }
-                                {/* <Link href="/" className={classes.backButton} >Back</Link> */}
-                                <Link href="/" className={classes.backButton} ><BtnText>BACK &rarr;</BtnText></Link>
+
+                                {/* Backend */}
+                                {project.project_details.code_samples.backend_url.length > 0 &&
+                                <div className={classes.codeGroup}>
+                                    <p>Backend :</p>
+                                    <a href={project.project_details.code_samples.backend_url}>
+                                        <SmallButton colorScheme="primary">GitHub</SmallButton>
+                                    </a>
+                                </div>
+                                }
                             </div>
-                        </>
-                    }
+                        </div>
+                        
+                        {/* Outcomes & Improvement */}
+                        <div className={classes.detailSection}>
+                            <h3>
+                                Outcomes & Improvements
+                            </h3>
+                            <p>{project.project_details.outcomes_and_improvements}</p>
+                        </div>
+
+                        {/* Button Group*/}
+                        <div className={classes.buttonGroup}>
+                            {/*  Visit Application Button   */}
+                            {project.project_url.length > 0 &&
+                            <a href={project.project_url}>
+                                <MediumButton>Visit Application</MediumButton>
+                            </a>
+                            }
+
+                            {/* Back Button */}
+                            <Link href="/" className={classes.backButton} >
+                                <BtnText>BACK &rarr;</BtnText>
+                            </Link>
+                        </div>
                 </div>
             </div>
 

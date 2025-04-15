@@ -5,7 +5,7 @@ import { ButtonProps, ButtonStyle, ColorScheme } from "@/util/types";
 export default function BtnMedium({
     className,
     children,
-    colorScheme = 'primary',
+    colorScheme = 'secondary',
     ...rest
 }: ButtonProps): JSX.Element {
     const { textColor, backgroundColor, borderColor, backgroundImage }: ColorScheme = colorSchemes[colorScheme] || colorSchemes.primary;
