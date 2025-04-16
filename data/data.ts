@@ -60,12 +60,7 @@ export const profile_data: ProfileData = {
         `I combine my passion for education with problem-solving and 
         creative power of coding, striving to create impactful and innovative solutions.`,
     short_self_introduction: 
-        `I began my career as an ESL teacher, a role I cherished deeply. 
-        When faced with an unexpected career pause, I was inspired by a friend who quickly launched a project 
-        using his software engineering skills. Seizing the opportunity, I explored software engineering and 
-        quickly found joy in building programs, solving complex puzzles, and crafting designs that reflected 
-        my vision. Though the journey has been challenging, with the support of engineer friends and 
-        incredible online resources, I’ve found fulfillment in overcoming obstacles.`,
+        `I began my career as an ESL teacher, a role I deeply cherished. When my visa status paused my career, a friend launched an educational project we had been discussing — using his software engineering skills. Inspired, I dove into coding and quickly found joy in solving complex puzzles, building creative solutions, and crafting designs that reflected my vision. Though the journey has been challenging, with the support of engineer friends and incredible online resources, I’ve found real fulfillment in overcoming obstacles.`,
     long_self_introduction1: 
         `I began my career as an ESL teacher, a role I cherished deeply, but I always had a curiosity 
         to explore something new. When the time came to change my visa, I faced the reality of being unable to 

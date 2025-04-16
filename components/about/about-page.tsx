@@ -20,7 +20,7 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
         
         {/* img */}
         <div className={classes.myImg}>
-          <img src="/images/dodger-sleeping.jpg" alt="My Image" />
+          <img src="/images/shiori.png" alt="My Image" />
         </div>
 
         {/* Description */}
