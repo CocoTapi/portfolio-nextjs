@@ -1,0 +1,113 @@
+.outerBox {
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.leftComponent {
+  /* display: grid;
+  grid-template-rows: max-content, 1fr;
+  transform: translateY(1.1rem); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonComponent {
+  grid-row: 2 / 3;
+  justify-self: center;
+}
+
+.rightComponent {
+  max-width: 55rem;
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.onGoing {
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-style: italic;
+
+  color: var(--color-secondary-dark-1);
+  background-color: white;
+  border-radius: 5px;
+
+  position: absolute;
+  align-self: flex-end;
+
+
+  padding: .2rem 1rem;
+  font-weight: 600;
+}
+
+.onGoingTitle {
+  margin-top: 3rem;
+}
+
+.rightComponent p,
+.rightComponent ul {
+  margin-bottom: 2rem;
+}
+
+.techGroup {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.techGroup li {
+  margin-right: 10px;
+  margin-bottom: 7px;
+}
+
+.link {
+  position: relative;
+  z-index: 99;
+  align-self: flex-end;
+  margin-right: 2rem;
+}
+
+
+@media only screen and (max-width: 50.6em) {
+  .outerBox {
+    padding: 5rem;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .leftComponent {
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttonComponent {
+    display: none;
+  }
+
+  .rightComponent {
+    margin-top: 5rem;
+    margin-left: 0;
+    max-width: none;
+    width: 100%;
+  }
+
+  .onGoing {
+    top: -31.5rem;
+  }
+}
+
+@media only screen and (max-width: 32.5em) {
+  .outerBox {
+    padding: 3rem;
+    align-items: center;
+  }
+
+  .rightComponent {
+    margin-top: 5rem;
+    width: 35rem;
+  }
+}

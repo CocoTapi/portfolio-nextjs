@@ -9,34 +9,58 @@ export default function DetailCard ({
             <h4>
                 {item.title}
             </h4>
-            <ul className={classes.devDescriptionList}>
 
-                <li className={classes.detailDevItem}>
-                    {item.paragraph_1}
-                </li>
+            {/* Paragraph 1  */}
+            <p className={classes.detailDevItem}>
+                {item.paragraph_1}
+            </p>
 
-                {item.paragraph_2 && 
-                    <li className={classes.detailDevItem}>
-                        {item.paragraph_2
-                    }</li>
-                }
+            {/* img */}
+            {item.img1 &&
+            <div className={classes.detailImgFrame}>
+                <img src={`/images/${item.img1}`} alt={`${item.title}`}/>
+            </div>
+            } 
 
-                {item.paragraph_3  && 
-                    <li className={classes.detailDevItem}>
-                        {item.paragraph_3}
-                    </li>
-                }
-
-                {item.paragraph_4  && 
-                    <li className={classes.detailDevItem}>{item.paragraph_4}</li>
-                }
-            </ul>
-        
-            {item.imgURL &&
-                <div className={classes.devImgFrame}>
-                    <img src={`/images/${item.imgURL}`} alt={`${item.title}`}/>
-                </div>
+            {/* Paragraph 2  */}
+            {item.paragraph_2 && 
+                <p className={classes.detailDevItem}>
+                    {item.paragraph_2
+                }</p>
             }
+
+            {/* img */}
+            {item.img2 &&
+            <div className={classes.detailImgFrame}>
+                <img src={`/images/${item.img2}`} alt={`${item.title}`}/>
+            </div>
+            } 
+
+            {/* Paragraph 3  */}
+            {item.paragraph_3  && 
+                <p className={classes.detailDevItem}>
+                    {item.paragraph_3}
+                </p>
+            }
+
+            {/* img */}
+            {item.img3 &&
+            <div className={classes.detailImgFrame}>
+                <img src={`/images/${item.img3}`} alt={`${item.title}`}/>
+            </div>
+            } 
+
+            {/* Paragraph 4  */}
+            {item.paragraph_4  && 
+                <p className={classes.detailDevItem}>{item.paragraph_4}</p>
+            }
+
+            {/* img */}
+            {item.img4 &&
+            <div className={classes.detailImgFrame}>
+                <img src={`/images/${item.img4}`} alt={`${item.title}`}/>
+            </div>
+            } 
             
         </div>
     )

@@ -3,12 +3,6 @@ import { colorSchemes } from "@/components/UI/color-schemes";
 // import { StaticImage_Data } from "next/image";
 
 // data
-export interface Image_Data {
-    image: string;
-    alt: string;
-}
-
-
 export interface Course_List {
     media_id: number,
     name: string,
@@ -56,14 +50,19 @@ interface Challenge {
     paragraph_2?: string;
     paragraph_3?: string;
     paragraph_4?: string;
-    imgURL?: string;
+    paragraph_5?: string;
+    img1?: string;
+    img2?: string;
+    img3?: string;
+    img4?: string;
+    img5?: string;
 
 
 }
 
 interface CodeSample {
     frontend_url: string;
-    backend_url: string
+    backend_url?: string
 }
 
 interface ProjectDetails {
@@ -73,13 +72,13 @@ interface ProjectDetails {
     tools_tech: string[];
     deployment_tech: string[];
     my_roles: string;
-    ui_img: string;
-    ui_description: string,
+    ui_img?: string;
+    ui_description?: string,
     frontend_features: Feature[];
-    backend_features: Feature[];
-    challenges: Challenge[];
-    frontend_deployment: string;
-    backend_deployment: string;
+    backend_features?: Feature[];
+    challenges?: Challenge[];
+    frontend_deployment?: string;
+    backend_deployment?: string;
     code_samples: CodeSample;
     outcomes_and_improvements: string;
 }
@@ -90,7 +89,7 @@ export interface ProjectData {
     onGoing: boolean,
     slug: string;
     project_url: string;
-    images: Image_Data[];
+    video: string;
     project_summary: string;
     tech_list: string[];
     tech_summary: string;
@@ -134,10 +133,6 @@ export interface ButtonStyle {
     backgroundImage?: string;
 };
 
-export interface ImageSlideshowProps {
-    images: Image_Data[];
-}
-
 export interface ProjectProps {
     project: ProjectData
 }
@@ -147,5 +142,9 @@ export interface ProfileProps {
 }
 
 export interface DetailCardProps {
-    item: Feature | Challenge
+    item: Challenge
 }
+
+export interface DemoVideoProps {
+    path: string;
+  };

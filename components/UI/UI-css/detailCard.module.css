@@ -5,12 +5,23 @@
     margin-top: 2rem;
 }
 
-.devDescriptionList {
-    display: flex;
-    flex-direction: column;
-}
-
 .detailDevItem {
     list-style: none;
     margin-bottom: 2rem;
+}
+
+.detailImgFrame {
+    width: 80rem;
+    margin-top: 2rem;
+    position: relative;
+
+    align-self: center;
+    margin-bottom: 5rem;
+}
+
+.detailImgFrame img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }

@@ -1,9 +1,7 @@
 import classes from "./page.module.css";
 import { profile_data, projects_data } from "../data/data";
-import ProjectSummary from "@/components/projects/project-summary";
+import ProjectSummary from "@/components/projects/projectSummary";
 import AboutPage from "@/components/about/about-page";
-import BtnMedium from "@/components/UI/btnMedium";
-import Link from "next/link";
 import Top from "@/components/top/top";
 import Contact from "@/components/contact/contact";
 
