@@ -211,11 +211,11 @@ export const projects_data: ProjectsData = {
                 project_description: `This project is currently in development and focuses on helping pet owners manage their pets’ weight more easily. I'm open to any advice or feature suggestions—feel free to open an issue on GitHub or share your thoughts!`,
                 frontend_tech: ['Angular', 'TypeScript', 'HTML', 'Sass'],
                 backend_tech: [],
-                tools_tech: ['Git', 'GitHub', 'Jasmine', 'Cypress'],
+                tools_tech: ['Git', 'GitHub', 'Jasmine', 'Cypress', 'Figma'],
                 deployment_tech: [],
                 my_roles: `UI/UX design, Frontend Development`,
                 ui_img: 'catLow.png',
-                ui_description: 'This is the wireframe of the app, showcasing the foundational layout and structure of each screen before visual styling was applied. It focuses on the core user journey, content placement, and navigation flow, allowing for early feedback and iteration.',
+                ui_description: 'I created the wireframe in Figma to define the core layout and structure of each screen before applying visual styling. Next, I’ll move on to UI design, focusing on colors, typography, and interactive elements.',
                 frontend_features: [
                     {
                         id: 1,
