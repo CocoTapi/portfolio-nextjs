@@ -69,7 +69,7 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
                         {/* Frontend tech stack */}
                         {project.project_details.frontend_tech.length > 0 &&
                         <div className={classes.techGroup}>
-                            <p className={classes.techLabel}>Frontend :</p>
+                            <h4 className={classes.techLabel}>Frontend :</h4>
                             <div className={classes.techTagGroup}>
                                 {project.project_details.frontend_tech.map((tech) =>
                                     <Tag>{tech}</Tag>
@@ -81,7 +81,7 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
                         {/* Backend tech stack */}
                         {project.project_details.backend_tech.length > 0 &&
                         <div className={classes.techGroup}>
-                            <p className={classes.techLabel}>Backend :</p>
+                            <h4 className={classes.techLabel}>Backend :</h4>
                             <div className={classes.techTagGroup}>
                                 {project.project_details.backend_tech.map((tech) =>
                                     <Tag>{tech}</Tag>
@@ -93,7 +93,7 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
                         {/* Tools and Testing */}
                         {project.project_details.tools_tech.length > 0 &&
                         <div className={classes.techGroup}>
-                            <p className={classes.techLabel}>Tools & Testing :</p>
+                            <h4 className={classes.techLabel}>Tools & Testing :</h4>
                             <div className={classes.techTagGroup}>
                                 {project.project_details.tools_tech.map((tech) =>
                                     <Tag>{tech}</Tag>
@@ -105,7 +105,7 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
                         {/* Deployment */}
                         {project.project_details.deployment_tech.length > 0 &&
                         <div className={classes.techGroup}>
-                            <p className={classes.techLabel}>Deployment :</p>
+                            <h4 className={classes.techLabel}>Deployment :</h4>
                             <div className={classes.techTagGroup}>
                                 {project.project_details.deployment_tech.map((tech) =>
                                     <Tag>{tech}</Tag>
@@ -202,22 +202,28 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
                         <div className={classes.codeFrame}>
                             {/* Frontend */}
                             {project.project_details.code_samples.frontend_url.length > 0 &&
-                            <div className={classes.codeGroup}>
-                                <p>Frontend :</p>
-                                <a href={project.project_details.code_samples.frontend_url} >
+                            <>
+                                <p className={classes.sampleLabelFront}>Frontend :</p>
+                                <a 
+                                    href={project.project_details.code_samples.frontend_url} 
+                                    className={classes.sampleButtonFront}
+                                >
                                     <SmallButton colorScheme="primary">GitHub</SmallButton>
                                 </a>
-                            </div>
+                            </>
                             }
 
                             {/* Backend */}
                             {project.project_details.code_samples.backend_url &&
-                            <div className={classes.codeGroup}>
-                                <p>Backend :</p>
-                                <a href={project.project_details.code_samples.backend_url}>
+                            <>
+                                <p className={classes.sampleLabelBack}>Backend :</p>
+                                <a 
+                                    href={project.project_details.code_samples.backend_url} 
+                                    className={classes.sampleButtonBack}
+                                >
                                     <SmallButton colorScheme="primary">GitHub</SmallButton>
                                 </a>
-                            </div>
+                            </>
                             }
                         </div>
                     </div>
