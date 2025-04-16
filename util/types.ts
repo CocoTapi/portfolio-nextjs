@@ -90,6 +90,7 @@ export interface ProjectData {
     slug: string;
     project_url: string;
     video: string;
+    topImg: string;
     project_summary: string;
     tech_list: string[];
     tech_summary: string;
@@ -147,4 +148,9 @@ export interface DetailCardProps {
 
 export interface DemoVideoProps {
     path: string;
-  };
+};
+
+export interface TagFrameProps {
+    title: string;
+    tagList: string[];
+};

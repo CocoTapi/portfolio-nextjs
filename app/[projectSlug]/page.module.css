@@ -41,7 +41,7 @@
     margin-bottom: 6rem;
 }
 
-.techGroup {
+/* .techGroup {
     display: flex;
     gap: 2rem;
 }
@@ -54,7 +54,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-}
+} */
 
 .backendDeployment {
     padding-top: 2rem;
@@ -157,7 +157,7 @@
         margin-bottom: 3rem;
     }
 
-    .techGroup {
+    /* .techGroup {
         display: grid;
         padding-bottom: 1rem;
     }
@@ -165,7 +165,7 @@
     .techTagGroup {
         display: flex;
         flex-wrap: wrap;
-    }
+    } */
 
     .backButton {
         margin-top: 2rem;
@@ -186,9 +186,9 @@
         gap: 1.5rem;
     }
 
-    .techLabel {
+    /* .techLabel {
         margin-bottom: 0;
-    }
+    } */
 }
 
 

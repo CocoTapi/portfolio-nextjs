@@ -1,0 +1,37 @@
+.techGroup {
+    display: flex;
+    gap: 2rem;
+}
+
+.techLabel {
+    margin-bottom: 1rem;
+}
+
+.techTagGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+@media only screen and (max-width: 46.25em){
+    .techGroup {
+        display: grid;
+        padding-bottom: 1rem;
+    }
+
+    .techTagGroup {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .techGroup {
+        display: grid;
+        padding-bottom: 1rem;
+    }
+
+    .techTagGroup {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

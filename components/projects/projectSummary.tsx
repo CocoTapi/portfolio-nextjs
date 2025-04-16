@@ -5,6 +5,7 @@ import BtnText from "../UI/btnText";
 import Link from "next/link";
 import Tag from "../UI/tag";
 import DemoVideo from "./demoVideo";
+import CardImg from "./cardImg";
 
 
 export default function ProjectSummary({ project }: ProjectProps): JSX.Element {
@@ -12,9 +13,12 @@ export default function ProjectSummary({ project }: ProjectProps): JSX.Element {
     <div className={classes.outerBox}>
       <div className={classes.leftComponent}>
 
-        {/* Slide show */}
-      
+        {/* Slide show or img */}
+        {project.video.length > 0 ? 
           <DemoVideo path={project.video} />
+          :
+          <CardImg path={project.topImg}/>
+        }
       
 
         {/* Visit app button */}

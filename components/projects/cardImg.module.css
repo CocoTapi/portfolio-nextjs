@@ -1,0 +1,28 @@
+.cardImgFrame {
+    width: 35rem;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  
+    display: inline-block;
+  
+    border: 10px solid var(--color-primary-500);
+  
+    margin-bottom: 10rem;
+    margin-top: 1.4rem;
+}
+
+.cardImgFrame img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 50.6em) {
+
+    .cardImgFrame {
+      margin-bottom: 0;
+      margin-top: 1.4rem;
+    }
+  }

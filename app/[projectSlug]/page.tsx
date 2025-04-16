@@ -8,6 +8,7 @@ import SmallButton from "@/components/UI/btnSmall";
 import Link from "next/link";
 import BtnText from "@/components/UI/btnText";
 import DetailCard from "@/components/UI/detailCard";
+import TagFrame from "@/components/UI/tagFrame";
 
 async function getProject(slug: string): Promise<ProjectData | undefined> {
     //await new Promise((resolve) => setTimeout(resolve, 5000));
@@ -68,50 +69,34 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
 
                         {/* Frontend tech stack */}
                         {project.project_details.frontend_tech.length > 0 &&
-                        <div className={classes.techGroup}>
-                            <h4 className={classes.techLabel}>Frontend :</h4>
-                            <div className={classes.techTagGroup}>
-                                {project.project_details.frontend_tech.map((tech) =>
-                                    <Tag>{tech}</Tag>
-                                )}
-                            </div>
-                        </div>
+                            <TagFrame 
+                                title='Frontend'
+                                tagList={project.project_details.frontend_tech}
+                            />
                         }
 
                         {/* Backend tech stack */}
                         {project.project_details.backend_tech.length > 0 &&
-                        <div className={classes.techGroup}>
-                            <h4 className={classes.techLabel}>Backend :</h4>
-                            <div className={classes.techTagGroup}>
-                                {project.project_details.backend_tech.map((tech) =>
-                                    <Tag>{tech}</Tag>
-                                )}
-                            </div>
-                        </div>
+                            <TagFrame 
+                                title='Backend'
+                                tagList={project.project_details.backend_tech}
+                            />
                         }
 
                         {/* Tools and Testing */}
                         {project.project_details.tools_tech.length > 0 &&
-                        <div className={classes.techGroup}>
-                            <h4 className={classes.techLabel}>Tools & Testing :</h4>
-                            <div className={classes.techTagGroup}>
-                                {project.project_details.tools_tech.map((tech) =>
-                                    <Tag>{tech}</Tag>
-                                )}
-                            </div>
-                        </div>
+                            <TagFrame 
+                                title='Tools & Testing'
+                                tagList={project.project_details.tools_tech}
+                            />
                         }
 
                         {/* Deployment */}
                         {project.project_details.deployment_tech.length > 0 &&
-                        <div className={classes.techGroup}>
-                            <h4 className={classes.techLabel}>Deployment :</h4>
-                            <div className={classes.techTagGroup}>
-                                {project.project_details.deployment_tech.map((tech) =>
-                                    <Tag>{tech}</Tag>
-                                )}
-                            </div>
-                        </div>
+                            <TagFrame 
+                                title='Deployment'
+                                tagList={project.project_details.deployment_tech}
+                            />
                         }
                     </div>
 
