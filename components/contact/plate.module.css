@@ -53,6 +53,10 @@
     margin-bottom: 3rem;
 }
 
+.socialLink {
+    font-size: 1.6rem;
+}
+
 .socialLink:hover {
    color: var(--color-secondary-dark-1);
 }
@@ -112,11 +116,6 @@
         width: 105rem;
         height: 17rem;
         background-size: 60% auto; 
-    }
-
-    
-    .socialLink {
-        font-size: 1.6rem;
     }
 }
 
