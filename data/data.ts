@@ -60,12 +60,7 @@ export const profile_data: ProfileData = {
         `I combine my passion for education with problem-solving and 
         creative power of coding, striving to create impactful and innovative solutions.`,
     short_self_introduction: 
-        `I began my career as an ESL teacher, a role I cherished deeply. 
-        When faced with an unexpected career pause, I was inspired by a friend who quickly launched a project 
-        using his software engineering skills. Seizing the opportunity, I explored software engineering and 
-        quickly found joy in building programs, solving complex puzzles, and crafting designs that reflected 
-        my vision. Though the journey has been challenging, with the support of engineer friends and 
-        incredible online resources, I’ve found fulfillment in overcoming obstacles.`,
+        `I began my career as an ESL teacher, a role I deeply cherished. When my visa status paused my career, a friend launched an educational project we had been discussing — using his software engineering skills. Inspired, I dove into coding and quickly found joy in solving complex puzzles, building creative solutions, and crafting designs that reflected my vision. Though the journey has been challenging, with the support of engineer friends and incredible online resources, I’ve found real fulfillment in overcoming obstacles.`,
     long_self_introduction1: 
         `I began my career as an ESL teacher, a role I cherished deeply, but I always had a curiosity 
         to explore something new. When the time came to change my visa, I faced the reality of being unable to 
@@ -204,61 +199,6 @@ export const projects_data: ProjectsData = {
         },
         {
             project_id: 2,
-            project_title: 'Packing Lists',
-            onGoing: false,
-            slug: 'packing-lists',
-            project_url: ``,
-            video: 'task.webm',
-            project_summary: `The Packing List is designed to simplify travel preparation by allowing users to create and manage packing lists for their trips.`,
-            tech_list: ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind', 'Redux Toolkit'],
-            tech_summary: `I used Redux Toolkit's createApi to manage API endpoints and CRUD operations for trips, luggage, and items. 
-                            By implementing tags with type and ID, I prevented unnecessary refetching, 
-                             while integrating middleware to handle API calls efficiently.`,
-            project_details: {
-                project_description: `The Packing List is a platform that helps travelers organize their packing needs efficiently. 
-                                        Users can create a new trip, add different pieces of luggage under each trip, and list items within each luggage. 
-                                        The app allows for easy tracking and updating of items, making it an essential tool for organized travel planning.`,
-                frontend_tech: ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind', 'Redux Toolkit'],
-                backend_tech: [],
-                tools_tech: ['Git', 'GitHub'],
-                deployment_tech: [],
-                my_roles: `UI/UX design, Frontend Development`,
-                ui_img: '',
-                ui_description: '',
-                frontend_features: [
-                    {
-                        id: 1,
-                        title: `Trip Management`,
-                        paragraph_1: `Users can create, view, and manage multiple trips, each with its unique packing list.`,
-                        paragraph_2: `This feature allows users to organize their travel packing efficiently, ensuring that no trip detail is overlooked.`,
-                    },
-                    {
-                        id: 2,
-                        title: "Efficient Data Invalidation",
-                        paragraph_1: "To optimize data fetching and prevent unnecessary API calls, I implemented tag-based data invalidation using Redux Toolkit's createApi. By using type and id tags, the app invalidates and re-fetches specific entities efficiently.",
-                        paragraph_2: "This feature ensures that only the relevant data that has changed (e.g., a deleted trip) is re-fetched, avoiding unnecessary network requests for data that remains unchanged."
-                    }
-
-                ],
-                challenges: [
-                    {
-                        id: 1,
-                        title: ``,
-                        paragraph_1: ``,
-                        paragraph_2: ``,
-                        paragraph_4: ``
-                    }
-                ],
-                code_samples: {
-                    frontend_url: `https://github.com/CocoTapi/packing-list`,
-                },
-                outcomes_and_improvements: `This project strengthened my understanding of React fundamentals, including building reusable components, managing forms, handling reducers, and integrating API queries using Redux Toolkit. 
-                                            It also enhanced my knowledge of CRUD operations.
-                                            Adding drag-and-drop item organization, reminders for essential items, and the ability to share packing lists would improve the user experience.`
-            }
-        },
-        {
-            project_id: 3,
             project_title: 'Calorie Calc App',
             onGoing: true,
             slug: 'calorie-calc',

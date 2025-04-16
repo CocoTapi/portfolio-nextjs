@@ -55,9 +55,15 @@
   color: black;
 }
 
-@media only screen and (max-width: 32.5em) {
+@media only screen and (max-width: 46.25em) {
   .nav {
     margin-right: 0;
-    gap: 1rem;
+    gap: 0;
+  }
+
+  .logoFrame img {
+    width: 270%;
+    padding-top: 1rem;
+    transform: translateX(-1rem);
   }
 }

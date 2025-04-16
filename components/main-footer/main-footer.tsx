@@ -50,9 +50,9 @@ export default function MainFooter(): JSX.Element {
           </li>
         </ul>
 
-        {/* Copy right */}
+        {/* Copyright */}
         <p className={classes.copyright}>
-          &copy; 2024 Shiori Yoshida Avino. All rights reserved.  
+          &copy; 2025 Shiori Yoshida Avino. All rights reserved.  
         </p>
       </div>
     </footer>

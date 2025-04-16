@@ -33,28 +33,6 @@
     font-size: 4.2rem;
 }
 
-.enIcon, .jpIcon {
-    margin: auto;
-    font-weight: 600;
-    background: linear-gradient(135deg, var(--color-secondary-400), var(--color-secondary-500)); 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-}
-
-.enIcon {
-    font-size: 4.2rem;
-}
-
-.jpIcon {
-    font-size: 3.5rem;
-    transform: translateY(3px);
-}
-
-.JpLetter {
-    transform: translateY(1px);
-}
-
 
 
 

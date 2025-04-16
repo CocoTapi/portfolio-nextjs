@@ -41,28 +41,19 @@
     margin-bottom: 6rem;
 }
 
-.boldP,
-.backendAccordionLabel,
-.techLabel {
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding-bottom: 1.5rem;
-    padding-right: 1.5rem;
-}
-
 .techGroup {
     display: flex;
-    gap: 0.5rem;
+    gap: 2rem;
+}
+
+.techLabel {
+    margin-bottom: 1rem;
 }
 
 .techTagGroup {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.backendAccordionLabel {
-    margin-top: 2rem;
+    gap: 1rem;
 }
 
 .backendDeployment {
@@ -77,12 +68,12 @@
 .codeFrame {
     display: flex;
     gap: 3rem;
+
+    align-items: center;
 }
 
-.codeGroup {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
+.sampleLabelBack {
+    margin-left: 1rem;
 }
 
 .buttonGroup {
@@ -166,13 +157,6 @@
         margin-bottom: 3rem;
     }
 
-    .boldP,
-    .backendAccordionLabel {
-        font-size: 1rem;
-        padding-bottom: 1rem;
-        padding-right: 1rem;
-    }
-
     .techGroup {
         display: grid;
         padding-bottom: 1rem;
@@ -181,22 +165,6 @@
     .techTagGroup {
         display: flex;
         flex-wrap: wrap;
-    }
-
-    .techLabel {
-        font-size: 1rem;
-        padding-bottom: 0.2rem;
-    }
-
-    .codeFrame {
-        display: grid;
-        gap: 0.5rem
-    }
-    
-    .codeGroup {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
     }
 
     .backButton {
@@ -213,12 +181,14 @@
     .demoFrame {
         width: 40rem;
     }
-}
 
-@media only screen and (max-width: 32.5em){
-    .devImgFrame img {
-        width: auto;
-        max-height: 320px;
+    .codeFrame {
+        gap: 1.5rem;
+    }
+
+    .techLabel {
+        margin-bottom: 0;
     }
 }
+
 

@@ -80,7 +80,7 @@ animation-fill-mode:  backwards;
 
 @media only screen and (max-width: 32.5em) {
     .contentBox {
-        height: 65vh;
+        height: 75vh;
 
         display: flex;
         flex-direction: column-reverse;
