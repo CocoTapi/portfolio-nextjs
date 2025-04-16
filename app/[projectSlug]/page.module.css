@@ -206,9 +206,12 @@
         text-shadow: rgba(0, 0, 0, 0.2) 1px 2px;
     }
 
-    .devImgFrame img {
-        width: auto;
-        max-height: 430px;
+    .devImgFrame {
+        width: 40rem;
+    }
+    
+    .demoFrame {
+        width: 40rem;
     }
 }
 
