@@ -148,9 +148,36 @@ export interface DetailCardProps {
 
 export interface DemoVideoProps {
     path: string;
+    className: string;
 };
 
 export interface TagFrameProps {
     title: string;
     tagList: string[];
 };
+
+export interface CordSampleProps {
+    frontendUrl: string,
+    backendUrl?: string;
+}
+
+export interface FullTechProps {
+    frontend: string[],
+    backend: string[],
+    tools: string[],
+    deployment: string[]
+}
+
+export interface FeaturesProps {
+    featureList: Feature[] | Challenge[]
+}
+
+export interface DeploySectionProps {
+    frontend: string | undefined,
+    backend?: string | undefined
+}
+
+export interface DetailSectionProps {
+    title: string;
+    children: ReactNode;
+}

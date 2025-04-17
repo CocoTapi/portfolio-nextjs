@@ -8,7 +8,7 @@ export default function TagFrame({
 }: TagFrameProps): JSX.Element {
     return (
         <div className={classes.techGroup}>
-            <h4 className={classes.techLabel}>{title} :</h4>
+            <h4>{title} :</h4>
             <div className={classes.techTagGroup}>
                 {tagList.map((tech) =>
                     <Tag>{tech}</Tag>

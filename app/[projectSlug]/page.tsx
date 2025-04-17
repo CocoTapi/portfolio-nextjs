@@ -3,20 +3,21 @@ import { ProjectData } from "@/util/types";
 import { notFound } from "next/navigation";
 import classes from "./page.module.css";
 import MediumButton from "@/components/UI/btnMedium";
-import Tag from "@/components/UI/tag";
-import SmallButton from "@/components/UI/btnSmall";
 import Link from "next/link";
 import BtnText from "@/components/UI/btnText";
-import DetailCard from "@/components/UI/detailCard";
-import TagFrame from "@/components/UI/tagFrame";
+import CordSample from "@/components/UI/cordSample";
+import FullTechStack from "@/components/projects/fullTechStack";
+import Features from "@/components/projects/features";
+import DeploySection from "@/components/projects/deploySection";
+import DemoVideo from "@/components/projects/demoVideo";
+import CardImg from "@/components/projects/cardImg";
+import DetailSection from "@/components/UI/detailSection";
 
 async function getProject(slug: string): Promise<ProjectData | undefined> {
     //await new Promise((resolve) => setTimeout(resolve, 5000));
     const project = projects_data.projects.find((project) =>
         project.slug === slug
     );
-
-
 
     return project ? project : undefined;
 }
@@ -31,216 +32,129 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
     return (
         <div className={classes.detailOuter}>
             <div className={classes.detailFrame}>
-                {/* <div className={classes.detailContent}> */}
+
                     {/* Title */}
-                    <h1 className={classes.projectTitle}>{project.project_title}</h1>
+                    <h1 className={classes.projectTitle}>
+                        {project.project_title}
+                    </h1>
 
                     {/* Description */}
-                    <p className={classes.projectSummary}>{project.project_details.project_description}</p>
+                    <p className={classes.projectSummary}>
+                        {project.project_details.project_description}
+                    </p>
 
                     {/* Visit Application Button */}
                     {project.project_url.length > 0 &&
-                    <div className={classes.buttonComponent}>
-                        <a href={project.project_url}>
-                            <MediumButton>Visit Application</MediumButton>
-                        </a>
-                    </div>
+                    <a href={project.project_url} className={classes.centerBtn}>
+                        <MediumButton>Visit Application</MediumButton>
+                    </a>
                     }
 
                     {/* Demo Video */}
                     { project.video.length > 0 &&
-                    <div className={classes.demoFrame}>
-                        <video
-                            src={`/videos/${project.video}`}  
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            className={classes.demoV}
+                        <DemoVideo 
+                            path={project.video}
+                            className={classes.demoFrame}
                         />
-                    </div>
                     }
 
                     {/* Tech Stack */}
-                    <div className={classes.detailSection}>
-                        <h3 className={classes.detailSubTitle}>
-                            Tech Stack :
-                        </h3>
-
-                        {/* Frontend tech stack */}
-                        {project.project_details.frontend_tech.length > 0 &&
-                            <TagFrame 
-                                title='Frontend'
-                                tagList={project.project_details.frontend_tech}
-                            />
-                        }
-
-                        {/* Backend tech stack */}
-                        {project.project_details.backend_tech.length > 0 &&
-                            <TagFrame 
-                                title='Backend'
-                                tagList={project.project_details.backend_tech}
-                            />
-                        }
-
-                        {/* Tools and Testing */}
-                        {project.project_details.tools_tech.length > 0 &&
-                            <TagFrame 
-                                title='Tools & Testing'
-                                tagList={project.project_details.tools_tech}
-                            />
-                        }
-
-                        {/* Deployment */}
-                        {project.project_details.deployment_tech.length > 0 &&
-                            <TagFrame 
-                                title='Deployment'
-                                tagList={project.project_details.deployment_tech}
-                            />
-                        }
-                    </div>
+                    <DetailSection title="Tech Stack">
+                        <FullTechStack 
+                            frontend={project.project_details.frontend_tech}
+                            backend={project.project_details.backend_tech}
+                            tools={project.project_details.tools_tech}
+                            deployment={project.project_details.deployment_tech}
+                        />
+                    </DetailSection>
+                    
 
                     {/* My Roles */}
-                    <div className={classes.detailSection}>
-                        <h3 className={classes.detailSubTitle}>
-                            My Roles :
-                        </h3>
+                    <DetailSection title="My Roles">
                         <p>{project.project_details.my_roles}</p>
-                    </div>
+                    </DetailSection>
+
+                    {/* Code Sample */}
+                    <CordSample 
+                        frontendUrl={project.project_details.code_samples.frontend_url}
+                        backendUrl={project.project_details.code_samples.backend_url}
+                    />
+                
+
 
                     {/* UI/UX Design */}
                     { project.project_details.ui_description &&
-                    <div className={classes.detailSection}>
-                        <h3>Design</h3>
-                        <p>{project.project_details.ui_description}</p>
-                        <div className={classes.devImgFrame}>
-                            <img src={`/images/${project.project_details.ui_img}`} alt="ui image"/>
-                        </div>
-                    </div>
+                        <DetailSection title="Design">
+                            {project.project_details.ui_img &&
+                                <CardImg 
+                                    path={project.project_details.ui_img}
+                                    className={classes.devImgFrame}
+                                />
+                            }
+                        </DetailSection>
                     }
+
+                    
+                    {/* Key Challenges */}
+                    {project.project_details.challenges &&
+                        <DetailSection title="Key Challenges & Solutions">
+                             <Features 
+                                featureList={project.project_details.challenges}
+                                />
+                        </DetailSection>
+                    }
+                    
 
                     {/* Frontend Development */}
                     {project.project_details.frontend_features.length > 0 && 
-                    <div className={classes.detailSection}>
-                        <h3>Frontend Development</h3>
-                        {project.project_details.frontend_features.map((feature) => (
-                            <DetailCard item={feature} key={feature.title}/>
-                        ))}
-                    </div>
+                        <DetailSection title="Frontend Development">
+                            <Features 
+                                featureList={project.project_details.frontend_features}
+                            />
+                        </DetailSection>
                     }
 
                     {/* Backend Development */}
                     {project.project_details.backend_features &&
-                    <div className={classes.detailSection}>
-                        <h3>Backend Development</h3>
-                        {project.project_details.backend_features.map((feature) => (
-                            <DetailCard item={feature} key={feature.title}/>
-                        ))}
-                    </div>
+                        <DetailSection title="Backend Development">
+                            <Features 
+                                featureList={project.project_details.backend_features}
+                            />
+                        </DetailSection>
                     }
 
-                    {/* Key Challenges */}
-                    {project.project_details.challenges &&
-                    <div className={classes.detailSection}>
-                        <h3>Key Challenges & Solutions</h3>
-                        {project.project_details.challenges.map((challenge) => (
-                            <DetailCard item={challenge} key={challenge.title}/>
-                        ))}
-                    </div>
-                    }
 
                     {/* Deployment */}
-                    {project.project_details.frontend_deployment ||
-                        project.project_details.backend_deployment ? (
-                        <div className={classes.detailSection}>
-                            <h3 className={classes.detailSubTitle}>
-                                Deployment :
-                            </h3> 
-
-                            {/* Frontend Deployment */}
-                            {project.project_details.frontend_deployment &&
-                                <div>
-                                <p className={classes.deployLabel}>Frontend Deployment :</p>
-                                <p>{project.project_details.frontend_deployment}</p>
-                            </div>
-                            }
-
-                            {/* Backend Deployment */}
-                            {project.project_details.backend_deployment &&
-                            <div className={classes.backendDeployment}>
-                                <p className={classes.deployLabel}>Backend Deployment :</p>
-                                <p>{project.project_details.backend_deployment}</p>
-                            </div>
-                            }
-
-                        </div> 
-                        ) : (
-                        ''
-                        )
-                    }
+                    <DeploySection 
+                        frontend={project.project_details.frontend_deployment}
+                        backend={project.project_details.backend_deployment}
+                    />
 
                     {/* Code Sample */}
-                    <div className={classes.detailSection}>
-                        <h3>
-                            Code Samples :
-                        </h3>
-                        <div className={classes.codeFrame}>
-                            {/* Frontend */}
-                            {project.project_details.code_samples.frontend_url.length > 0 &&
-                            <>
-                                <p className={classes.sampleLabelFront}>Frontend :</p>
-                                <a 
-                                    href={project.project_details.code_samples.frontend_url} 
-                                    className={classes.sampleButtonFront}
-                                >
-                                    <SmallButton colorScheme="primary">GitHub</SmallButton>
-                                </a>
-                            </>
-                            }
-
-                            {/* Backend */}
-                            {project.project_details.code_samples.backend_url &&
-                            <>
-                                <p className={classes.sampleLabelBack}>Backend :</p>
-                                <a 
-                                    href={project.project_details.code_samples.backend_url} 
-                                    className={classes.sampleButtonBack}
-                                >
-                                    <SmallButton colorScheme="primary">GitHub</SmallButton>
-                                </a>
-                            </>
-                            }
-                        </div>
-                    </div>
+                    <CordSample 
+                        frontendUrl={project.project_details.code_samples.frontend_url}
+                        backendUrl={project.project_details.code_samples.backend_url}
+                    />
                         
                     {/* Outcomes & Improvement */}
                     { project.project_details.outcomes_and_improvements.length > 0 &&
-                    <div className={classes.detailSection}>
-                        <h3>
-                            Outcomes & Improvements
-                        </h3>
-                        <p>{project.project_details.outcomes_and_improvements}</p>
-                    </div>
+                        <DetailSection title="Outcomes & Improvements">
+                            <p>{project.project_details.outcomes_and_improvements}</p>
+                        </DetailSection>
                     }
 
-                    {/* Button Group*/}
-                    <div className={classes.buttonGroup}>
-
-                        {/*  Visit Application Button   */}
-                        {project.project_url.length > 0 &&
-                        <a href={project.project_url}>
+                    {/*  Visit Application Button   */}
+                    {project.project_url.length > 0 &&
+                        <a href={project.project_url} className={classes.centerBtn}>
                             <MediumButton>Visit Application</MediumButton>
                         </a>
-                        }
+                    }
 
-                        {/* Back Button */}
-                        <Link href="/" className={classes.backButton} >
-                            <BtnText>BACK &rarr;</BtnText>
-                        </Link>
-                    </div>
+                    {/* Back Button */}
+                    <Link href="/" className={classes.backButton}>
+                        <BtnText>BACK &rarr;</BtnText>
+                    </Link>
                 </div>
-            {/* </div> */}
-
         </div>
     )
 }

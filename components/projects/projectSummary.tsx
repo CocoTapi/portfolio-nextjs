@@ -15,9 +15,9 @@ export default function ProjectSummary({ project }: ProjectProps): JSX.Element {
 
         {/* Slide show or img */}
         {project.video.length > 0 ? 
-          <DemoVideo path={project.video} />
+          <DemoVideo path={project.video} className={classes.videoComponent} />
           :
-          <CardImg path={project.topImg}/>
+          <CardImg path={project.topImg} className={classes.videoComponent}/>
         }
       
 

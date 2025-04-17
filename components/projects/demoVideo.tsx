@@ -3,7 +3,10 @@ import { useEffect, useRef } from 'react';
 import classes from './demoVideo.module.css'
 import { DemoVideoProps } from '@/util/types';
 
-export default function DemoVideo({ path }: DemoVideoProps): JSX.Element {
+export default function DemoVideo({ 
+  path,
+  className 
+}: DemoVideoProps): JSX.Element {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
@@ -31,7 +34,7 @@ export default function DemoVideo({ path }: DemoVideoProps): JSX.Element {
   }, []);
 
   return (
-    <div className={classes.videoFrame}>
+    <div className={`${classes.videoFrame} ${className}`}>
         <video
             src={`/videos/${path}`}  
             autoPlay

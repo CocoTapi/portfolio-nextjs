@@ -1,3 +1,4 @@
+import CardImg from "../projects/cardImg";
 import classes from "./UI-css/detailCard.module.css";
 import { DetailCardProps } from "@/util/types";
 
@@ -6,9 +7,9 @@ export default function DetailCard ({
 }: DetailCardProps): JSX.Element {
     return (
         <div className={classes.devFrame}>
-            <h4>
+            <p className={classes.subTitle}>
                 {item.title}
-            </h4>
+            </p>
 
             {/* Paragraph 1  */}
             <p className={classes.detailDevItem}>
@@ -17,9 +18,10 @@ export default function DetailCard ({
 
             {/* img */}
             {item.img1 &&
-            <div className={classes.detailImgFrame}>
-                <img src={`/images/${item.img1}`} alt={`${item.title}`}/>
-            </div>
+                <CardImg 
+                    path={item.img1}
+                    className={classes.detailImgFrame}
+                />
             } 
 
             {/* Paragraph 2  */}
@@ -31,9 +33,10 @@ export default function DetailCard ({
 
             {/* img */}
             {item.img2 &&
-            <div className={classes.detailImgFrame}>
-                <img src={`/images/${item.img2}`} alt={`${item.title}`}/>
-            </div>
+                <CardImg 
+                    path={item.img2}
+                    className={classes.detailImgFrame}
+                />
             } 
 
             {/* Paragraph 3  */}
@@ -45,9 +48,10 @@ export default function DetailCard ({
 
             {/* img */}
             {item.img3 &&
-            <div className={classes.detailImgFrame}>
-                <img src={`/images/${item.img3}`} alt={`${item.title}`}/>
-            </div>
+                <CardImg 
+                    path={item.img3}
+                    className={classes.detailImgFrame}
+                />
             } 
 
             {/* Paragraph 4  */}
@@ -57,9 +61,10 @@ export default function DetailCard ({
 
             {/* img */}
             {item.img4 &&
-            <div className={classes.detailImgFrame}>
-                <img src={`/images/${item.img4}`} alt={`${item.title}`}/>
-            </div>
+                <CardImg 
+                    path={item.img4}
+                    className={classes.detailImgFrame}
+                />
             } 
             
         </div>

@@ -264,13 +264,13 @@ export const projects_data: ProjectsData = {
                     {
                         id: 1,
                         title: `Reusable components`,
-                        paragraph_1: ``,
+                        paragraph_1: `I built a flexible and reusable component system to ensure consistency across the app. Elements like videos, buttons, and images were abstracted into modular components, which made the codebase cleaner, easier to maintain, and more scalable as the project evolved.`,
                         paragraph_2: ``,
                     }, 
                     {
                         id: 1,
                         title: `Responsive design for all size screen`,
-                        paragraph_1: ``,
+                        paragraph_1: `I implemented responsive design techniques to ensure the site displays cleanly across different screen sizes. Using fluid layouts, relative units, and media queries, I adjusted spacing, typography, and images to provide a consistent experience on laptops, tablets, and smaller devices.`,
                         paragraph_2: ``,
                     },                    
                 ],              

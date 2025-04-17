@@ -1,0 +1,8 @@
+.featureItem {
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+.featureItem:last-child {
+   margin-bottom: 0; 
+}

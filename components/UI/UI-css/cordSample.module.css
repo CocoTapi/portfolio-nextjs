@@ -1,0 +1,34 @@
+.sectionBox {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+}
+
+.codeFrame {
+    display: flex;
+    gap: 3rem;
+
+    align-items: center;
+}
+
+.sampleLabelBack {
+    margin-left: 1rem;
+}
+
+
+
+@media only screen and (max-width: 46.25em){
+    .codeFrame {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-columns: auto auto;
+
+        justify-content: start;
+    }
+
+    .sampleLabelBack {
+        margin-left: 0;
+    }
+
+}
