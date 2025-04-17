@@ -1,0 +1,9 @@
+.deployFrame {
+    display: flex;
+    flex-direction: column;
+}
+
+.deployLabel, .deployFrontLabel {
+    font-weight: 600;
+    margin-top: 2rem;
+}

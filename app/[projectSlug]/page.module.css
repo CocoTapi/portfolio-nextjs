@@ -14,116 +14,29 @@
 
     display: flex;
     flex-direction: column;
+    gap: 6rem;
 }
 
-.projectTitle,
-.projectSummary,
-.detailSection {
-    padding-bottom: 4rem;
-}
-
-.detailSection {
-    display: flex;
-    flex-direction: column;
-}
-
-.buttonComponent {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 6rem;
-}
-
-.imgFrame {
-    width: 100%;
-    height: 40rem;
-    background-color: white;
-    margin: auto;
-    margin-bottom: 6rem;
-}
-
-.techGroup {
-    display: flex;
-    gap: 2rem;
-}
-
-.techLabel {
-    margin-bottom: 1rem;
-}
-
-.techTagGroup {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.backendDeployment {
-    padding-top: 2rem;
-}
-
-.deployLabel {
-    font-weight: 600;
-    padding-bottom: 1rem;
-}
-
-.codeFrame {
-    display: flex;
-    gap: 3rem;
-
-    align-items: center;
-}
-
-.sampleLabelBack {
-    margin-left: 1rem;
-}
-
-.buttonGroup {
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    padding-top: 1rem;
+.centerBtn {
+    align-self: center;
+    margin: 2rem 0;
 }
 
 .backButton {
-    margin-top: 6.5rem;
+    margin-top: 3rem;
+    align-self: center;
 }
 
 .devImgFrame {
     width: 80rem;
-    margin-top: 2rem;
-    position: relative;
 
     align-self: center;
-}
-
-.devImgFrame img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
 }
 
 .demoFrame {
     width: 80rem;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-    
-    border: 1rem solid var(--color-primary-500);
+
     align-self: center;
-
-    margin-bottom: 6rem;
-}
-
-.demoV {
-    width: 154.5%;
-    height: auto;
-}
-
-@media only screen and (max-width: 62.5em) {
-    .devImgFrame img {
-        width: auto;
-        max-height: 600px;
-    }
 }
 
 @media only screen and (max-width: 46.25em){
@@ -132,39 +45,12 @@
     }
 
     .detailFrame {
-        border-radius: 20px;
         padding: 2rem;
-    }
 
-    .projectTitle,
-    .projectSummary {
-        padding-bottom: 1.5rem;
+        gap: 3rem;
     }
-
-    .detailSection {
-        padding-bottom: 2rem;
-    }
-
-    .buttonComponent {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 3rem;
-    }
-
-    .imgFrame {
+    .devImgFrame {
         width: 100%;
-        height: 16rem;
-        margin-bottom: 3rem;
-    }
-
-    .techGroup {
-        display: grid;
-        padding-bottom: 1rem;
-    }
-
-    .techTagGroup {
-        display: flex;
-        flex-wrap: wrap;
     }
 
     .backButton {
@@ -173,21 +59,13 @@
         font-size: 1.2rem;
         text-shadow: rgba(0, 0, 0, 0.2) 1px 2px;
     }
-
-    .devImgFrame {
-        width: 40rem;
-    }
     
     .demoFrame {
-        width: 40rem;
+        width: 100%;
     }
 
     .codeFrame {
         gap: 1.5rem;
-    }
-
-    .techLabel {
-        margin-bottom: 0;
     }
 }
 

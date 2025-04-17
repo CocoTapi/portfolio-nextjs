@@ -1,4 +1,4 @@
-.videoFrame {
+.cardImgFrame {
     height: auto;
     position: relative;
     overflow: hidden;
@@ -6,10 +6,11 @@
     display: inline-block;
   
     border: 1rem solid var(--color-primary-500);
-  
-  }
+}
 
-.demoVideo {
-    width: 154.5%;
+.cardImgFrame img {
+    width: 100%;
+    max-width: 100%;
     height: auto;
-  }
+    display: block;
+}

@@ -90,6 +90,7 @@ export interface ProjectData {
     slug: string;
     project_url: string;
     video: string;
+    topImg: string;
     project_summary: string;
     tech_list: string[];
     tech_summary: string;
@@ -147,4 +148,36 @@ export interface DetailCardProps {
 
 export interface DemoVideoProps {
     path: string;
-  };
+    className: string;
+};
+
+export interface TagFrameProps {
+    title: string;
+    tagList: string[];
+};
+
+export interface CordSampleProps {
+    frontendUrl: string,
+    backendUrl?: string;
+}
+
+export interface FullTechProps {
+    frontend: string[],
+    backend: string[],
+    tools: string[],
+    deployment: string[]
+}
+
+export interface FeaturesProps {
+    featureList: Feature[] | Challenge[]
+}
+
+export interface DeploySectionProps {
+    frontend: string | undefined,
+    backend?: string | undefined
+}
+
+export interface DetailSectionProps {
+    title: string;
+    children: ReactNode;
+}

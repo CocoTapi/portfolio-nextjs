@@ -100,9 +100,10 @@ export const projects_data: ProjectsData = {
             project_id: 1,
             project_title: 'Lesson Lab',
             onGoing: false,
-            slug: 'lesson-lab',
+            slug: 'lessonLab',
             project_url: `https://cocotapi.github.io/lesson-lab-frontend/`,
             video: 'lessonLabDemo.webm',
+            topImg: '',
             project_summary: `Lesson Lab is a Web 2.0 application designed to empower educators 
                                           to manage high-quality class activities while reducing workload.`,
             tech_list: ['React', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Node.js', 'Node Express', 'PostgreSQL', 'PgAdmin', 'Postman', 'AWS', 'Git', 'GitHub', 'Figma'],
@@ -165,7 +166,7 @@ export const projects_data: ProjectsData = {
                         paragraph_2: `A well-designed database schema ensures data consistency, easy maintenance, and scalability as the application grows.`,
                     }
                 ],
-                challenges: [
+                challenges: [       
                     {
                         id: 1,
                         title: `OAuth Integration Challenge`,
@@ -204,6 +205,7 @@ export const projects_data: ProjectsData = {
             slug: 'calorie-calc',
             project_url: ``,
             video: 'catApp.webm',
+            topImg: '',
             project_summary: `This ongoing project is a mobile app designed to help cat and dog owners calculate food calories and maintain their pet’s healthy weight. Many members of my cat community struggle to track their pets' intake—especially when mixing dry and wet food. This app aims to simplify that process and provide personalized feeding guidance.`,
             tech_list: ['Angular', 'TypeScript', 'HTML', 'Sass', 'Git', 'GitHub', 'Figma'],
             tech_summary: `I’m focused on writing clean, maintainable code with clear documentation to support collaboration with other developers. I'm also using Jasmine for unit testing to ensure the app is reliable and testable as it evolves.`,
@@ -235,6 +237,45 @@ export const projects_data: ProjectsData = {
                 backend_deployment: ``,
                 code_samples: {
                     frontend_url: `https://github.com/CocoTapi/Cat-Calorie-Calc-Frontend`,
+                    backend_url: ``
+                },
+                outcomes_and_improvements: ``
+            }
+        },
+        {
+            project_id: 3,
+            project_title: 'My Portfolio Website',
+            onGoing: false,
+            slug: 'portfolio-website',
+            project_url: ``,
+            video: '',
+            topImg: 'portfolio.png',
+            project_summary: `I designed and built this personal website from scratch using React, TypeScript, and Next.js. The goal was to create a responsive, fast, and accessible platform to showcase my projects and skills.`,
+            tech_list: ['React', 'TypeScript', 'Next.js', 'HTML', 'CSS', 'Git', 'GitHub', 'Figma'],
+            tech_summary: ``,
+            project_details: {
+                project_description: ``,
+                frontend_tech: ['React', 'TypeScript', 'Next.js', 'HTML', 'CSS'],
+                backend_tech: [],
+                tools_tech: ['Git', 'GitHub','Figma'],
+                deployment_tech: ['Vercel'],
+                my_roles: `UI/UX design, Frontend Development`,
+                frontend_features: [
+                    {
+                        id: 1,
+                        title: `Reusable components`,
+                        paragraph_1: `I built a flexible and reusable component system to ensure consistency across the app. Elements like videos, buttons, and images were abstracted into modular components, which made the codebase cleaner, easier to maintain, and more scalable as the project evolved.`,
+                        paragraph_2: ``,
+                    }, 
+                    {
+                        id: 1,
+                        title: `Responsive design for all size screen`,
+                        paragraph_1: `I implemented responsive design techniques to ensure the site displays cleanly across different screen sizes. Using fluid layouts, relative units, and media queries, I adjusted spacing, typography, and images to provide a consistent experience on laptops, tablets, and smaller devices.`,
+                        paragraph_2: ``,
+                    },                    
+                ],              
+                code_samples: {
+                    frontend_url: `https://github.com/CocoTapi/portfolio-nextjs`,
                     backend_url: ``
                 },
                 outcomes_and_improvements: ``
