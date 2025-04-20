@@ -85,6 +85,7 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
                     {/* UI/UX Design */}
                     { project.project_details.ui_description &&
                         <DetailSection title="Design">
+                            <p>{project.project_details.ui_description}</p>
                             {project.project_details.ui_img &&
                                 <CardImg 
                                     path={project.project_details.ui_img}

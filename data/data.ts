@@ -8,12 +8,12 @@ export const social = {
 
 export const course_list: Course_List[] = [
     {
-        media_id: 0,
+        media_id: 1,
         name: 'Web Developer Bootcamp 2023 | Udemy',
         link: "https://github.com/CocoTapi/web_developer_bootcamp_2023/tree/main/Sections"
     },
     {
-        media_id: 1,
+        media_id: 3,
         name: 'React - The Complete Guide 2023 (incl. Next.js, Redux) | Udemy',
         link: "https://github.com/CocoTapi/REACT_2023"
     },
@@ -23,35 +23,30 @@ export const course_list: Course_List[] = [
         link: "https://github.com/CocoTapi/modern_react_2023"
     },
     {
-        media_id: 3,
+        media_id: 4,
         name: 'JavaScript Algorithms and Data Structures Masterclass | Udemy',
         link: "https://github.com/CocoTapi/algorithms_and_data_structure"
     },
     {
-        media_id: 4,
-        name: 'Master the Coding Interview: Data Structures + Algorithms | Udemy',
-        link: "https://github.com/CocoTapi/coding_interview_bootcamp"
-    },
-    {
-        media_id: 5,
+        media_id: 7,
         name: 'The Advanced CSS and Sass: Flexbox, Grid, Animations and More | Udemy',
         link: "https://github.com/CocoTapi/advanced-css-and-sass"
     },
     {
         media_id: 6,
         name: 'The Complete SQL Bootcamp: Go from Zero to Hero | Udemy',
-        link: ""
+        link: "https://www.udemy.com/course/the-complete-sql-bootcamp/"
     },
     {
-        media_id: 7,
+        media_id: 9,
         name: 'Angular - The Complete Guide (2025 Edition) | Udemy',
         link: "https://www.udemy.com/course/the-complete-guide-to-angular-2/"
     },
     {
-        media_id: 8,
+        media_id: 10,
         name: 'A complete guide to Angular 19 Unit Testing and End to End (E2E) Testing, including Testing best practices and CI | Udemy (Ongoing)',
         link: "https://www.udemy.com/course/angular-testing-course"
-    },
+    }
 ]
 
 export const profile_data: ProfileData = {
