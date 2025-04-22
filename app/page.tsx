@@ -17,6 +17,7 @@ export default function HomePage(): JSX.Element {
       {/* projects */}
       <section id="projects" className={classes.projectSection}>
         <h1>Latest Projects</h1>
+        
         {projects_data.projects.map((project, index) => (
           <div
             key={project.project_title}
