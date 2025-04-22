@@ -8,11 +8,6 @@ export const social = {
 
 export const course_list: Course_List[] = [
     {
-        media_id: 1,
-        name: 'Web Developer Bootcamp 2023 | Udemy',
-        link: "https://github.com/CocoTapi/web_developer_bootcamp_2023/tree/main/Sections"
-    },
-    {
         media_id: 3,
         name: 'React - The Complete Guide 2023 (incl. Next.js, Redux) | Udemy',
         link: "https://github.com/CocoTapi/REACT_2023"
@@ -34,7 +29,7 @@ export const course_list: Course_List[] = [
     },
     {
         media_id: 6,
-        name: 'The Complete SQL Bootcamp: Go from Zero to Hero | Udemy',
+        name: 'The Complete SQL: Go from Zero to Hero | Udemy',
         link: "https://www.udemy.com/course/the-complete-sql-bootcamp/"
     },
     {
