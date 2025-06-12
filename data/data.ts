@@ -39,7 +39,7 @@ export const course_list: Course_List[] = [
     },
     {
         media_id: 10,
-        name: 'A complete guide to Angular 19 Unit Testing and End to End (E2E) Testing, including Testing best practices and CI | Udemy (Ongoing)',
+        name: 'A complete guide to Angular 19 Unit Testing and End to End (E2E) Testing, including Testing best practices and CI | Udemy',
         link: "https://www.udemy.com/course/angular-testing-course"
     }
 ]

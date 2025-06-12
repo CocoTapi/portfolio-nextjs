@@ -12,27 +12,37 @@ export default function Plate({ profile }: ProfileProps) : JSX.Element{
             <div className={classes.plateWrapper}>
                 <div className={classes.obi}></div>
 
-                <div className={classes.plate}>
-                    <MdOutlineMail className={classes.iconEmail}/>
-                    <h3>E-Mail</h3>
-                    <a href={`mailto:${profile.social_media.email}`} className={classes.socialLink}>
+                <a href={`mailto:${profile.social_media.email}`} className={classes.socialLink}>
+                    <div className={classes.plate}>
+                        <MdOutlineMail className={classes.iconEmail}/>
+
+                        <span className={classes.linkTitle}>
+                            E-Mail
+                        </span>
+
                         {profile.social_media.email}
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
+            
            
             
             {/* LinkedIn */}
             <div className={classes.plateWrapper}>
                 <div className={classes.obi}></div>
 
-                <div className={classes.plate}>
-                    <SiLinkedin className={classes.iconLinkedIn}/>
-                    <h3 className={classes.linkedInTitle}>LinkedIn</h3>
-                    <a href={profile.social_media.linkedIn} className={classes.socialLink}>
+                <a href={profile.social_media.linkedIn} className={classes.socialLink}>
+                    <div className={classes.plate}>
+                        <SiLinkedin className={classes.iconLinkedIn}/>
+
+                        <span className={classes.linkTitle}>
+                            LinkedIn
+                        </span>
+                        
                         {profile.social_media.linkedIn}
-                    </a>
-                </div>
+                    
+                    </div>
+                 </a>
             </div>
             
 
@@ -40,13 +50,18 @@ export default function Plate({ profile }: ProfileProps) : JSX.Element{
             <div className={classes.plateWrapper}>
                 <div className={classes.obi}></div>
 
-                <div className={classes.plate}>
-                    <AiOutlineGithub  className={classes.iconGitHub}/>
-                    <h3>GitHub</h3>
-                    <a href={profile.social_media.gitHub} className={classes.socialLink}>
+                <a href={profile.social_media.gitHub} className={classes.socialLink}>
+                    <div className={classes.plate}>
+                        <AiOutlineGithub  className={classes.iconGitHub}/>
+
+                        <span className={classes.linkTitle}>
+                            GitHub
+                        </span>
+
                         {profile.social_media.gitHub}
-                    </a>
-                </div>
+                       
+                    </div>
+                 </a>
             </div>
             
 
