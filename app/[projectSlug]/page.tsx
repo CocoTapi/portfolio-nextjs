@@ -13,6 +13,7 @@ import DemoVideo from "@/components/projects/demoVideo";
 import CardImg from "@/components/projects/cardImg";
 import DetailSection from "@/components/UI/detailSection";
 
+// TODO: This dynamic route (/[projectSlug]) is not cached.
 async function getProject(slug: string): Promise<ProjectData | undefined> {
     //await new Promise((resolve) => setTimeout(resolve, 5000));
     const project = projects_data.projects.find((project) =>
