@@ -127,13 +127,10 @@ export const projects_data: ProjectsData = {
                             {
                                 id: 'Filter2',
                                 text: `This feature ensures that educators can quickly find activities that perfectly match their teaching needs, saving them time and effort.`,
-                                img: 'p2.png'
+                                img: ''
                             },
                         ]
-
-                    //     paragraph_1: `Users can search for class activities using keywords, filter them based on various criteria (e.g., subject, grade level, duration), and sort results by popularity or relevance.`,
-                    //     paragraph_2: `This feature ensures that educators can quickly find activities that perfectly match their teaching needs, saving them time and effort.`,
-                    },
+                },
                     {
                         id: 2,
                         title: `Responsive Design`,
@@ -146,13 +143,9 @@ export const projects_data: ProjectsData = {
                             {
                                 id: 'Responsive2',
                                 text: `Responsive design improves accessibility and usability by automatically adjusting layouts and components, making the platform visually appealing and functional for all users.`,
-                                img: 'p2.png'
+                                img: ''
                             },
                         ]
-
-
-                        // paragraph_1: `The application adapts seamlessly to different screen sizes and devices, ensuring a consistent and user-friendly experience whether accessed from a desktop, tablet, or mobile phone.`,
-                        // paragraph_2: `Responsive design improves accessibility and usability by automatically adjusting layouts and components, making the platform visually appealing and functional for all users.`
                     },
                     
 
@@ -161,26 +154,66 @@ export const projects_data: ProjectsData = {
                     {
                         id: 1,
                         title: `Data Validation`,
-                        paragraph_1: `Implemented robust validation functions to ensure that all user data meets the required criteria before being processed or stored in the database.`,
-                        paragraph_2: `This feature prevents invalid or malicious data from entering the system, ensuring data integrity and security.`,
+                        paragraphs: [
+                            {
+                                id: 'Data1',
+                                text: `Implemented robust validation functions to ensure that all user data meets the required criteria before being processed or stored in the database.`,
+                                img: ''
+                            },
+                            {
+                                id: 'Data2',
+                                text: `This feature prevents invalid or malicious data from entering the system, ensuring data integrity and security.`,
+                                img: ''
+                            },
+                        ]
                     },
                     {
                         id: 2,
                         title: `Secure User Authentication`,
-                        paragraph_1: `Used bcrypt to encrypt user passwords and JSON Web Tokens (JWT) for generating secure tokens to manage user sessions and authorize access to protected routes.`,
-                        paragraph_2: `This feature enhances security by ensuring that user passwords are stored securely and that only authorized users can access sensitive parts of the application.`,
-                    },
+                        paragraphs: [       
+                            {
+                                id: 'Auth1',
+                                text: `Used bcrypt to encrypt user passwords and JSON Web Tokens (JWT) for generating secure tokens to manage user sessions and authorize access to protected routes.`,
+                                img: ''
+                            },
+                            {
+                                id: 'Auth2',
+                                text: `This feature enhances security by ensuring that user passwords are stored securely and that only authorized users can access sensitive parts of the application.`,
+                                img: ''
+                            },
+                        ]
+                    }, 
                     {
                         id: 4,
                         title: `Asynchronous Handling & Error Management`,
-                        paragraph_1: `Integrated asynchronous handlers and error management to handle operations smoothly and provide clear feedback when issues arise.`,
-                        paragraph_2: `This feature ensures that the backend can manage multiple operations simultaneously without crashing and that any errors are caught and handled gracefully.`,
+                        paragraphs: [
+                            {
+                                id: 'Async1',
+                                text: `Integrated asynchronous handlers and error management to handle operations smoothly and provide clear feedback when issues arise.`,
+                                img: ''
+                            }, 
+                            {
+                                id: 'Async2',
+                                text: `This feature ensures that the backend can manage multiple operations simultaneously without crashing and that any errors are caught and handled gracefully.`,
+                                img: ''
+                            }, 
+                        ]
                     },
                     {
                         id: 6,
                         title: `PostgreSQL Database Design`,
-                        paragraph_1: `Designed and structured PostgreSQL tables to efficiently handle user data, activities, and relationships between them.`,
-                        paragraph_2: `A well-designed database schema ensures data consistency, easy maintenance, and scalability as the application grows.`,
+                        paragraphs: [
+                            {
+                                id: 'SQL1',
+                                text:  `Designed and structured PostgreSQL tables to efficiently handle user data, activities, and relationships between them.`,
+                                img: ''
+                            }, 
+                            {
+                                id: 'SQL2',
+                                text:   `A well-designed database schema ensures data consistency, easy maintenance, and scalability as the application grows.`,
+                                img: ''
+                            }, 
+                        ]
                     }
                 ],
                 challenges: [       
@@ -190,7 +223,7 @@ export const projects_data: ProjectsData = {
                         paragraphs: [
                             {
                                 id: 'OAuth1',
-                                test: `While integrating OAuth into my application, I initially relied on the passport npm package with everything handled on the frontend. However, as I moved toward a more robust solution with separate frontend and backend implementations, I encountered challenges understanding how to securely coordinate communication between the frontend, backend, and Google without relying on pre-built packages. To overcome this, I conducted extensive research on OAuth integration patterns, took detailed handwritten notes to map out the flow, and consulted with senior engineers to validate my approach. `,
+                                text: `While integrating OAuth into my application, I initially relied on the passport npm package with everything handled on the frontend. However, as I moved toward a more robust solution with separate frontend and backend implementations, I encountered challenges understanding how to securely coordinate communication between the frontend, backend, and Google without relying on pre-built packages. To overcome this, I conducted extensive research on OAuth integration patterns, took detailed handwritten notes to map out the flow, and consulted with senior engineers to validate my approach. `,
                                 img: ''
                             },
                             {
@@ -208,18 +241,13 @@ export const projects_data: ProjectsData = {
                                 text: `The frontend’s userLoader function checks for the token in the URL parameters, stores it along with its expiration time in localStorage, and sends a postMessage containing the token.
                                         This message triggers the handleGoogleAuthEvent(event) function in the main window, which stores the token and expiration again (in the main window’s context) and then closes the popup.`,   
                                 img: 'p4.png'
-                            }
+                            },
+                             {
+                                id: 'OAuth5',
+                                text: `This challenge not only deepened my understanding of OAuth but also improved my ability to research, collaborate, and implement secure authentication solutions. The implementation works well and is built to scale. I also have plans to make it even more secure by using cookies once the domain setup allows it.`,
+                                img: ''
+                            },
                         ]
-
-                        // paragraph_1: `While integrating OAuth into my application, I initially relied on the passport npm package with everything handled on the frontend. However, as I moved toward a more robust solution with separate frontend and backend implementations, I encountered challenges understanding how to securely coordinate communication between the frontend, backend, and Google without relying on pre-built packages. To overcome this, I conducted extensive research on OAuth integration patterns, took detailed handwritten notes to map out the flow, and consulted with senior engineers to validate my approach. `,
-                        // paragraph_2: `I send a POST request to the backend to retrieve a Google authentication URL, then initiate the login process—either via a popup window (on desktop) or a full-page redirect (on mobile), depending on the device type.`,
-                        // paragraph_3: `After the user successfully logs in, the backend receives a token from Google and checks the database to determine whether the user has previously logged into the website. It then generates a JSON Web Token (JWT) and sends it to the frontend via a redirect URL, with the token attached as a query parameter.`,
-                        // paragraph_4: `The frontend’s userLoader function checks for the token in the URL parameters, stores it along with its expiration time in localStorage, and sends a postMessage containing the token.
-                        // This message triggers the handleGoogleAuthEvent(event) function in the main window, which stores the token and expiration again (in the main window’s context) and then closes the popup.`,   
-                        // paragraph_5: `This challenge not only deepened my understanding of OAuth but also improved my ability to research, collaborate, and implement secure authentication solutions. The implementation works well and is built to scale. I also have plans to make it even more secure by using cookies once the domain setup allows it.`,
-                        // img2: 'p2.png',
-                        // img3: 'p3.png',
-                        // img4: 'p4.png',
                     },
                     {
                         id: 2,
@@ -240,18 +268,7 @@ export const projects_data: ProjectsData = {
                                 text: `This solution successfully maintained session persistence across refreshes and route changes. However, it relies on frequent GET requests to the backend, which could be optimized for better performance. I'm continuing to explore more efficient strategies to further refine and improve this approach.`,
                                 img: '',
                             },
-                            {
-                                id: 'Routes4',
-                                text:"",
-                                img: ""
-                            }
-
-
-
-                        // paragraph_1: `Previously, the website would lose the user's session and revert to the pre-login state whenever a logged-in user refreshed the page or navigated to a different child route, which disrupted the user experience.`,
-                        // paragraph_2: `To address this, I first created React Context to store user data across routes. While this approach worked for accessing data within the app, it didn’t persist the session after a page refresh. I then consulted with other developers, explored online resources, and reviewed Udemy courses and open-source projects to deepen my understanding of React Router DOM. Ultimately, I implemented a token check at the parent level of the home route to validate and restore the user's session, which resolved the issue.`,
-                        // paragraph_3: `This solution successfully maintained session persistence across refreshes and route changes. However, it relies on frequent GET requests to the backend, which could be optimized for better performance. I'm continuing to explore more efficient strategies to further refine and improve this approach.`,
-                        // img2: 'c2.png',
+                        ]
                     },
                 ],
                 frontend_deployment: `The frontend was hosted on GitHub Pages, providing a quick and cost-effective solution for static site hosting.`,
@@ -287,14 +304,33 @@ export const projects_data: ProjectsData = {
                     {
                         id: 1,
                         title: `Sliding Panel for Editing Pet Profile`,
-                        paragraph_1: `I implemented a reusable sliding panel that appears from the bottom when the user clicks the edit button. After updating the profile, the user can simply slide the panel down to close it and apply the changes.`,
-                        paragraph_2: ``,
+                        paragraphs: [
+                            {
+                                id: 'Panel1',
+                                text: `I implemented a reusable sliding panel that appears from the bottom when the user clicks the edit button. After updating the profile, the user can simply slide the panel down to close it and apply the changes.`,
+                                img: ""
+                            }
+                        ]
+                        // paragraph_1: `I implemented a reusable sliding panel that appears from the bottom when the user clicks the edit button. After updating the profile, the user can simply slide the panel down to close it and apply the changes.`,
+                        // paragraph_2: ``,
                     },
                     {
                         id: 2,
                         title: `Multi-Language Support`,
-                        paragraph_1: `I integrated a multi-language service using @ngx-translate/core, allowing users to switch between English and Japanese. The app dynamically updates content based on the selected language for a more accessible user experience.`,
-                        paragraph_2: `Support for Spanish and Chinese is planned for future updates to make the platform even more inclusive for a global audience.`,
+                        paragraphs: [
+                            {
+                                id: 'Language1',
+                                text:  `I integrated a multi-language service using @ngx-translate/core, allowing users to switch between English and Japanese. The app dynamically updates content based on the selected language for a more accessible user experience.`,
+                                img: ""
+                            },
+                            {
+                                id: 'Language2',
+                                text:   `Support for Spanish and Chinese is planned for future updates to make the platform even more inclusive for a global audience.`,
+                                img: ""
+                            },
+                        ]
+                        // paragraph_1: `I integrated a multi-language service using @ngx-translate/core, allowing users to switch between English and Japanese. The app dynamically updates content based on the selected language for a more accessible user experience.`,
+                        // paragraph_2: `Support for Spanish and Chinese is planned for future updates to make the platform even more inclusive for a global audience.`,
                     }                      
 
                 ],              
@@ -329,14 +365,28 @@ export const projects_data: ProjectsData = {
                     {
                         id: 1,
                         title: `Reusable components`,
-                        paragraph_1: `I built a flexible and reusable component system to ensure consistency across the app. Elements like videos, buttons, and images were abstracted into modular components, which made the codebase cleaner, easier to maintain, and more scalable as the project evolved.`,
-                        paragraph_2: ``,
+                        paragraphs: [
+                             {
+                                id: 'reuse1',
+                                text:   `I built a flexible and reusable component system to ensure consistency across the app. Elements like videos, buttons, and images were abstracted into modular components, which made the codebase cleaner, easier to maintain, and more scalable as the project evolved.`,
+                                img: ""
+                            },
+                        ]
+                        // paragraph_1: `I built a flexible and reusable component system to ensure consistency across the app. Elements like videos, buttons, and images were abstracted into modular components, which made the codebase cleaner, easier to maintain, and more scalable as the project evolved.`,
+                        // paragraph_2: ``,
                     }, 
                     {
                         id: 1,
                         title: `Responsive design for all size screen`,
-                        paragraph_1: `I implemented responsive design techniques to ensure the site displays cleanly across different screen sizes. Using fluid layouts, relative units, and media queries, I adjusted spacing, typography, and images to provide a consistent experience on laptops, tablets, and smaller devices.`,
-                        paragraph_2: ``,
+                        paragraphs: [
+                            {
+                                id: 'size1',
+                                text:   `I implemented responsive design techniques to ensure the site displays cleanly across different screen sizes. Using fluid layouts, relative units, and media queries, I adjusted spacing, typography, and images to provide a consistent experience on laptops, tablets, and smaller devices.`,
+                                img: ""
+                            },
+                        ]
+                        // paragraph_1: `I implemented responsive design techniques to ensure the site displays cleanly across different screen sizes. Using fluid layouts, relative units, and media queries, I adjusted spacing, typography, and images to provide a consistent experience on laptops, tablets, and smaller devices.`,
+                        // paragraph_2: ``,
                     },                    
                 ],              
                 code_samples: {
