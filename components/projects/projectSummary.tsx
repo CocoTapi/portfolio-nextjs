@@ -43,7 +43,7 @@ export default function ProjectSummary({ project }: ProjectProps): JSX.Element {
         <p>{project.project_summary}</p>
         <ul className={classes.techGroup}>
           {project.tech_list.map((tech: string) => (
-            <li>
+            <li key={tech}>
               <Tag>{tech}</Tag>
             </li>
           ))}

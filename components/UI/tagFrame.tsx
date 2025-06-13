@@ -11,7 +11,7 @@ export default function TagFrame({
             <h4>{title} :</h4>
             <div className={classes.techTagGroup}>
                 {tagList.map((tech) =>
-                    <Tag>{tech}</Tag>
+                    <Tag key={tech}>{tech}</Tag>
                 )}
             </div>
         </div>

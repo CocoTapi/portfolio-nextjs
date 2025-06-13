@@ -72,7 +72,7 @@ export const profile_data: ProfileData = {
         and creative power of coding, continuously striving to create impactful and innovative solutions.`,
     hobbies: 
         `I love spending time with my cat (who is also my coding partner), cooking, baking, and gardening. 
-        Recently, I like playing pickle ball too!`,
+        Recently, I like playing pickleball too!`,
     social_media: social,
     skills: [
         'JavaScript', 'TypeScript', 'React', 'Angular', 'HTML', 'CSS', 'Sass', 

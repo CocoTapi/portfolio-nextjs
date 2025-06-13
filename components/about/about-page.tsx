@@ -1,14 +1,9 @@
 import { ProfileProps } from "@/util/types";
-import MediumButton from "../UI/btnMedium";
 import classes from "./about-page.module.css";
 import Skills from "./skills";
 import IntroductionNav from "./introduction-nav";
-// import { media_data } from "@/data/data";
-import SmallButton from "../UI/btnSmall";
 import { AiOutlineGithub } from "react-icons/ai";
 import { SiLinkedin } from "react-icons/si";
-import BtnText from "../UI/btnText";
-import { course_list } from "@/data/data";
 
 export default function AboutPage({ profile }: ProfileProps): JSX.Element {
 
@@ -18,6 +13,7 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
       {/* Introduction component */}
       <div className={classes.introComponent}>
         
+        {/* TODO: Update to <Image> */}
         {/* img */}
         <div className={classes.myImg}>
           <img src="/images/shiori.png" alt="My Image" />
@@ -31,7 +27,7 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
 
           {/* Hobbies */}
           <p className={classes.hobbies}>
-            <span>When I'm not coding : </span>{profile.hobbies}
+            <span>When I&apos;m not coding : </span>{profile.hobbies}
           </p>
           
           {/* Social Media */}
@@ -77,7 +73,7 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
               Bachelor of Arts in English and Master of Arts in English 
             </p>
             <p className={classes.school}>
-              Japan Women’s University, Tokyo, Japan
+              Japan Women&apos;s University, Tokyo, Japan
             </p>
           </div>
           
