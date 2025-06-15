@@ -233,13 +233,18 @@ export const projects_data: ProjectsData = {
                             },
                             {
                                 id: 'OAuth3',
-                                text: `After the user successfully logs in, the backend receives a token from Google and checks the database to determine whether the user has previously logged into the website. It then generates a JSON Web Token (JWT) and sends it to the frontend via a redirect URL, with the token attached as a query parameter.`,
+                                text: `
+                                    After the user successfully logs in, the backend receives a token from Google and checks the database to determine whether the user has previously logged into the website. It then generates a JSON Web Token (JWT) and sends it to the frontend via a redirect URL, with the token attached as a query parameter.
+                                    This is a temporary workaround, as GitHub Pages does not support setting custom headers (e.g. Set-Cookie), sending credentials with CORS, or controlling headers via server configuration. I recognize it's less secure and plan to switch to cookie-based authentication.
+                                `,
                                 img: 'p3.png',
                             },
                             {
                                 id: 'OAuth4',
-                                text: `The frontend’s userLoader function checks for the token in the URL parameters, stores it along with its expiration time in localStorage, and sends a postMessage containing the token.
-                                        This message triggers the handleGoogleAuthEvent(event) function in the main window, which stores the token and expiration again (in the main window’s context) and then closes the popup.`,   
+                                text: `
+                                    The frontend’s userLoader function checks for the token in the URL parameters, stores it along with its expiration time in localStorage, and sends a postMessage containing the token.
+                                    This message triggers the handleGoogleAuthEvent(event) function in the main window, which stores the token and expiration again (in the main window’s context) and then closes the popup.
+                                `,   
                                 img: 'p4.png'
                             },
                              {
@@ -297,7 +302,7 @@ export const projects_data: ProjectsData = {
                 backend_tech: [],
                 tools_tech: ['Git', 'GitHub', 'Jasmine', 'Cypress', 'Figma'],
                 deployment_tech: [],
-                my_roles: `Frontend Development`,
+                my_roles: `UI/UX design, Frontend Development`,
                 ui_img: 'catLow.png',
                 ui_description: 'I created the initial wireframe in Figma to establish the core layout and user flow for each screen. Visual styling, including colors and final design details, will be added in the next phase, as the design is still under active discussion.',
                 frontend_features: [
