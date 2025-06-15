@@ -113,7 +113,7 @@ export const projects_data: ProjectsData = {
                 deployment_tech: ['AWS', 'GitHub'],
                 my_roles: `UI/UX design, Frontend Development, Backend Development, and Deployment.`,
                 ui_img: 'lessonLabUI.png',
-                ui_description: 'First, I designed low-fi version of user interface and once I decided brief ideas of entire app, I add colors and images to match the app image using Figma. These are the main part of the app design.',
+                ui_description: 'First, I designed low-fi version of user interface. Once I decided brief ideas of entire app, I added colors and images to match the app theme using Figma. These are the main part of the app design.',
                 frontend_features: [
                     {
                         id: 1,
@@ -297,9 +297,9 @@ export const projects_data: ProjectsData = {
                 backend_tech: [],
                 tools_tech: ['Git', 'GitHub', 'Jasmine', 'Cypress', 'Figma'],
                 deployment_tech: [],
-                my_roles: `UI/UX design, Frontend Development`,
+                my_roles: `Frontend Development`,
                 ui_img: 'catLow.png',
-                ui_description: 'I created the wireframe in Figma to define the core layout and structure of each screen before applying visual styling. Next, I’ll move on to UI design, focusing on colors, typography, and interactive elements.This is the wireframe of the app, showcasing the foundational layout and structure of each screen before visual styling was applied. It focuses on the core user journey, content placement, and navigation flow, allowing for early feedback and iteration.',
+                ui_description: 'I created the initial wireframe in Figma to establish the core layout and user flow for each screen. Visual styling, including colors and final design details, will be added in the next phase, as the design is still under active discussion.',
                 frontend_features: [
                     {
                         id: 1,
