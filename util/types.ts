@@ -36,29 +36,36 @@ export interface ProfileData {
 interface Feature {
     id: number;
     title: string;
-    paragraph_1: string;
-    paragraph_2: string;
-    paragraph_3?: string;
-    paragraph_4?: string;
-    imgURL?: string;
+    paragraphs: Paragraph[]
+    // paragraph_1: string;
+    // paragraph_2: string;
+    // paragraph_3?: string;
+    // paragraph_4?: string;
+    // imgURL?: string;
 }
 
-interface Challenge {
-    id: number;
-    title: string;
-    paragraph_1: string;
-    paragraph_2?: string;
-    paragraph_3?: string;
-    paragraph_4?: string;
-    paragraph_5?: string;
-    img1?: string;
-    img2?: string;
-    img3?: string;
-    img4?: string;
-    img5?: string;
-
-
+interface Paragraph {
+    id: string,
+    text: string,
+    img: string,
 }
+
+// interface Challenge {
+//     id: number;
+//     title: string;
+//     paragraph_1: string;
+//     paragraph_2?: string;
+//     paragraph_3?: string;
+//     paragraph_4?: string;
+//     paragraph_5?: string;
+//     img1?: string;
+//     img2?: string;
+//     img3?: string;
+//     img4?: string;
+//     img5?: string;
+
+
+// }
 
 interface CodeSample {
     frontend_url: string;
@@ -75,8 +82,8 @@ interface ProjectDetails {
     ui_img?: string;
     ui_description?: string,
     frontend_features: Feature[];
-    backend_features?: Feature[];
-    challenges?: Challenge[];
+    backend_features?: Feature[];  
+    challenges?: Feature[];
     frontend_deployment?: string;
     backend_deployment?: string;
     code_samples: CodeSample;
@@ -143,7 +150,8 @@ export interface ProfileProps {
 }
 
 export interface DetailCardProps {
-    item: Challenge
+    // item: Challenge
+    item: Feature
 }
 
 export interface DemoVideoProps {
@@ -169,7 +177,7 @@ export interface FullTechProps {
 }
 
 export interface FeaturesProps {
-    featureList: Feature[] | Challenge[]
+    featureList: Feature[] 
 }
 
 export interface DeploySectionProps {

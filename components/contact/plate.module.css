@@ -30,8 +30,17 @@
     z-index: 20;
 }
 
-.plate h3 {
+/* .plate span {
     margin-bottom: 1rem;
+} */
+
+.linkTitle {
+    margin-bottom: 1rem;
+
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 3rem;
+   
 }
 
 .iconEmail {
@@ -90,7 +99,7 @@
         padding-top: 4rem;
     }
 
-    .plate h3 {
+    .linkTitle {
         font-size: 2.5rem;
     }
 

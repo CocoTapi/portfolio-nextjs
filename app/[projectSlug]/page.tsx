@@ -13,6 +13,7 @@ import DemoVideo from "@/components/projects/demoVideo";
 import CardImg from "@/components/projects/cardImg";
 import DetailSection from "@/components/UI/detailSection";
 
+// TODO: This dynamic route (/[projectSlug]) is not cached.
 async function getProject(slug: string): Promise<ProjectData | undefined> {
     //await new Promise((resolve) => setTimeout(resolve, 5000));
     const project = projects_data.projects.find((project) =>
@@ -85,6 +86,7 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
                     {/* UI/UX Design */}
                     { project.project_details.ui_description &&
                         <DetailSection title="Design">
+                            <p>{project.project_details.ui_description}</p>
                             {project.project_details.ui_img &&
                                 <CardImg 
                                     path={project.project_details.ui_img}

@@ -11,61 +11,26 @@ export default function DetailCard ({
                 {item.title}
             </p>
 
-            {/* Paragraph 1  */}
-            <p className={classes.detailDevItem}>
-                {item.paragraph_1}
-            </p>
+            {
+                item.paragraphs.map((para) => (
+                    <>
+                        {/* paragraph */}
+                        <p className={classes.detailDevItem} key={para.id}>
+                            {para.text}
+                        </p>
 
-            {/* img */}
-            {item.img1 &&
-                <CardImg 
-                    path={item.img1}
-                    className={classes.detailImgFrame}
-                />
-            } 
-
-            {/* Paragraph 2  */}
-            {item.paragraph_2 && 
-                <p className={classes.detailDevItem}>
-                    {item.paragraph_2
-                }</p>
+                        {/* img */}
+                        {para.img && 
+                            <CardImg 
+                                path={para.img}
+                                className={classes.detailImgFrame}
+                            />
+                        }
+                        
+                    </>
+                   
+                ))
             }
-
-            {/* img */}
-            {item.img2 &&
-                <CardImg 
-                    path={item.img2}
-                    className={classes.detailImgFrame}
-                />
-            } 
-
-            {/* Paragraph 3  */}
-            {item.paragraph_3  && 
-                <p className={classes.detailDevItem}>
-                    {item.paragraph_3}
-                </p>
-            }
-
-            {/* img */}
-            {item.img3 &&
-                <CardImg 
-                    path={item.img3}
-                    className={classes.detailImgFrame}
-                />
-            } 
-
-            {/* Paragraph 4  */}
-            {item.paragraph_4  && 
-                <p className={classes.detailDevItem}>{item.paragraph_4}</p>
-            }
-
-            {/* img */}
-            {item.img4 &&
-                <CardImg 
-                    path={item.img4}
-                    className={classes.detailImgFrame}
-                />
-            } 
             
         </div>
     )

@@ -11,7 +11,7 @@ export default function Top() {
             <div className={classes.textBox}>
                 <h2 className={classes.mainText}>
                     <span className={classes.mainTextName}>
-                        Hi, I'm Shiori,
+                        Hi, I&apos;m Shiori,
                     </span>
                     <span className={classes.mainTextJobTitle}>
                         Full-stack Developer.

@@ -6,6 +6,7 @@ export default function CardImg({
     className 
 }: DemoVideoProps): JSX.Element {
     return (
+        // TODO: update <img /> to <Image />
         <div className={`${classes.cardImgFrame} ${className}`}>
             <img src={`/images/${path}`} alt={`${path}`}/>
         </div>

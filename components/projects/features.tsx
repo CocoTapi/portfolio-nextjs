@@ -8,8 +8,8 @@ export default function Features({
     return (
         <ul className={classes.featureList}>
             {featureList.map((feature) => (
-                <li className={classes.featureItem}>
-                    <DetailCard item={feature} key={feature.title}/>
+                <li className={classes.featureItem} key={feature.title}>
+                    <DetailCard item={feature} />
                 </li>
             ))}
         </ul>
