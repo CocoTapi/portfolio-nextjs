@@ -235,7 +235,7 @@ export const projects_data: ProjectsData = {
                                 id: 'OAuth3',
                                 text: `
                                     After the user successfully logs in, the backend receives a token from Google and checks the database to determine whether the user has previously logged into the website. It then generates a JSON Web Token (JWT) and sends it to the frontend via a redirect URL, with the token attached as a query parameter.
-                                    This is a temporary workaround, as GitHub Pages does not support setting custom headers (e.g. Set-Cookie), sending credentials with CORS, or controlling headers via server configuration. I recognize it's less secure and plan to switch to cookie-based authentication.
+                                    (This is a temporary workaround, as GitHub Pages does not support setting custom headers (e.g. Set-Cookie), sending credentials with CORS, or controlling headers via server configuration. I recognize it's less secure and plan to switch to cookie-based authentication.)
                                 `,
                                 img: 'p3.png',
                             },
