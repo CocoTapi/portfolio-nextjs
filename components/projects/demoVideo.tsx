@@ -10,26 +10,32 @@ export default function DemoVideo({
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
-    if (!videoRef.current) return;
+    const video = videoRef.current;
+    if (!video) return;
 
+ 
+
+    // Detect whether the video is visible on screen
     const observer = new IntersectionObserver(
+      
+      // [entry]: destructing entries and use the first entry (IntersectionObserverEntry)
       ([entry]) => {
-        const video = videoRef.current;
-        if (!video) return;
 
+        // If the video is visible, it plays. If not, pause. 
         if (entry.isIntersecting) {
           video.play();
         } else {
           video.pause(); // Optional: pause when leaving view
         }
       },
-      { threshold: 0.5 }
+      // the percentage of the video visibility
+      { threshold: 0.3 }
     );
 
-    observer.observe(videoRef.current);
+    observer.observe(video);
 
     return () => {
-      if (videoRef.current) observer.unobserve(videoRef.current);
+       observer.unobserve(video);
     };
   }, []);
 
