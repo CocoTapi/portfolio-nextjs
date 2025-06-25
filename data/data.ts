@@ -41,7 +41,12 @@ export const course_list: Course_List[] = [
         media_id: 10,
         name: 'A complete guide to Angular 19 Unit Testing and End to End (E2E) Testing, including Testing best practices and CI | Udemy',
         link: "https://www.udemy.com/course/angular-testing-course"
-    }
+    },
+    {
+        media_id: 11,
+        name: 'Software Architecture & Design of Modern Large Scale Systems | Udemy',
+        link: "https://www.udemy.com/course/software-architecture-design-of-modern-large-scale-systems/"
+    },
 ]
 
 export const profile_data: ProfileData = {
