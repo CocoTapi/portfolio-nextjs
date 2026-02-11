@@ -26,14 +26,18 @@
 .footerLogoFrame {
     grid-row: 1 / 2;
     grid-column: name-start / name-end;
-    width: 30rem;
+    width: 30rem; 
+    
+    position: relative; 
+    
+    aspect-ratio: 3 / 1; 
 
     justify-self: center;
     align-self: center;
 }
 
-.footerLogoFrame img {
-    width: 100%;
+.footerLogo {
+    object-fit: contain; 
 }
 
 .footerNameGroup {
@@ -95,7 +99,6 @@
 .footerNavItem:link {
     text-decoration: none;
     font-size: 1.6rem;
-    color: var(--color-grey-light-1);
     font-family: var(--font-primary);
     font-weight: 300;
     text-transform: uppercase;
@@ -107,7 +110,7 @@
     z-index: 10;
 
     transition: all .2s;
-  }
+}
   
 .footerNavItem:hover,
 .footerNavItem:active {
@@ -148,7 +151,6 @@
     .footerLogoFrame {
         grid-row: 1 / 2;
         grid-column: name-start / span 3;
-
     }
 
     .footerNameGroup {

@@ -3,6 +3,7 @@ import { SiLinkedin } from "react-icons/si";
 import classes from "./main-footer.module.css";
 import { profile_data, social } from "@/data/data";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function MainFooter(): React.ReactNode {
   return (
@@ -11,7 +12,13 @@ export default function MainFooter(): React.ReactNode {
 
         {/* Cat Logo */}
         <div className={classes.footerLogoFrame}>
-          <img src="/images/logo.png" alt="Logo" />
+          <Image 
+            src="/images/logo.png" 
+            alt="Logo" 
+            fill
+            sizes="30rem" 
+            className={classes.footerLogo}
+          />
         </div>
 
         <div className={classes.footerNameGroup}>
