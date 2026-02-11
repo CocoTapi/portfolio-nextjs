@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { colorSchemes } from "@/components/UI/color-schemes";
-// import { StaticImage_Data } from "next/image";
 
 // data
 export interface Course_List {
@@ -14,10 +13,6 @@ export interface MediaData {
     linkedIn: string,
     email: string
 }
-
-// interface OnlineCourses {
-//     [key: number]: string
-// }
 
 export interface ProfileData {
     my_email: string;
@@ -37,11 +32,6 @@ interface Feature {
     id: number;
     title: string;
     paragraphs: Paragraph[]
-    // paragraph_1: string;
-    // paragraph_2: string;
-    // paragraph_3?: string;
-    // paragraph_4?: string;
-    // imgURL?: string;
 }
 
 interface Paragraph {
@@ -49,23 +39,6 @@ interface Paragraph {
     text: string,
     img: string,
 }
-
-// interface Challenge {
-//     id: number;
-//     title: string;
-//     paragraph_1: string;
-//     paragraph_2?: string;
-//     paragraph_3?: string;
-//     paragraph_4?: string;
-//     paragraph_5?: string;
-//     img1?: string;
-//     img2?: string;
-//     img3?: string;
-//     img4?: string;
-//     img5?: string;
-
-
-// }
 
 interface CodeSample {
     frontend_url: string;
@@ -150,7 +123,6 @@ export interface ProfileProps {
 }
 
 export interface DetailCardProps {
-    // item: Challenge
     item: Feature
 }
 
@@ -189,3 +161,7 @@ export interface DetailSectionProps {
     title: string;
     children: ReactNode;
 }
+
+export interface ProjectPageProps {
+    params: Promise<{ projectSlug: string }>;
+};
