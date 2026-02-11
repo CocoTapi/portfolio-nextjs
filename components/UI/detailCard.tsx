@@ -4,7 +4,7 @@ import { DetailCardProps } from "@/util/types";
 
 export default function DetailCard ({ 
     item
-}: DetailCardProps): JSX.Element {
+}: DetailCardProps): React.ReactNode {
     return (
         <div className={classes.devFrame}>
             <p className={classes.subTitle}>

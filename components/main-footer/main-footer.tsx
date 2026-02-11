@@ -4,7 +4,7 @@ import classes from "./main-footer.module.css";
 import { profile_data, social } from "@/data/data";
 import Link from "next/link";
 
-export default function MainFooter(): JSX.Element {
+export default function MainFooter(): React.ReactNode {
   return (
     <footer className={classes.footer}>
       <div className={classes.footerContent}>

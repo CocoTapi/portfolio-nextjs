@@ -7,8 +7,13 @@ export default function BtnMedium({
     children,
     colorScheme = 'secondary',
     ...rest
-}: ButtonProps): JSX.Element {
-    const { textColor, backgroundColor, borderColor, backgroundImage }: ColorScheme = colorSchemes[colorScheme] || colorSchemes.primary;
+}: ButtonProps): React.ReactNode {
+    const {    
+        textColor, 
+        backgroundColor, 
+        borderColor, 
+        backgroundImage 
+    }: ColorScheme = colorSchemes[colorScheme] || colorSchemes.primary;
 
     const buttonStyle: ButtonStyle = {
         color: textColor,

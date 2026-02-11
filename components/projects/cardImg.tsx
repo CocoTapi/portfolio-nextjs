@@ -4,7 +4,7 @@ import classes from './cardImg.module.css';
 export default function CardImg({ 
     path,
     className 
-}: DemoVideoProps): JSX.Element {
+}: DemoVideoProps): React.ReactNode {
     return (
         // TODO: update <img /> to <Image />
         <div className={`${classes.cardImgFrame} ${className}`}>

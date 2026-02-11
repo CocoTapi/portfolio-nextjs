@@ -7,8 +7,12 @@ export default function Tag({
     children,
     colorScheme = 'grey',
     ...rest
-}: ButtonProps): JSX.Element {
-    const { textColor, backgroundColor, borderColor }: ColorScheme = colorSchemes[colorScheme] || colorSchemes.primary;
+}: ButtonProps): React.ReactNode {
+    const { 
+        textColor, 
+        backgroundColor, 
+        borderColor 
+    }: ColorScheme = colorSchemes[colorScheme] || colorSchemes.primary;
 
     const buttonStyle: ButtonStyle = {
         color: textColor,

@@ -6,7 +6,7 @@ import { DemoVideoProps } from '@/util/types';
 export default function DemoVideo({ 
   path,
   className 
-}: DemoVideoProps): JSX.Element {
+}: DemoVideoProps): React.ReactNode {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {

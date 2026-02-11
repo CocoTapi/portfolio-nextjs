@@ -5,11 +5,13 @@ import IntroductionNav from "./introduction-nav";
 import { AiOutlineGithub } from "react-icons/ai";
 import { SiLinkedin } from "react-icons/si";
 
-export default function AboutPage({ profile }: ProfileProps): JSX.Element {
+export default function AboutPage({ profile }: ProfileProps): React.ReactNode {
 
   return (
     <div className={classes.aboutComponent}>
+      {/* Page title */}
       <h1>About</h1>
+
       {/* Introduction component */}
       <div className={classes.introComponent}>
         
@@ -79,7 +81,10 @@ export default function AboutPage({ profile }: ProfileProps): JSX.Element {
           
           {/* Self study */}
           <div className={classes.eduGroup}>
-            <p className={classes.eduLabel}>Professional Development</p>
+            <p className={classes.eduLabel}>
+              Professional Development
+            </p>
+            
             <ul className={classes.courseList}>
               {profile.professional_development.map((course) => (
                 <li key={course.name}>

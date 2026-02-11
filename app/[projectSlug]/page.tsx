@@ -28,20 +28,19 @@ export default async function ProjectDetainPage({ params }: ProjectPageProps): P
     const { projectSlug } = await params;
     const project = await getProject(projectSlug);
 
-    if (!project) {
-        notFound();
-    }
+    // if no project, send user to not found page
+    if (!project) notFound();
 
     return (
         <div className={classes.detailOuter}>
             <div className={classes.detailFrame}>
 
-                    {/* Title */}
+                    {/* Project Title */}
                     <h1 className={classes.projectTitle}>
                         {project.project_title}
                     </h1>
 
-                    {/* Description */}
+                    {/* Project Description */}
                     <p className={classes.projectSummary}>
                         {project.project_details.project_description}
                     </p>

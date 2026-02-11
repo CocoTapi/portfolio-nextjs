@@ -1,7 +1,7 @@
-import { ReactNode } from "react";
+import { ComponentPropsWithoutRef, ReactNode } from "react";
 import { colorSchemes } from "@/components/UI/color-schemes";
 
-// data
+// ---------------------------------- data ------------------------------------------
 export interface Course_List {
     media_id: number,
     name: string,
@@ -81,7 +81,7 @@ export interface ProjectsData {
     projects: ProjectData[];
 }
 
-//color scheme
+// ---------------------------------- color scheme ------------------------------------------
 export interface ColorScheme {
     textColor: string;
     backgroundColor: string;
@@ -94,17 +94,19 @@ type ColorSchemeKey = keyof typeof colorSchemes;
 
 
 
-// props
+// ---------------------------------- NavLink ------------------------------------------
 export interface NavLinkProps {
     href: string;
     children: string;
 }
 
-export interface ButtonProps {
+
+// ---------------------------------- Button ------------------------------------------
+
+export interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
     className?: string;
     children: ReactNode;
     colorScheme?: ColorSchemeKey;
-    [key: string]: any;
 }
 
 export interface ButtonStyle {
@@ -114,6 +116,13 @@ export interface ButtonStyle {
     backgroundImage?: string;
 };
 
+export interface BtnTextProps extends ComponentPropsWithoutRef<"button"> {
+    className?: string;
+    children: ReactNode;
+}
+
+// ---------------------------------- Project ------------------------------------------
+
 export interface ProjectProps {
     project: ProjectData
 }
@@ -121,6 +130,9 @@ export interface ProjectProps {
 export interface ProfileProps {
     profile: ProfileData
 }
+
+
+// ---------------------------------- UI Items ------------------------------------------
 
 export interface DetailCardProps {
     item: Feature
@@ -161,6 +173,8 @@ export interface DetailSectionProps {
     title: string;
     children: ReactNode;
 }
+
+// ---------------------------------- Pages ------------------------------------------
 
 export interface ProjectPageProps {
     params: Promise<{ projectSlug: string }>;

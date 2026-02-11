@@ -5,7 +5,7 @@ import AboutPage from "@/components/about/about-page";
 import Top from "@/components/top/top";
 import Contact from "@/components/contact/contact";
 
-export default function HomePage(): JSX.Element {
+export default function HomePage(): React.ReactNode {
   return (
     <>
     <main className={classes.main}>

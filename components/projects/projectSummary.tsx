@@ -8,7 +8,7 @@ import DemoVideo from "./demoVideo";
 import CardImg from "./cardImg";
 
 
-export default function ProjectSummary({ project }: ProjectProps): JSX.Element {
+export default function ProjectSummary({ project }: ProjectProps): React.ReactNode {
   return (
     <div className={classes.outerBox}>
       <div className={classes.leftComponent}>

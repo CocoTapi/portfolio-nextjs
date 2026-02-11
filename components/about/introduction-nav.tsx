@@ -7,7 +7,7 @@ import SmallButton from "../UI/btnSmall";
 import { FaChevronDown } from "react-icons/fa";
 
 
-export default function IntroductionNav({ profile }: ProfileProps): JSX.Element {
+export default function IntroductionNav({ profile }: ProfileProps): React.ReactNode {
   const [showLong, setShowLong] = useState(false);
 
   function handleLongVer() {

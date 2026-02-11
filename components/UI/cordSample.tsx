@@ -5,7 +5,7 @@ import BtnMedium from "./btnMedium";
 export default function CordSample({
     frontendUrl,
     backendUrl
-}: CordSampleProps): JSX.Element {
+}: CordSampleProps): React.ReactNode {
  return (
     <div className={classes.sectionBox}>
         <h3>
