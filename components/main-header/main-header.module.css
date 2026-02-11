@@ -28,12 +28,16 @@
 }
 
 .logoFrame {
-  width: 6rem;
+    width: 6rem; 
+    position: relative; 
+    aspect-ratio: 3 / 1; 
+
+    transform: scale(3.5);
+    transform-origin: left center;
 }
 
-.logoFrame img {
-  width: 270%;
-  padding-top: 1rem;
+.headerLogo {
+    object-fit: contain; 
 }
 
 .navItem:link {
@@ -62,8 +66,6 @@
   }
 
   .logoFrame img {
-    width: 270%;
-    padding-top: 1rem;
-    transform: translateX(-1rem);
+    transform: scale(1.1) translateX(-.5rem);
   }
 }
