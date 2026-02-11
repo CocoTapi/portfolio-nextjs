@@ -4,6 +4,7 @@ import Skills from "./skills";
 import IntroductionNav from "./introduction-nav";
 import { AiOutlineGithub } from "react-icons/ai";
 import { SiLinkedin } from "react-icons/si";
+import Image from "next/image";
 
 export default function AboutPage({ profile }: ProfileProps): React.ReactNode {
 
@@ -15,10 +16,16 @@ export default function AboutPage({ profile }: ProfileProps): React.ReactNode {
       {/* Introduction component */}
       <div className={classes.introComponent}>
         
-        {/* TODO: Update to <Image> */}
-        {/* img */}
+        {/* Self img */}
         <div className={classes.myImg}>
-          <img src="/images/shiori.png" alt="My Image" />
+          <Image 
+            src="/images/shiori.png" 
+            alt="My Image" 
+            fill 
+            priority
+            sizes="(max-width: 32.5em) 60vw, 25vw"
+            className={classes.styledImage} 
+          />
         </div>
 
         {/* Description */}
