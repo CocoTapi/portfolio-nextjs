@@ -59,7 +59,7 @@ export default function MainFooter(): React.ReactNode {
 
         {/* Copyright */}
         <p className={classes.copyright}>
-          &copy; 2025 Shiori Yoshida Avino. All rights reserved.  
+          &copy; 2026 Shiori Yoshida Avino. All rights reserved.  
         </p>
       </div>
     </footer>
