@@ -18,6 +18,10 @@ export default function IntroductionNav({ profile }: ProfileProps): React.ReactN
     setShowLong(!showLong);
   }
 
+  const stanzas = showLong
+    ? profile.long_self_introduction
+    : profile.short_self_introduction;
+
   return (
     <div>
       <div className={classes.myStoryLabel}>
@@ -27,15 +31,11 @@ export default function IntroductionNav({ profile }: ProfileProps): React.ReactN
           <button className={classes.seeLongButton} onClick={handleShortVer}>See Long Version <FaChevronDown className={classes.underIcon} /></button>
         }
       </div>
-      {!showLong && <p>{profile.short_self_introduction}</p>}
-      {showLong && (
-        <div className={classes.longParagraph}>
-          <p>{profile.long_self_introduction1}</p>
-          <p>{profile.long_self_introduction2}</p>
-          <p>{profile.long_self_introduction3}</p>
-          {/* <p>{profile.long_self_introduction4}</p> */}
-        </div>
-      )}
+      <div className={classes.paragraphGroup}>
+        {stanzas.map((stanza, i) => (
+          <p key={i}>{stanza}</p>
+        ))}
+      </div>
     </div>
   );
 }

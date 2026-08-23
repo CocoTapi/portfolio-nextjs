@@ -54,27 +54,23 @@ export const profile_data: ProfileData = {
     top_page_description: 
         `I combine my passion for education with communication and 
         innovative power of coding, striving to create reliable solutions.`,
-    short_self_introduction: 
-        `I began my career as an ESL teacher, a role I deeply cherished. When my visa status paused my career, a friend launched an educational project we had been discussing — using his software engineering skills. Inspired, I dove into coding and quickly found joy in solving complex puzzles, building creative solutions, and crafting designs that reflected my vision. Though the journey has been challenging, with the support of engineer friends and incredible online resources, I’ve found real fulfillment in overcoming obstacles.`,
-    long_self_introduction1: 
-        `I began my career as an ESL teacher, a role I cherished deeply, but I always had a curiosity 
-        to explore something new. When the time came to change my visa, I faced the reality of being unable to 
-        work for nearly two years. Rather than see this as a setback, I viewed it as an opportunity 
-        to grow my skills and complete a project I had been planning during my master's degree.`,
-    long_self_introduction2: 
-        `I refined my project, diving into data and technologies, and sought advice from software engineers. 
-        While they encouraged me to learn coding, I initially resisted. However, that all changed 
-        when my software engineer friend successfully launched a project we had been discussing, 
-        quickly turning it into a business. This moment opened my eyes to the incredible power and 
-        potential of software engineering.`,
-    long_self_introduction3: 
-        `Inspired, I began learning to code and quickly found joy in building programs, 
-        solving complex puzzles, and crafting designs that reflected my vision. The journey has been far 
-        from easy—every new challenge brings unknown errors and difficulties. But with the support of engineer 
-        friends and incredible resources available online, I’ve found fulfillment in overcoming them.`,
-    long_self_introduction4: 
-        `Now, as a software engineer, I combine my passion for education with the problem-solving 
-        and creative power of coding, continuously striving to create impactful and innovative solutions.`,
+    short_self_introduction: [
+        `I started my career as an ESL teacher which I loved, but transitioned into tech 
+        after building an educational application with software engineer friends. `,
+        `Today, I am the Lead Frontend Engineer for a publicly listed affiliate platform handling millions of users.
+        I own our frontend architect, manage AWS deployments, and handle live hotfixes. 
+        I also use my teaching background every day to review code, set standards, and communicate across our engineering and business teams!`,
+    ],
+    long_self_introduction: [
+         `I began my career as an ESL teacher, a role I deeply cherished.
+        When my visa status paused my career, a friend brought an educational project we had been discussed to life 
+        using his software engineering skills. Inspired, I dove into coding and quickly found joy
+        in solving complex puzzles, building creative solutions, and crafting designs that reflected my vision.`,
+        `Today, I am the Lead Frontend Engineer for a publicly listed affiliate platform handling millions of users.
+        I architect our applications, manage AWS deployments, and handle live hotfixes. 
+        My background in teaching actually serves me perfectly now, as a part of my role is conduction code reviews,
+        setting team standards, and communicating complex requirements with the team.`,
+    ],
     hobbies: 
         `I love spending time with my cat (who is also my coding partner), cooking, baking, and gardening. 
         Recently, I like playing pickleball too!`,

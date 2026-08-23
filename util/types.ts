@@ -17,11 +17,8 @@ export interface MediaData {
 export interface ProfileData {
     my_email: string;
     top_page_description: string;
-    short_self_introduction: string;
-    long_self_introduction1: string;
-    long_self_introduction2: string;
-    long_self_introduction3: string;
-    long_self_introduction4: string;
+    short_self_introduction: string[];
+    long_self_introduction: string[];
     hobbies: string;
     social_media: MediaData;
     skills: string[];
