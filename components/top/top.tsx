@@ -1,4 +1,4 @@
-import Link from "next/link";
+import HashLink from "../UI/hashLink";
 import classes from "./top.module.css";
 import BtnMedium from "../UI/btnMedium";
 import { profile_data } from "@/data/data";
@@ -22,9 +22,9 @@ export default function Top() {
                     {profile_data.top_page_description}
                 </p>
                 <div className={classes.introButtonFrame}>
-                    <Link href="#contact">
+                    <HashLink href="/#contact">
                         <BtnMedium>Get in Touch !</BtnMedium>
-                    </Link>
+                    </HashLink>
                 </div>
             </div>
             <div className={classes.topImgFrame}>

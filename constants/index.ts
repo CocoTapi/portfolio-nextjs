@@ -12,3 +12,14 @@ export const TOP_IMAGE_SIZE = "(min-width: 93.75em) 600px, 40vw";
 
 /** size for ENLARGED Image */
 export const ENLARGED_IMAGE_SIZE = "96vw";
+
+/**
+ * Home-page sections, shared by the header and footer navs so the two cannot
+ * drift apart. Hrefs are root-anchored: a bare "#about" resolves against the
+ * current path, which breaks on the project detail pages.
+ */
+export const NAV_ITEMS = [
+    { label: 'Projects', href: '/#projects' },
+    { label: 'About', href: '/#about' },
+    { label: 'Contact', href: '/#contact' },
+] as const;

@@ -40,7 +40,7 @@
     object-fit: contain; 
 }
 
-.navItem:link {
+.navItem {
   text-decoration: none;
   font-size: 1.6rem;
   color: var(--color-grey-dark-1);

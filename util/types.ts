@@ -92,10 +92,12 @@ type ColorSchemeKey = keyof typeof colorSchemes;
 
 
 
-// ---------------------------------- NavLink ------------------------------------------
-export interface NavLinkProps {
+// ---------------------------------- HashLink ------------------------------------------
+export interface HashLinkProps {
+    /** Root-anchored target, e.g. "/#about". */
     href: string;
-    children: string;
+    className?: string;
+    children: ReactNode;
 }
 
 
