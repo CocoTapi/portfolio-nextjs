@@ -1,4 +1,5 @@
 import type { ProjectPageProps } from "@/util/types";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import classes from "./page.module.css";
 import MediumButton from "@/components/UI/btnMedium";
@@ -20,6 +21,20 @@ export async function generateStaticParams() {
 
 // Force 404 for unknown slugs
 export const dynamicParams = false;
+
+// Per-project title and description, e.g. "Shiori A | Lesson Lab Detail"
+export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
+    const { projectSlug } = await params;
+    const project = await getProject(projectSlug);
+
+    if (!project) return { title: "Shiori A | Project Not Found" };
+
+    return {
+        title: `Shiori A | ${project.project_title} Detail`,
+        // summaries are indented template literals, so collapse the whitespace
+        description: project.project_summary.replace(/\s+/g, " ").trim(),
+    };
+}
 
 /**
  * Project Detail Page
