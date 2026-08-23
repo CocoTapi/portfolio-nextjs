@@ -64,6 +64,9 @@
     margin-right: 0;
     gap: 0;
   }
+  .logoFrame {
+    margin-left: -1.2rem;
+  }
 
   .logoFrame img {
     transform: scale(1.1) translateX(-.5rem);
