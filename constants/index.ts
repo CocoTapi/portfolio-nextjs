@@ -7,5 +7,8 @@ export const DEFAULT_CARD_IMAGE_SIZE = '(max-width: 46.25em) 100vw, 800px';
 /** Image size for small screen */
 export const SMALL_CARD_IMAGE_SIZE = '(max-width: 46.25em) 100vw, 360px';
 
+/** Top page Image size  */
+export const TOP_IMAGE_SIZE = "(min-width: 93.75em) 600px, 40vw";
+
 /** size for ENLARGED Image */
 export const ENLARGED_IMAGE_SIZE = "96vw";
