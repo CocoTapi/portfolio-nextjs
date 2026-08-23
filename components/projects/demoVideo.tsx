@@ -1,11 +1,15 @@
 'use client';
-import { useEffect, useRef } from 'react';
-import classes from './demoVideo.module.css'
-import { DemoVideoProps } from '@/util/types';
 
-export default function DemoVideo({ 
+import { useCallback, useEffect, useRef } from 'react';
+import classes from './demoVideo.module.css';
+import common from './cardImg.module.css';
+import ZoomableMedia from '../UI/zoomableMedia';
+import type { DemoVideoProps } from '@/util/types';
+
+export default function DemoVideo({
   path,
-  className 
+  className,
+  label
 }: DemoVideoProps): React.ReactNode {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -13,17 +17,18 @@ export default function DemoVideo({
     const video = videoRef.current;
     if (!video) return;
 
- 
-
     // Detect whether the video is visible on screen
     const observer = new IntersectionObserver(
-      
-      // [entry]: destructing entries and use the first entry (IntersectionObserverEntry)
+
+      // destructing entries and use the first entry (IntersectionObserverEntry)
       ([entry]) => {
 
-        // If the video is visible, it plays. If not, pause. 
+        // If the video is visible, it plays. If not, pause.
         if (entry.isIntersecting) {
-          video.play();
+          // play() rejects with AbortError if the element is paused before the
+          // promise settles -- now likely, since opening the modal pauses this
+          // thumbnail.
+          void video.play().catch(() => {});
         } else {
           video.pause(); // Optional: pause when leaving view
         }
@@ -35,20 +40,49 @@ export default function DemoVideo({
     observer.observe(video);
 
     return () => {
-       observer.unobserve(video);
+      observer.disconnect();
     };
   }, []);
 
+  // Stop the thumbnail while the enlarged copy plays
+  const handleOpenChange = useCallback((isOpen: boolean): void => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (isOpen) {
+      video.pause();
+    } else {
+      void video.play().catch(() => {});
+    }
+  }, []);
+
   return (
-    <div className={`${classes.videoFrame} ${className}`}>
-        <video
-            src={`/videos/${path}`}  
+    <ZoomableMedia
+      label={label}
+      className={`${common.cardImgFrame} ${className}`}
+      onOpenChange={handleOpenChange}
+      enlarged={
+        <div className={classes.enlargedVideoFrame}>
+          <video
+            src={`/videos/${path}`}
             autoPlay
             muted
             loop
             playsInline
-            className={classes.demoVideo}
-        />
-    </div>
+            className={classes.enlargedVideo}
+          />
+        </div>
+      }
+    >
+      <video
+        ref={videoRef}
+        src={`/videos/${path}`}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className={classes.demoVideo}
+      />
+    </ZoomableMedia>
   );
 }

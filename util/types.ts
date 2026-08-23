@@ -38,6 +38,7 @@ interface Paragraph {
     id: string,
     text: string,
     img: string,
+    alt?: string,
 }
 
 interface CodeSample {
@@ -138,9 +139,32 @@ export interface DetailCardProps {
     item: Feature
 }
 
-export interface DemoVideoProps {
+interface MediaProps {
     path: string;
     className: string;
+}
+
+export interface DemoVideoProps extends MediaProps {
+    /** Human-readable description; names the zoom button and the dialog. */
+    label: string;
+};
+
+export interface CardImgProps extends MediaProps {
+    alt: string;
+    /** Defaults to the 80rem detail-page case. */
+    sizes?: string;
+};
+
+export interface ZoomableMediaProps {
+    /** The thumbnail. May be a server-rendered subtree. */
+    children: ReactNode;
+    /** The full-size render. Mounted only while the dialog is open. */
+    enlarged: ReactNode;
+    /** Accessible name for both the trigger and the dialog. */
+    label: string;
+    /** Frame + layout classes from the caller; applied to the trigger button. */
+    className: string;
+    onOpenChange?: (isOpen: boolean) => void;
 };
 
 export interface TagFrameProps {

@@ -1,4 +1,4 @@
-import { ProjectPageProps } from "@/util/types";
+import type { ProjectPageProps } from "@/util/types";
 import { notFound } from "next/navigation";
 import classes from "./page.module.css";
 import MediumButton from "@/components/UI/btnMedium";
@@ -54,9 +54,10 @@ export default async function ProjectDetainPage({ params }: ProjectPageProps): P
 
                     {/* Demo Video */}
                     { project.video.length > 0 &&
-                        <DemoVideo 
+                        <DemoVideo
                             path={project.video}
                             className={classes.demoFrame}
+                            label={`${project.project_title} demo video`}
                         />
                     }
 
@@ -86,9 +87,10 @@ export default async function ProjectDetainPage({ params }: ProjectPageProps): P
                         <DetailSection title="Design">
                             <p>{project.project_details.ui_description}</p>
                             {project.project_details.ui_img &&
-                                <CardImg 
+                                <CardImg
                                     path={project.project_details.ui_img}
                                     className={classes.devImgFrame}
+                                    alt={`${project.project_title} interface design`}
                                 />
                             }
                         </DetailSection>

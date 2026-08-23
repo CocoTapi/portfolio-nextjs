@@ -1,4 +1,4 @@
-import { ProjectProps } from "@/util/types";
+import type { ProjectProps } from "@/util/types";
 import classes from "./projectSummary.module.css";
 import BtnMedium from "../UI/btnMedium";
 import BtnText from "../UI/btnText";
@@ -6,6 +6,7 @@ import Link from "next/link";
 import Tag from "../UI/tag";
 import DemoVideo from "./demoVideo";
 import CardImg from "./cardImg";
+import { SMALL_CARD_IMAGE_SIZE } from "@/constants";
 
 
 export default function ProjectSummary({ project }: ProjectProps): React.ReactNode {
@@ -14,10 +15,19 @@ export default function ProjectSummary({ project }: ProjectProps): React.ReactNo
       <div className={classes.leftComponent}>
 
         {/* Slide show or img */}
-        {project.video.length > 0 ? 
-          <DemoVideo path={project.video} className={classes.videoComponent} />
+        {project.video.length > 0 ?
+          <DemoVideo
+            path={project.video}
+            className={classes.videoComponent}
+            label={`${project.project_title} demo video`}
+          />
           :
-          <CardImg path={project.topImg} className={classes.videoComponent}/>
+          <CardImg
+            path={project.topImg}
+            className={classes.videoComponent}
+            alt={`${project.project_title} screenshot`}
+            sizes={SMALL_CARD_IMAGE_SIZE}
+          />
         }
       
 

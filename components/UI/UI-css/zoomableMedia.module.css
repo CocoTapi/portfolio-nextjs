@@ -1,0 +1,135 @@
+/*
+ * NO z-index anywhere in this file. showModal() puts the element in the browser
+ * top layer, which paints above the fixed site header (main-header.module.css,
+ * z-index: 1000) without competing with it.
+ */
+.dialog {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+
+    /* auto, not hidden: a tall image is allowed to exceed the viewport. */
+    overflow: auto;
+    overscroll-behavior: contain;   /* insurance against scroll chaining */
+}
+
+/*
+ * `display` is set on .dialog[open] ONLY. 
+ */
+
+.dialog[open] {
+    display: flex;
+}
+
+/*
+ * Literal rgba(), NOT var(): ::backdrop did not inherit custom properties from
+ * its originating element until Chrome 122 / recent Safari, so var() silently
+ * resolves to nothing in older engines.
+ */
+.dialog::backdrop {
+    background-color: rgba(28, 24, 24, 0.8);
+    backdrop-filter: blur(3px);
+}
+
+/*
+ * modal panel
+ */
+.panel {
+    position: relative;
+
+    /* kills the inline baseline gap under media */
+    line-height: 0;                 
+
+    /* Safe centring -- see the note on .dialog[open] above. */
+    margin: auto;
+
+    /*  Sized in px, not rem */
+    border: 10px solid var(--color-primary-500);
+    
+    background-color: var(--color-grey-dark-1);
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.45);
+}
+
+/*
+ * Sized in px, not rem
+ */
+.closeButton {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    /* paints above the media */
+    z-index: 1;                     
+
+    min-width: 44px;
+    min-height: 44px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 0;
+
+    color: var(--color-grey-dark-1);
+    background-color: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+
+    transition: background-color 0.2s ease;
+}
+
+.closeButton:hover {
+    background-color: #fff;
+}
+
+.closeButton:focus-visible {
+    outline: 3px solid var(--color-secondary-500);
+    outline-offset: 2px;
+}
+
+/*
+ * The media itself needs no responsive overrides -- its width formula is already
+ * viewport-relative. Only the close button is nudged in on small screens.
+ */
+@media only screen and (max-width: 32.5em) {
+    .closeButton {
+        top: 8px;
+        right: 8px;
+    }
+}
+
+/*
+ * Entrance only. @starting-style + allow-discrete would also animate the exit,
+ * but the panel's children unmount synchronously on close (so the video stops
+ * downloading), which would show a visibly empty fading frame.
+ */
+@media (prefers-reduced-motion: no-preference) {
+    .panel {
+        animation: zoomIn 0.18s ease-out;
+    }
+
+    .dialog::backdrop {
+        animation: fadeIn 0.18s ease-out;
+    }
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
