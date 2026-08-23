@@ -15,7 +15,7 @@ import { FaSquareGit } from "react-icons/fa6";
 import { AiOutlineGithub } from "react-icons/ai";
 import { FiFigma } from "react-icons/fi";
 
-export default function Skills(): JSX.Element {
+export default function Skills(): React.ReactNode {
   return (
     <>
       <div className={classes.skillGroup}>

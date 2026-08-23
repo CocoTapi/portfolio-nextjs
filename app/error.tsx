@@ -3,7 +3,7 @@
 import BtnMedium from "@/components/UI/btnMedium"
 import Link from "next/link"
 
-export default function Error(): JSX.Element{
+export default function Error(): React.ReactNode{
     //console.log(error);
 
     return  (

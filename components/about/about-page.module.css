@@ -29,11 +29,16 @@
 
 .myImg {
     width: 25%;
+    position: relative; /* Required for 'fill' */
+    aspect-ratio: 1 / 1; /* Adjust this to match your image's actual ratio */
+    align-self: flex-start;
 }
 
-
-.myImg img {
-    width: 100%;
+.styledImage {
+    object-fit: cover; /* Ensures the image doesn't stretch weirdly */
+    border-radius: 50%; 
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .introDescription {
@@ -138,9 +143,13 @@
     .aboutComponent {
         padding: 6rem 4rem;
     }
-  }
+}
 
 @media only screen and (max-width: 32.5em) {
+    
+}
+
+@media only screen and (max-width: 45em) {
     .aboutComponent {
         border-radius: 20px;
         padding: 3rem;
@@ -150,9 +159,10 @@
         flex-direction: column;
     }
 
-    /* TODO */
     .myImg {
-        width: 50%;
+        width: 60%;
+        align-self: center;
+        margin-bottom: 1rem;
     }
 
     .introDescription {

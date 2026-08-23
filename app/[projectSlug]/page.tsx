@@ -1,5 +1,5 @@
-import { projects_data } from "@/data/data"
-import { ProjectData } from "@/util/types";
+import type { ProjectPageProps } from "@/util/types";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import classes from "./page.module.css";
 import MediumButton from "@/components/UI/btnMedium";
@@ -12,50 +12,73 @@ import DeploySection from "@/components/projects/deploySection";
 import DemoVideo from "@/components/projects/demoVideo";
 import CardImg from "@/components/projects/cardImg";
 import DetailSection from "@/components/UI/detailSection";
+import { getProject, getProjectSlugs } from "@/data/projectUtils";
 
-// TODO: This dynamic route (/[projectSlug]) is not cached.
-async function getProject(slug: string): Promise<ProjectData | undefined> {
-    //await new Promise((resolve) => setTimeout(resolve, 5000));
-    const project = projects_data.projects.find((project) =>
-        project.slug === slug
-    );
-
-    return project ? project : undefined;
+// Tell Next.js which paths to pre-render
+export async function generateStaticParams() {
+  return getProjectSlugs(); 
 }
 
-export default async function ProjectDetainPage({ params }: any): Promise<JSX.Element>{
-    const project = await getProject(params.projectSlug);
+// Force 404 for unknown slugs
+export const dynamicParams = false;
 
-    if (!project) {
-        notFound();
-    }
+// Per-project title and description, e.g. "Shiori A | Lesson Lab Detail"
+export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
+    const { projectSlug } = await params;
+    const project = await getProject(projectSlug);
+
+    if (!project) return { title: "Shiori A | Project Not Found" };
+
+    return {
+        title: `Shiori A | ${project.project_title} Detail`,
+        // summaries are indented template literals, so collapse the whitespace
+        description: project.project_summary.replace(/\s+/g, " ").trim(),
+    };
+}
+
+/**
+ * Project Detail Page
+ */
+export default async function ProjectDetainPage({ params }: ProjectPageProps): Promise<React.ReactNode>{
+    const { projectSlug } = await params;
+    const project = await getProject(projectSlug);
+
+    // if no project, send user to not found page
+    if (!project) notFound();
 
     return (
         <div className={classes.detailOuter}>
             <div className={classes.detailFrame}>
 
-                    {/* Title */}
+                    {/* Project Title */}
                     <h1 className={classes.projectTitle}>
                         {project.project_title}
                     </h1>
 
-                    {/* Description */}
+                    {/* Project Description */}
                     <p className={classes.projectSummary}>
                         {project.project_details.project_description}
                     </p>
 
                     {/* Visit Application Button */}
                     {project.project_url.length > 0 &&
-                    <a href={project.project_url} className={classes.centerBtn}>
+                    <a 
+                        href={project.project_url} 
+                        className={classes.centerBtn} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
                         <MediumButton>Visit Application</MediumButton>
                     </a>
                     }
 
                     {/* Demo Video */}
                     { project.video.length > 0 &&
-                        <DemoVideo 
+                        <DemoVideo
                             path={project.video}
                             className={classes.demoFrame}
+                            label={`${project.project_title} demo video`}
+                            href={project.project_url}
                         />
                     }
 
@@ -68,7 +91,6 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
                             deployment={project.project_details.deployment_tech}
                         />
                     </DetailSection>
-                    
 
                     {/* My Roles */}
                     <DetailSection title="My Roles">
@@ -80,22 +102,20 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
                         frontendUrl={project.project_details.code_samples.frontend_url}
                         backendUrl={project.project_details.code_samples.backend_url}
                     />
-                
-
 
                     {/* UI/UX Design */}
                     { project.project_details.ui_description &&
                         <DetailSection title="Design">
                             <p>{project.project_details.ui_description}</p>
                             {project.project_details.ui_img &&
-                                <CardImg 
+                                <CardImg
                                     path={project.project_details.ui_img}
                                     className={classes.devImgFrame}
+                                    alt={`${project.project_title} interface design`}
                                 />
                             }
                         </DetailSection>
                     }
-
                     
                     {/* Key Challenges */}
                     {project.project_details.challenges &&
@@ -105,7 +125,6 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
                                 />
                         </DetailSection>
                     }
-                    
 
                     {/* Frontend Development */}
                     {project.project_details.frontend_features.length > 0 && 
@@ -124,7 +143,6 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
                             />
                         </DetailSection>
                     }
-
 
                     {/* Deployment */}
                     <DeploySection 
@@ -147,7 +165,12 @@ export default async function ProjectDetainPage({ params }: any): Promise<JSX.El
 
                     {/*  Visit Application Button   */}
                     {project.project_url.length > 0 &&
-                        <a href={project.project_url} className={classes.centerBtn}>
+                        <a 
+                            href={project.project_url} 
+                            className={classes.centerBtn} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                        >
                             <MediumButton>Visit Application</MediumButton>
                         </a>
                     }

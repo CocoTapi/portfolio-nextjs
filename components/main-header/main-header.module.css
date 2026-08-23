@@ -28,15 +28,19 @@
 }
 
 .logoFrame {
-  width: 6rem;
+    width: 6rem; 
+    position: relative; 
+    aspect-ratio: 3 / 1; 
+
+    transform: scale(3.5);
+    transform-origin: left center;
 }
 
-.logoFrame img {
-  width: 270%;
-  padding-top: 1rem;
+.headerLogo {
+    object-fit: contain; 
 }
 
-.navItem:link {
+.navItem {
   text-decoration: none;
   font-size: 1.6rem;
   color: var(--color-grey-dark-1);
@@ -60,10 +64,11 @@
     margin-right: 0;
     gap: 0;
   }
+  .logoFrame {
+    margin-left: -1.2rem;
+  }
 
   .logoFrame img {
-    width: 270%;
-    padding-top: 1rem;
-    transform: translateX(-1rem);
+    transform: scale(1.1) translateX(-.5rem);
   }
 }

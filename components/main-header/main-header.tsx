@@ -1,5 +1,8 @@
 import Link from "next/link";
 import classes from "./main-header.module.css";
+import Image from "next/image";
+import HashLink from "../UI/hashLink";
+import { NAV_ITEMS } from "@/constants";
 
 export default function MainHeader() {
 
@@ -8,19 +11,24 @@ export default function MainHeader() {
       <div className={classes.headerContents}>
         <Link href="/">
           <div className={classes.logoFrame}>
-            <img src="/images/logo.png" alt="Logo" />
+            <Image 
+              src="/images/logo.png" 
+              alt="Logo" 
+              fill 
+              priority 
+              className={classes.headerLogo}
+              sizes="30rem" 
+            />
           </div>
         </Link>
         <ul className={classes.nav}>
-          <li>
-            <Link href="/#projects" className={classes.navItem}>Projects</Link>
-          </li>
-          <li>
-            <Link href="/#about" className={classes.navItem}>About</Link>
-          </li>
-          <li>
-            <Link href="/#contact" className={classes.navItem}>Contact</Link>
-          </li>
+          {NAV_ITEMS.map((item) => (
+            <li key={item.href}>
+              <HashLink href={item.href} className={classes.navItem}>
+                {item.label}
+              </HashLink>
+            </li>
+          ))}
         </ul>
       </div>
     </header>

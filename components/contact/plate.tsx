@@ -4,7 +4,7 @@ import { ProfileProps } from '@/util/types';
 import { SiLinkedin } from 'react-icons/si';
 import { MdOutlineMail } from "react-icons/md";
 
-export default function Plate({ profile }: ProfileProps) : JSX.Element{
+export default function Plate({ profile }: ProfileProps) : React.ReactNode{
     return (
         <div className={classes.plateBox}>
           

@@ -1,9 +1,10 @@
-import Link from "next/link";
+import HashLink from "../UI/hashLink";
 import classes from "./top.module.css";
 import BtnMedium from "../UI/btnMedium";
 import { profile_data } from "@/data/data";
 import Image from "next/image";
-0
+import origamiImage from "@/public/images/origami.png";
+import { TOP_IMAGE_SIZE } from "@/constants";
 
 export default function Top() {
     return (
@@ -21,15 +22,17 @@ export default function Top() {
                     {profile_data.top_page_description}
                 </p>
                 <div className={classes.introButtonFrame}>
-                    <Link href="#contact">
+                    <HashLink href="/#contact">
                         <BtnMedium>Get in Touch !</BtnMedium>
-                    </Link>
+                    </HashLink>
                 </div>
             </div>
             <div className={classes.topImgFrame}>
-                <img 
-                    src="/images/origami.png"
-                    alt="Top image"
+                <Image
+                    src={origamiImage}
+                    alt="Origami crane illustration"
+                    priority
+                    sizes={TOP_IMAGE_SIZE}
                 />
             </div>
         </div>

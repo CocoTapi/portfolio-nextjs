@@ -4,11 +4,11 @@ import classes from './UI-css/detailSection.module.css';
 export default function DetailSection({
     title,
     children
-} : DetailSectionProps ): JSX.Element {
+} : DetailSectionProps ): React.ReactNode {
     return (
         <div className={classes.sectionBox}>
             <h3>
-                    {title} :
+                {title} :
             </h3>
 
             { children }

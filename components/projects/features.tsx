@@ -4,7 +4,7 @@ import classes from './features.module.css';
 
 export default function Features({
     featureList
-}: FeaturesProps): JSX.Element {
+}: FeaturesProps): React.ReactNode {
     return (
         <ul className={classes.featureList}>
             {featureList.map((feature) => (

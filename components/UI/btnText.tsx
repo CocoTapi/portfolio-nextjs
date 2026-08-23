@@ -1,13 +1,11 @@
-import { colorSchemes } from "./color-schemes";
 import classes from "./UI-css/btn-text.module.css";
-import { ButtonProps, ButtonStyle, ColorScheme } from "@/util/types";
+import { BtnTextProps } from "@/util/types";
 
 export default function BtnText({
     className,
     children,
     ...rest
-}: any): JSX.Element {
-   
+}: BtnTextProps): React.ReactNode {
     return (
         <button
             className={`${classes.button} ${className}`}

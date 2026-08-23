@@ -4,7 +4,7 @@ import classes from './deploySection.module.css';
 export default function DeploySection({
     frontend,
     backend
-}: DeploySectionProps): JSX.Element {
+}: DeploySectionProps): React.ReactNode {
     return (
         <div className={classes.deployFrame}>
          {(frontend || backend) &&

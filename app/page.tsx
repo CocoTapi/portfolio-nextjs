@@ -4,8 +4,13 @@ import ProjectSummary from "@/components/projects/projectSummary";
 import AboutPage from "@/components/about/about-page";
 import Top from "@/components/top/top";
 import Contact from "@/components/contact/contact";
+import { Metadata } from "next";
 
-export default function HomePage(): JSX.Element {
+export const metadata: Metadata = {
+  title: "Portfolio Shiori A",
+  description: "Portfolio: Shiori Avino",
+};
+export default function HomePage(): React.ReactNode {
   return (
     <>
     <main className={classes.main}>

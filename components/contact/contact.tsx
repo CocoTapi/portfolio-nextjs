@@ -2,9 +2,9 @@ import { ProfileProps } from '@/util/types';
 import classes from './contact.module.css';
 import Plate from './plate';
 
-export default function Contact({ profile }: ProfileProps): JSX.Element{
+export default function Contact({ profile }: ProfileProps): React.ReactNode{
     return (
-        <div id="contact" className={classes.contactBox}>
+        <div className={classes.contactBox}>
             <h1>Get in Touch</h1>
             <p className={classes.comment}>
                 I&apos;m always open to discussing new opportunities, projects, or ideas.

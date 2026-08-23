@@ -1,10 +1,11 @@
+import { Fragment } from "react";
 import CardImg from "../projects/cardImg";
 import classes from "./UI-css/detailCard.module.css";
 import { DetailCardProps } from "@/util/types";
 
-export default function DetailCard ({ 
+export default function DetailCard ({
     item
-}: DetailCardProps): JSX.Element {
+}: DetailCardProps): React.ReactNode {
     return (
         <div className={classes.devFrame}>
             <p className={classes.subTitle}>
@@ -13,25 +14,26 @@ export default function DetailCard ({
 
             {
                 item.paragraphs.map((para) => (
-                    <>
+                    <Fragment key={para.id}>
                         {/* paragraph */}
-                        <p className={classes.detailDevItem} key={para.id}>
+                        <p className={classes.detailDevItem}>
                             {para.text}
                         </p>
 
                         {/* img */}
-                        {para.img && 
-                            <CardImg 
+                        {para.img &&
+                            <CardImg
                                 path={para.img}
                                 className={classes.detailImgFrame}
+                                alt={para.alt ?? `${item.title} screenshot`}
                             />
                         }
-                        
-                    </>
-                   
+
+                    </Fragment>
+
                 ))
             }
-            
+
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import { ProjectProps } from "@/util/types";
+import type { ProjectProps } from "@/util/types";
 import classes from "./projectSummary.module.css";
 import BtnMedium from "../UI/btnMedium";
 import BtnText from "../UI/btnText";
@@ -6,25 +6,36 @@ import Link from "next/link";
 import Tag from "../UI/tag";
 import DemoVideo from "./demoVideo";
 import CardImg from "./cardImg";
+import { SMALL_CARD_IMAGE_SIZE } from "@/constants";
 
 
-export default function ProjectSummary({ project }: ProjectProps): JSX.Element {
+export default function ProjectSummary({ project }: ProjectProps): React.ReactNode {
   return (
     <div className={classes.outerBox}>
       <div className={classes.leftComponent}>
 
         {/* Slide show or img */}
-        {project.video.length > 0 ? 
-          <DemoVideo path={project.video} className={classes.videoComponent} />
+        {project.video.length > 0 ?
+          <DemoVideo
+            path={project.video}
+            className={classes.videoComponent}
+            label={`${project.project_title} demo video`}
+            href={project.project_url}
+          />
           :
-          <CardImg path={project.topImg} className={classes.videoComponent}/>
+          <CardImg
+            path={project.topImg}
+            className={classes.videoComponent}
+            alt={`${project.project_title} screenshot`}
+            sizes={SMALL_CARD_IMAGE_SIZE}
+          />
         }
       
 
         {/* Visit app button */}
         <div className={classes.buttonComponent}>
           {project.project_url.length > 0 &&
-          <a href={project.project_url}>
+          <a href={project.project_url} target="_blank" rel="noopener noreferrer">
             <BtnMedium>Visit Application</BtnMedium>
           </a>
           }

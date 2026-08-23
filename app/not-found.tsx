@@ -1,7 +1,7 @@
 import BtnMedium from "@/components/UI/btnMedium";
 import Link from "next/link";
 
-export default function NotFoundProject(): JSX.Element {
+export default function NotFoundProject(): React.ReactNode {
     return (
         <main className="not-found">
             <h1>Not Found</h1>

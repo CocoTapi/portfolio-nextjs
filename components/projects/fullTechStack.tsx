@@ -7,7 +7,7 @@ export default function FullTechStack({
     backend,
     tools,
     deployment
-}: FullTechProps): JSX.Element {
+}: FullTechProps): React.ReactNode {
     return (
         <div className={classes.techFrame}>
             {/* Frontend tech stack */}

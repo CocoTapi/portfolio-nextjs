@@ -1,8 +1,7 @@
-import { ReactNode } from "react";
+import { ComponentPropsWithoutRef, ReactNode } from "react";
 import { colorSchemes } from "@/components/UI/color-schemes";
-// import { StaticImage_Data } from "next/image";
 
-// data
+// ---------------------------------- data ------------------------------------------
 export interface Course_List {
     media_id: number,
     name: string,
@@ -15,18 +14,11 @@ export interface MediaData {
     email: string
 }
 
-// interface OnlineCourses {
-//     [key: number]: string
-// }
-
 export interface ProfileData {
     my_email: string;
     top_page_description: string;
-    short_self_introduction: string;
-    long_self_introduction1: string;
-    long_self_introduction2: string;
-    long_self_introduction3: string;
-    long_self_introduction4: string;
+    short_self_introduction: string[];
+    long_self_introduction: string[];
     hobbies: string;
     social_media: MediaData;
     skills: string[];
@@ -37,35 +29,14 @@ interface Feature {
     id: number;
     title: string;
     paragraphs: Paragraph[]
-    // paragraph_1: string;
-    // paragraph_2: string;
-    // paragraph_3?: string;
-    // paragraph_4?: string;
-    // imgURL?: string;
 }
 
 interface Paragraph {
     id: string,
     text: string,
     img: string,
+    alt?: string,
 }
-
-// interface Challenge {
-//     id: number;
-//     title: string;
-//     paragraph_1: string;
-//     paragraph_2?: string;
-//     paragraph_3?: string;
-//     paragraph_4?: string;
-//     paragraph_5?: string;
-//     img1?: string;
-//     img2?: string;
-//     img3?: string;
-//     img4?: string;
-//     img5?: string;
-
-
-// }
 
 interface CodeSample {
     frontend_url: string;
@@ -108,7 +79,7 @@ export interface ProjectsData {
     projects: ProjectData[];
 }
 
-//color scheme
+// ---------------------------------- color scheme ------------------------------------------
 export interface ColorScheme {
     textColor: string;
     backgroundColor: string;
@@ -121,17 +92,21 @@ type ColorSchemeKey = keyof typeof colorSchemes;
 
 
 
-// props
-export interface NavLinkProps {
+// ---------------------------------- HashLink ------------------------------------------
+export interface HashLinkProps {
+    /** Root-anchored target, e.g. "/#about". */
     href: string;
-    children: string;
+    className?: string;
+    children: ReactNode;
 }
 
-export interface ButtonProps {
+
+// ---------------------------------- Button ------------------------------------------
+
+export interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
     className?: string;
     children: ReactNode;
     colorScheme?: ColorSchemeKey;
-    [key: string]: any;
 }
 
 export interface ButtonStyle {
@@ -141,6 +116,13 @@ export interface ButtonStyle {
     backgroundImage?: string;
 };
 
+export interface BtnTextProps extends ComponentPropsWithoutRef<"button"> {
+    className?: string;
+    children: ReactNode;
+}
+
+// ---------------------------------- Project ------------------------------------------
+
 export interface ProjectProps {
     project: ProjectData
 }
@@ -149,14 +131,41 @@ export interface ProfileProps {
     profile: ProfileData
 }
 
+
+// ---------------------------------- UI Items ------------------------------------------
+
 export interface DetailCardProps {
-    // item: Challenge
     item: Feature
 }
 
-export interface DemoVideoProps {
+interface MediaProps {
     path: string;
     className: string;
+}
+
+export interface DemoVideoProps extends MediaProps {
+    /** Human-readable description; names the zoom button and the dialog. */
+    label: string;
+    /** Live app URL. When non-empty the thumbnail links out instead of zooming. */
+    href?: string;
+};
+
+export interface CardImgProps extends MediaProps {
+    alt: string;
+    /** Defaults to the 80rem detail-page case. */
+    sizes?: string;
+};
+
+export interface ZoomableMediaProps {
+    /** The thumbnail. May be a server-rendered subtree. */
+    children: ReactNode;
+    /** The full-size render. Mounted only while the dialog is open. */
+    enlarged: ReactNode;
+    /** Accessible name for both the trigger and the dialog. */
+    label: string;
+    /** Frame + layout classes from the caller; applied to the trigger button. */
+    className: string;
+    onOpenChange?: (isOpen: boolean) => void;
 };
 
 export interface TagFrameProps {
@@ -189,3 +198,9 @@ export interface DetailSectionProps {
     title: string;
     children: ReactNode;
 }
+
+// ---------------------------------- Pages ------------------------------------------
+
+export interface ProjectPageProps {
+    params: Promise<{ projectSlug: string }>;
+};
