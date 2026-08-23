@@ -20,6 +20,7 @@ export default function ProjectSummary({ project }: ProjectProps): React.ReactNo
             path={project.video}
             className={classes.videoComponent}
             label={`${project.project_title} demo video`}
+            href={project.project_url}
           />
           :
           <CardImg
@@ -34,7 +35,7 @@ export default function ProjectSummary({ project }: ProjectProps): React.ReactNo
         {/* Visit app button */}
         <div className={classes.buttonComponent}>
           {project.project_url.length > 0 &&
-          <a href={project.project_url}>
+          <a href={project.project_url} target="_blank" rel="noopener noreferrer">
             <BtnMedium>Visit Application</BtnMedium>
           </a>
           }

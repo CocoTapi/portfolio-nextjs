@@ -7,6 +7,13 @@
 }
 
 /*
+ * link variant of cardImgFrame 
+ */
+a.videoLinkFrame {
+    cursor: pointer;
+}
+
+/*
  * videoFrame in a modal
  */
 .enlargedVideoFrame {

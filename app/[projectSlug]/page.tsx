@@ -62,7 +62,12 @@ export default async function ProjectDetainPage({ params }: ProjectPageProps): P
 
                     {/* Visit Application Button */}
                     {project.project_url.length > 0 &&
-                    <a href={project.project_url} className={classes.centerBtn}>
+                    <a 
+                        href={project.project_url} 
+                        className={classes.centerBtn} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
                         <MediumButton>Visit Application</MediumButton>
                     </a>
                     }
@@ -73,6 +78,7 @@ export default async function ProjectDetainPage({ params }: ProjectPageProps): P
                             path={project.video}
                             className={classes.demoFrame}
                             label={`${project.project_title} demo video`}
+                            href={project.project_url}
                         />
                     }
 
@@ -159,7 +165,12 @@ export default async function ProjectDetainPage({ params }: ProjectPageProps): P
 
                     {/*  Visit Application Button   */}
                     {project.project_url.length > 0 &&
-                        <a href={project.project_url} className={classes.centerBtn}>
+                        <a 
+                            href={project.project_url} 
+                            className={classes.centerBtn} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                        >
                             <MediumButton>Visit Application</MediumButton>
                         </a>
                     }

@@ -144,6 +144,8 @@ interface MediaProps {
 export interface DemoVideoProps extends MediaProps {
     /** Human-readable description; names the zoom button and the dialog. */
     label: string;
+    /** Live app URL. When non-empty the thumbnail links out instead of zooming. */
+    href?: string;
 };
 
 export interface CardImgProps extends MediaProps {

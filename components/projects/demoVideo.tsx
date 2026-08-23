@@ -9,7 +9,8 @@ import type { DemoVideoProps } from '@/util/types';
 export default function DemoVideo({
   path,
   className,
-  label
+  label,
+  href
 }: DemoVideoProps): React.ReactNode {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -56,6 +57,33 @@ export default function DemoVideo({
     }
   }, []);
 
+  const thumbnail = (
+    <video
+      ref={videoRef}
+      src={`/videos/${path}`}
+      autoPlay
+      muted
+      loop
+      playsInline
+      className={classes.demoVideo}
+    />
+  );
+
+  // send visitors to the real thing instead of a bigger video. 
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${label} — visit the live application`}
+        className={`${common.cardImgFrame} ${classes.videoLinkFrame} ${className}`}
+      >
+        {thumbnail}
+      </a>
+    );
+  }
+
   return (
     <ZoomableMedia
       label={label}
@@ -74,15 +102,7 @@ export default function DemoVideo({
         </div>
       }
     >
-      <video
-        ref={videoRef}
-        src={`/videos/${path}`}
-        autoPlay
-        muted
-        loop
-        playsInline
-        className={classes.demoVideo}
-      />
+      {thumbnail}
     </ZoomableMedia>
   );
 }
